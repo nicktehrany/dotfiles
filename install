@@ -2,7 +2,8 @@
 BASEDIR=$(dirname $0)
 cd $BASEDIR
 
-git submodule update --init --recursive
+git submodule init
+git submodule update
 ln -sf ${PWD}/.bashrc ~/.bashrc
 ln -sf ${PWD}/.vimrc ~/.vimrc
 ln -sf ${PWD}/vgitconfig ~/.gitconfig

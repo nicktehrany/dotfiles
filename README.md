@@ -2,7 +2,7 @@
 
 ## Installation
 
-This will ask for sudo password, as it will try to install zsh.
+If zsh isn't installed, it'll ask for sudo password and install zsh.
 
 ```shell
 git clone https://github.com/nicktehrany/dotfiles

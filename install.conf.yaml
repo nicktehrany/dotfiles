@@ -6,11 +6,10 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.vim: vim
-    ~/.vimrc: vimrc
-
-- create:
-    - ~/.vim/undo-history
+    ~/.vim:
+    ~/.vimrc:
+    ~/.gitconfig:
+    ~/.bashrc:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

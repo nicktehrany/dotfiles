@@ -11,8 +11,6 @@ else
     sudo apt install zsh
 fi
 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 git submodule init
 git submodule update
 ln -sf ${PWD}/.bashrc ~/.bashrc

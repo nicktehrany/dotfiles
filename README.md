@@ -1,1 +1,5 @@
-# Dotfiles [[![Build Status] (https://github.com/nicktehrany/dotfiles)]
+# Dotfiles
+
+## Installation
+
+Run ./install

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 BASEDIR=$(dirname $0)
 cd $BASEDIR
+sudo apt install zsh
 
 git submodule init
 git submodule update

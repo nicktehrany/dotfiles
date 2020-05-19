@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 BASEDIR=$(dirname $0)
 cd $BASEDIR
-sudo apt install zsh
+zsh="zsh"
+
+if rpm -q $pkg
+then
+    echo "zsh already installed"
+else
+    sudo apt install zsh
+fi
 
 git submodule init
 git submodule update

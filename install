@@ -3,10 +3,11 @@ BASEDIR=$(dirname $0)
 cd $BASEDIR
 zsh="zsh"
 
-if rpm -q $pkg
+if dpkg -s $pkg &>/dev/null
 then
     echo "zsh already installed"
 else
+    echo "Installing zsh"
     sudo apt install zsh
 fi
 

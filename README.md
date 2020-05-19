@@ -2,4 +2,8 @@
 
 ## Installation
 
-Run ./install
+```shell
+git clone https://github.com/nicktehrany/dotfiles
+cd dotfiles
+./install
+```

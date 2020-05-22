@@ -51,6 +51,7 @@ set expandtab
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeShowHidden=1
 
 " Spell Checker on <F6>
 map <F6> :setlocal spell! spelllang=en_us<CR>

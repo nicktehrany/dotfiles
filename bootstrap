@@ -21,6 +21,8 @@ if [ -e ~/.oh-my-zsh ]; then
     echo "~/.oh-my-zsh already exists"
 else
     ln -sf ${PWD}/.zsh/ohmyzsh ~/.oh-my-zsh
+    chsh -s /bin/zsh
+    echo "Log out and log back in to change default shell"
 fi
 if [ -e ~/.vim ]; then
     echo "~/.vim already exists"

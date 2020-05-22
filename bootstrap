@@ -16,7 +16,11 @@ ln -sf ${PWD}/.bashrc ~/.bashrc
 ln -sf ${PWD}/.vim/.vimrc ~/.vimrc
 ln -sf ${PWD}/.zsh/.zshrc ~/.zshrc
 ln -sf ${PWD}/git/.gitconfig ~/.gitconfig
-ln -sf ${PWD}/.zsh/ohmyzsh ~/.oh-my-zsh
+if [ -e ~/.oh-my-zsh ]; then
+    echo "/oh-my-zsh already exists"
+else
+    ln -sf ${PWD}/.zsh/ohmyzsh ~/.oh-my-zsh
+fi
 if [ -e ~/.vim ]; then
     echo "~/.vim already exists"
 else

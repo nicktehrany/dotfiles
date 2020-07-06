@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic"
 
 # Use lf to switch directories and bind it to ctrl-d
 lfcd () {
@@ -13,7 +13,7 @@ lfcd () {
     fi
 }
 bindkey -s '^d' 'lfcd\n'
-
+bindkey -s '^q' 'tmux\n'
 bindkey -s '^x' 'ncdu\n'
 
 plugins=(git sudo colored-man-pages)
@@ -24,3 +24,5 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases
 alias gs="git status"
+alias gc="git commit"
+alias ga="git add"

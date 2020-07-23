@@ -41,6 +41,7 @@ filetype plugin indent on    " required
 colorscheme codedark
 
 set number
+set rnu
 syntax on
 set smartindent
 set tabstop=4

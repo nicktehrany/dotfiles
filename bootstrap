@@ -3,11 +3,35 @@ BASEDIR=$(dirname $0)
 cd $BASEDIR
 zsh="zsh"
 
-if [ !dpkg -s $zsh >/dev/null 2>&1 ]; then
+if ! command -v zsh &> /dev/null; then
     echo "Installing zsh"
     sudo apt install zsh
 else
     echo "zsh already installed"
+fi
+
+if ! command -v lfcd &> /dev/null; then
+   echo "Installing lf"
+   wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz
+   tar xvf lf-linux-amd64.tar.gz
+   chmod +x lf
+   sudo mv lf /usr/local/bin
+else
+    echo "lf already installed"
+fi
+
+if ! command -v vim &> /dev/null; then
+    echo "Installing vim"
+    sudo apt install vim
+else
+    echo "vim already installed"
+fi
+
+if ! command -v ndcu &> /dev/null; then
+    echo "Installing ncdu"
+    sudo apt install ncdu
+else
+    echo "ndcu already installed"
 fi
 
 git submodule init
@@ -16,7 +40,12 @@ ln -sf ${PWD}/.bashrc ~/.bashrc
 ln -sf ${PWD}/.vim/.vimrc ~/.vimrc
 ln -sf ${PWD}/.zsh/.zshrc ~/.zshrc
 ln -sf ${PWD}/git/.gitconfig ~/.gitconfig
+if [ -e ~/.zsh ]; then
+    echo "Resetting .zsh symlink"
+    sudo rm ~/.zsh
+fi
 ln -sf ${PWD}/.zsh ~/.zsh
+
 if [ -e ~/.oh-my-zsh ]; then
     echo "~/.oh-my-zsh already exists"
 else

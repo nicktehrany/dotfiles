@@ -26,3 +26,5 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias gs="git status"
 alias gc="git commit"
 alias ga="git add"
+alias gp="git push"
+alias gstore="git config credential.helper store"

@@ -27,11 +27,11 @@ else
     echo "vim already installed"
 fi
 
-if ! command -v ndcu &> /dev/null; then
+if ! command -v ncdu &> /dev/null; then
     echo "Installing ncdu"
     sudo apt install ncdu
 else
-    echo "ndcu already installed"
+    echo "ncdu already installed"
 fi
 
 git submodule init

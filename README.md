@@ -9,6 +9,16 @@ git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
 ./bootstrap
 ```
+
+## Updating submodules
+
+In order to update submodules if their remote repositery changes.
+
+```shell
+git submodule update --init --recursive
+git submodule update --remote --merge
+```
+
 ## In progress:
   
   * Include hidden files in lfcd (keybinding to show hidden files)

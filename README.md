@@ -10,5 +10,6 @@ cd dotfiles
 ./bootstrap
 ```
 ## In progress:
-
+  
+  * Include hidden files in lfcd (keybinding to show hidden files)
   * Missing local/private git config files

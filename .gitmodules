@@ -68,3 +68,6 @@
 [submodule ".zsh/zsh-syntax-highlighting"]
 	path = .zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "textemp"]
+	path = textemp
+	url = https://github.com/nicktehrany/textemp

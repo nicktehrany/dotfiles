@@ -19,7 +19,7 @@ bindkey -s '^x' 'ncdu\n'
 plugins=(git sudo colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
-
+source $HOME/dotfiles/textemp/textemp
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases

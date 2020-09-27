@@ -12,10 +12,9 @@ cd dotfiles
 
 ## Updating submodules
 
-In order to update submodules if their remote repositery changes.
+In order to update submodules if their remote repository changes.
 
 ```shell
-git submodule update --init --recursive
 git submodule update --remote --merge
 ```
 

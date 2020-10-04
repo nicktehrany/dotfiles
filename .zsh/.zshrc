@@ -1,4 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
+export TEXTEMP="$HOME/dotfiles/textemp"
 
 ZSH_THEME="af-magic"
 
@@ -19,7 +20,7 @@ bindkey -s '^x' 'ncdu\n'
 plugins=(git sudo colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/dotfiles/textemp/textemp
+source $HOME/dotfiles/textemp/textemp.sh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases

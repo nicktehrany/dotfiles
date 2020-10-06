@@ -22,3 +22,4 @@ git submodule update --remote --merge
   
   * Include hidden files in lfcd (keybinding to show hidden files)
   * Missing local/private git config files
+  * Add CI for automatic updating of sumbodles, currently manually updating submodules once in a while

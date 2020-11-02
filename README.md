@@ -18,8 +18,7 @@ In order to update submodules if their remote repository changes.
 git submodule update --remote --merge
 ```
 
-## In progress:
+## In progress
   
-  * Include hidden files in lfcd (keybinding to show hidden files)
-  * Missing local/private git config files
-  * Add CI for automatic updating of sumbodles, currently manually updating submodules once in a while
+* Missing local/private git config files
+* Add CI for automatic updating of submodles, currently manually updating submodules once in a while

@@ -4,6 +4,7 @@ export TEXTEMP="$HOME/dotfiles/textemp"
 ZSH_THEME="af-magic"
 
 # Use lf to switch directories and bind it to ctrl-d
+# hidden files are shown with zh when in lfcd
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
@@ -30,4 +31,4 @@ alias ga="git add"
 alias gpush="git push"
 alias gstore="git config credential.helper store"
 alias glog="git log --all --graph --decorate --oneline"
-
+alias gd="git diff"

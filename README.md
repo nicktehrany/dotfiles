@@ -19,8 +19,8 @@ git submodule update --remote --merge
 ```
 
 ## In progress
-  
+ 
 * Missing local/private git config files
 * Add CI for automatic updating of submodles, currently manually updating submodules once in a while
 * Vscode
-* tmux config
+* Expand tmux conf

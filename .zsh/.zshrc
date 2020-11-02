@@ -15,8 +15,8 @@ lfcd () {
     fi
 }
 bindkey -s '^d' 'lfcd\n'
-bindkey -s '^q' 'tmux\n'
-bindkey -s '^x' 'ncdu\n'
+bindkey -s '^x' 'tmux\n'
+bindkey -s '^q' 'ncdu\n'
 
 plugins=(git sudo colored-man-pages)
 

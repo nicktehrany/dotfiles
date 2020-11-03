@@ -16,6 +16,7 @@ if ! command -v lfcd &> /dev/null; then
    tar xvf lf-linux-amd64.tar.gz
    chmod +x lf
    sudo mv lf /usr/local/bin
+   rm -rf lf-linux-amd64.tar.gz
 else
     echo "lf already installed"
 fi
@@ -40,6 +41,7 @@ ln -sf ${PWD}/.bashrc ~/.bashrc
 ln -sf ${PWD}/.vim/.vimrc ~/.vimrc
 ln -sf ${PWD}/.zsh/.zshrc ~/.zshrc
 ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
+tmux source ~/.tmux.conf
 ln -sf ${PWD}/git/.gitconfig ~/.gitconfig
 if [ -e ~/.zsh ]; then
     echo "Resetting .zsh symlink"

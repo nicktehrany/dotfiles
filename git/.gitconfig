@@ -3,3 +3,5 @@
 	email = nicktehrany1@gmail.com
 [core]
 	editor = vim
+[pull]
+	rebase = false

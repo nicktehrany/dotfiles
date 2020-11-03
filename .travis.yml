@@ -4,5 +4,8 @@ sudo: required
 
 dist: focal
 
+before_install:
+  - sudo apt install zsh vim ncdu tmux
+
 script:
   - ./bootstrap

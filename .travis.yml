@@ -1,7 +1,6 @@
 language: shell
 
 os: linux
-sudo: required
 
 dist: focal
 

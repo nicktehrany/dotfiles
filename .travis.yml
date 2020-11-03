@@ -1,7 +1,7 @@
 language: shell
 
 os: linux
-root: required
+sudo: required
 
 dist: focal
 

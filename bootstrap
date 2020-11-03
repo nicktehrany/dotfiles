@@ -51,8 +51,7 @@ ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
 ln -sf ${PWD}/git/.gitconfig ~/.gitconfig
 if [ -e ~/.zsh ]; then
-    echo "Resetting .zsh symlink"
-    sudo rm ~/.zsh
+    echo "Overwriting .zsh symlink"
 fi
 ln -sf ${PWD}/.zsh ~/.zsh
 

@@ -1,11 +1,13 @@
-language: bash
+language: shell
 
-sudo: required
+os: linux
+root: required
 
 dist: focal
 
 before_install:
-  - sudo apt install zsh vim ncdu tmux
+  - sudo apt-get update
+  - sudo apt-get install zsh vim ncdu tmux -y
 
 script:
   - ./bootstrap

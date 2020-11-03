@@ -35,6 +35,13 @@ else
     echo "ncdu already installed"
 fi
 
+if ! command -v tmux &> /dev/null; then
+    echo "Installing tmux"
+    sudo apt install tmux
+else
+    echo "tmux already installed"
+fi
+
 git submodule init
 git submodule update
 ln -sf ${PWD}/.bashrc ~/.bashrc

@@ -1,4 +1,4 @@
-# Dotfiles <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
+# Dotfiles <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a> [![Build Status](https://travis-ci.com/nicktehrany/dotfiles.svg?branch=master)](https://travis-ci.com/nicktehrany/dotfiles)
 
 ## Installation
 
@@ -19,7 +19,7 @@ git submodule update --remote --merge
 ```
 
 ## In progress
- 
+
 * Missing local/private git config files
 * Add CI for automatic updating of submodles, currently manually updating submodules once in a while
 * Vscode

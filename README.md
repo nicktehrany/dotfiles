@@ -7,8 +7,10 @@ Use at **OWN RISK**, the build pipeline runs a linux focal vm with all required 
 ```shell
 git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
-./bootstrap
+./install
 ```
+
+Then just open a new terminal.
 
 ## Updating submodules
 

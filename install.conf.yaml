@@ -17,4 +17,14 @@
 - shell:
     - git submodule sync --recursive
     - git submodule update --remote --merge
+    - sudo apt-get update
+    - sudo apt-get install zsh vim ncdu tmux -y
+    - >
+      wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz
+      tar xvf lf-linux-amd64.tar.gz
+      chmod +x lf
+      sudo mv lf /usr/local/bin
+      rm -rf lf-linux-amd64.tar.gz
+    - chsh -s $(which zsh)
+    - [chsh -s $(which zsh), Making zsh the default shell]
     - tmux source ~/.tmux.conf

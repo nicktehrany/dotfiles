@@ -1,9 +1,9 @@
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.vimrc: .vim/.vimrc
@@ -11,11 +11,10 @@
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.gitconfig: git/.gitconfig
     ~/.zsh: .zsh
-    ~/.oh-my-zsh: .zsh/.ohmyzsh
+    ~/.oh-my-zsh: .zsh/ohmyzsh
     ~/.vim: .vim
 
-
 - shell:
-  - git submodule sync --recursive
-  - git update-submodules
-  - tmux source ~/.tmux.conf
+    - git submodule sync --recursive
+    - git submodule update --remote --merge
+    - tmux source ~/.tmux.conf

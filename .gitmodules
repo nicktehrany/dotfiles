@@ -71,3 +71,7 @@
 [submodule "textemp"]
 	path = textemp
 	url = https://github.com/nicktehrany/textemp
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty

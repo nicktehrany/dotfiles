@@ -1,0 +1,5 @@
+- aptget:
+  vim:
+  zsh:
+  ncdu:
+  tmux:

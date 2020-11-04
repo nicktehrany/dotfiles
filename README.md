@@ -2,7 +2,7 @@
 
 ## Installation
 
-If missing packages, it'll ask for sudo password and install them.
+Use at **OWN RISK**, the build pipeline runs a linux focal vm with all required packages already installed. Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) file to see installed packages, and install same packages before installing, to avoid problems.
 
 ```shell
 git clone https://github.com/nicktehrany/dotfiles
@@ -21,6 +21,5 @@ git submodule update --remote --merge
 ## In progress
 
 * Missing local/private git config files
-* Add CI for automatic updating of submodles, currently manually updating submodules once in a while
 * Vscode
 * Expand tmux conf

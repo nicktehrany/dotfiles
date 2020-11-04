@@ -2,7 +2,7 @@
 
 ## Installation
 
-Use at **OWN RISK**, the build pipeline runs a linux focal vm with all required packages already installed. Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) file to see installed packages, and install same packages before installing, to avoid problems.
+Use at **OWN RISK**, the build pipeline runs a linux focal vm with all required packages already installed. Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) for packages that will be installed, if not already installed. All existing links or config files will be overwritten! (Check [.install.conf.yaml](https://github.com/nicktehrany/dotfiles/blob/dotbot_implement/install.conf.yaml) for all links)
 
 ```shell
 git clone https://github.com/nicktehrany/dotfiles
@@ -10,7 +10,7 @@ cd dotfiles
 ./install
 ```
 
-Then just open a new terminal.
+Then just open a new terminal. The updating of submodules can sometimes take a couple of seconds.
 
 ## Updating submodules
 

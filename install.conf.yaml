@@ -2,38 +2,25 @@
     link:
       create: true
       relink: true
+      force: true
 
 - clean: ["~"]
 
 - link:
     ~/.vimrc:
       path: .vim/.vimrc
-      relink: true
-      force: true
     ~/.zshrc:
       path: .zsh/.zshrc
-      relink: true
-      force: true
     ~/.tmux.conf:
       path: tmux/.tmux.conf
-      relink: true
-      force: true
     ~/.gitconfig:
       path: git/.gitconfig
-      relink: true
-      force: true
     ~/.zsh:
       path: .zsh
-      relink: true
-      force: true
     ~/.oh-my-zsh:
       path: .zsh/ohmyzsh
-      relink: true
-      force: true
     ~/.vim:
       path: .vim
-      relink: true
-      force: true
 
 - shell:
     - git submodule sync --recursive

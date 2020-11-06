@@ -25,14 +25,12 @@
       path: vscode/settings.json
 
 - shell:
-    - git submodule sync --recursive
-    - git submodule update --remote --merge
     - wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz
     - tar xvf lf-linux-amd64.tar.gz
     - chmod +x lf
     - sudo mv lf /usr/local/bin
     - rm -rf lf-linux-amd64.tar.gz
-    - sudo apt install software-properties-common apt-transport-https wget
+    - sudo apt install software-properties-common apt-transport-https wget -y
     - wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
     - sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
     - [bash ./vscode/install.sh, Installing vscode extensions]

@@ -27,11 +27,18 @@
   },
   "editor.rulers": [120],
   "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#5a7c59"
+    "editorRuler.foreground": "#5a7c59",
+    "statusBar.background": "#161616",
+    "statusBar.noFolderBackground": "#212121",
+    "statusBar.debuggingBackground": "#263238",
+    "list.activeSelectionBackground": "#131522",
+    "activityBarBadge.background": "#07996d",
+    "activityBarBadge.foreground": "#ffffff"
   },
   "python.dataScience.alwaysTrustNotebooks": true,
   "editor.fontFamily": "'Droid Sans Mono', 'monospace',  monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "python.pythonPath": "/bin/python3",
-  "python.dataScience.sendSelectionToInteractiveWindow": true
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
+  "workbench.colorTheme": "Ayu Dark Bordered"
 }

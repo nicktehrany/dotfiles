@@ -23,3 +23,4 @@ code --install-extension ritwickdey.liveserver
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension yzane.markdown-pdf
 code --install-extension yzhang.markdown-all-in-one
+code --install-extension teabyii.ayu

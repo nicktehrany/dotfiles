@@ -30,3 +30,4 @@
     - chmod +x lf
     - sudo mv lf /usr/local/bin
     - rm -rf lf-linux-amd64.tar.gz
+    - [bash ./vscode/install.sh, Installing vscode extensions]

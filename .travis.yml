@@ -5,7 +5,7 @@ dist: focal
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install zsh vim ncdu tmux -y
+  - sudo apt-get install zsh vim ncdu tmux code -y
 
 script:
   - ./install

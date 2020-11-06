@@ -30,4 +30,7 @@
     - chmod +x lf
     - sudo mv lf /usr/local/bin
     - rm -rf lf-linux-amd64.tar.gz
+    - sudo apt install software-properties-common apt-transport-https wget
+    - wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    - sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
     - [bash ./vscode/install.sh, Installing vscode extensions]

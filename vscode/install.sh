@@ -2,9 +2,6 @@ code --install-extension aaron-bond.better-comments
 code --install-extension austin.code-gnu-global
 code --install-extension davidanson.vscode-markdownlint
 code --install-extension eamodio.gitlens
-code --install-extension equinusocio.vsc-community-material-theme
-code --install-extension equinusocio.vsc-material-theme
-code --install-extension equinusocio.vsc-material-theme-icons
 code --install-extension esbenp.prettier-vscode
 code --install-extension geoffkaile.latex-count
 code --install-extension james-yu.latex-workshop
@@ -14,7 +11,6 @@ code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode-remote.remote-ssh
-code --install-extension ms-vscode-remote.remote-ssh-edit
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode-remote.vscode-remote-extensionpack
 code --install-extension ms-vscode.wordcount

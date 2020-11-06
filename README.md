@@ -32,7 +32,7 @@ If you only want to relink config files or run all commands except shell (in the
 My vscode is still a work in progress as far as the right color scheme goes. Thus far it looks as follows,
 
 ![VSCode](images/vscode.png)
-If you want to play around with different colors, adjust workbench.colorCustomizations in the [settings.json](https://github.com/nicktehrany/dotfiles/blob/master/vscode/settings.json) file, and possible add more of the vscode color variables you can set. A nice compiled list of
+If you want to play around with different colors, adjust workbench.colorCustomizations in the [settings.json](https://github.com/nicktehrany/dotfiles/blob/master/vscode/settings.json) file, and possibly add more of the vscode color variables you can set. A nicely compiled list of
 these can be found [here](https://gist.github.com/lol-russo/1c7a0b958be4b9434c5a120f24d5e7c3).
 
 ## Credits

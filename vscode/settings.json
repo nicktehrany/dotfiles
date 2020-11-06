@@ -6,6 +6,7 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5,
   "cSpell.userWords": [
     "Journaling",
     "andian",
@@ -40,5 +41,8 @@
   "editor.fontLigatures": true,
   "python.pythonPath": "/bin/python3",
   "python.dataScience.sendSelectionToInteractiveWindow": true,
-  "workbench.colorTheme": "Ayu Dark Bordered"
+  "workbench.colorTheme": "Ayu Dark Bordered",
+  "material-icon-theme.folders.color": "#fdd835",
+  "material-icon-theme.opacity": 1,
+  "material-icon-theme.folders.theme": "specific"
 }

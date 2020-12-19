@@ -23,6 +23,8 @@
       path: .vim
     ~/.config/Code/User/settings.json:
       path: vscode/settings.json
+    ~/.local/share/konsole/blue_default.profile:
+      path: konsole/blue_default.profile
 
 - shell:
     - wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz

@@ -14,9 +14,16 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
+
 bindkey -s '^d' 'lfcd\n'
 bindkey -s '^x' 'tmux\n'
 bindkey -s '^q' 'ncdu\n'
+
+if [ -z "$TMUX" ]
+then
+    tmux
+fi
+
 
 plugins=(git sudo colored-man-pages)
 

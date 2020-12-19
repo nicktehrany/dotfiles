@@ -12,6 +12,13 @@ cd dotfiles
 
 Then just open a new terminal. The updating of submodules can sometimes take a couple of seconds.
 
+## Requirements
+
+[Gitmux](https://github.com/arl/gitmux) is required to use the gitmux config for displaying the git tree in tmux. Install instruction are on their
+website, the config file will be linked automatically.
+
+VSCode remote development containers require docker, install instructions are available [here](https://code.visualstudio.com/docs/remote/containers).
+
 ## Commands
 
 In order to update submodules if their remote repository changes.

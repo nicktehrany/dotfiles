@@ -26,8 +26,10 @@ then
     tmux
 fi
 
+# autosuggestions
+bindkey '^ ' autosuggest-accept
 
-plugins=(git sudo colored-man-pages)
+plugins=(git sudo colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/textemp/textemp.sh

@@ -15,7 +15,8 @@ Then just open a new terminal. The updating of submodules can sometimes take a c
 ## Requirements
 
 [Gitmux](https://github.com/arl/gitmux) is required to use the gitmux config for displaying the git tree in tmux. Install instruction are on their
-website, the config file will be linked automatically.
+website, the config file will be linked automatically. I'm currently using git information via zsh and am therefore not 
+using gitmux, but keeping the config in case I switch at some point.
 
 VSCode remote development containers require docker, install instructions are available [here](https://code.visualstudio.com/docs/remote/containers).
 
@@ -33,6 +34,11 @@ If you only want to relink config files or run all commands except shell (in the
 ./install --only link # or
 ./install --except shell
 ```
+
+## Visuals
+
+The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).  
+![Visuals](images/visuals.png)
 
 ## VS Code
 

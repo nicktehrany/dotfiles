@@ -1,7 +1,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 export TEXTEMP="$HOME/dotfiles/textemp"
 
-ZSH_THEME="af-magic"
+# PROMPT='%{$fg_bold[blue]%}%~ %{$reset_color%}%{$fg_bold[white]\$%} '
+
+ZSH_THEME="robbyrussell"
 
 # Use lf to switch directories and bind it to ctrl-d
 # hidden files are shown with zh when in lfcd

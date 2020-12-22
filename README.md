@@ -10,7 +10,7 @@ cd dotfiles
 ./install
 ```
 
-Then just open a new terminal. The updating of submodules can sometimes take a couple of seconds.
+Then just open a new terminal. The updating of submodules can sometimes take a couple of seconds.<!--  -->
 
 ## Commands
 

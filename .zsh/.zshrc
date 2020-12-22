@@ -21,12 +21,7 @@ bindkey -s '^d' 'lfcd\n'
 bindkey -s '^x' 'tmux\n'
 bindkey -s '^q' 'ncdu\n'
 
-if [ -z "$TMUX" ]
-then
-    tmux
-fi
-
-# autosuggestions
+# autosuggestions accept suggestion with ctrl + space
 bindkey '^ ' autosuggest-accept
 
 plugins=(git sudo colored-man-pages zsh-autosuggestions)

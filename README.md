@@ -32,16 +32,10 @@ If you only want to relink config files or run all commands except shell (in the
 The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).  
 ![Visuals](images/visuals.png)
 
-## VS Code
+### VS Code
 
 My vscode is still a work in progress as far as the right color scheme goes. Thus far it looks as follows,
 
 ![VSCode](images/vscode.png)
 If you want to play around with different colors, adjust workbench.colorCustomizations in the [settings.json](https://github.com/nicktehrany/dotfiles/blob/master/vscode/settings.json) file, and possibly add more of the vscode color variables you can set. A nicely compiled list of
 these can be found [here](https://gist.github.com/lol-russo/1c7a0b958be4b9434c5a120f24d5e7c3).
-
-## Credits
-
-Credits to [dotbot](https://github.com/anishathalye/dotbot/tree/043373ea74f85ff3c55a9c9f4eeb13ad7d694e71) for making
-setting up of dotfiles this simple, and the handy [aptget](https://github.com/dein0s/dotbot_plugin_aptget) plugin for
-installing required packages.

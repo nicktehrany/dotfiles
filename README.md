@@ -11,8 +11,11 @@ cd dotfiles
 Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) for packages that will be installed,
 if not already installed. **All existing links or config files will be overwritten!** (Check [.install.conf.yaml](https://github.com/nicktehrany/dotfiles/blob/master/install.conf.yaml) for all links)
 
-Then just open a new terminal. The updating and installing of submodules and vscode plugins will take a few minutes. Next, to have the
-status bar of tmux work correctly run inside tmux `prefix` + `I` to install required plugins via tpm, followed by
+Then just open a new konsole. The updating and installing of submodules and vscode plugins will take a few minutes.
+
+Next, to set the default konsole theme, open the konsole menu (`Ctrl` + `Shift` + `m`),
+under settings select manage profiles, then select `blue_default` and set it as default.
+Lastly, to have the status bar of tmux work correctly run inside tmux `prefix` + `I` to install required plugins via tpm, followed by
 reloading tmux with `prefix` + `R`.
 
 ## Commands

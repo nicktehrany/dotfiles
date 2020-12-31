@@ -7,5 +7,8 @@ addons:
   apt:
     update: true
 
+before_install:
+  - wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+
 script:
   - ./install

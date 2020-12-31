@@ -7,4 +7,6 @@
     ncdu:
     tmux:
     code:
+        ppa_source: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+        upgrade: true
     konsole:

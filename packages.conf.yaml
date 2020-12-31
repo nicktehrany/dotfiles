@@ -1,9 +1,10 @@
 - aptget:
+    wget:
+    apt-transport-https:
+    software-properties-common:
     vim:
     zsh:
     ncdu:
     tmux:
     code:
     konsole:
-    apt-transport-https:
-    wget:

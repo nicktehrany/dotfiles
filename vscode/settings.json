@@ -35,12 +35,10 @@
     "list.activeSelectionBackground": "#131522",
     "activityBarBadge.background": "#07996d",
     "activityBarBadge.foreground": "#ffffff"
-  },
-  "python.dataScience.alwaysTrustNotebooks": true,
+},
   "editor.fontFamily": "'Droid Sans Mono', 'monospace',  monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
-  "python.pythonPath": "/bin/python3",
-  "python.dataScience.sendSelectionToInteractiveWindow": true,
+"python.pythonPath": "/bin/python3",
   "workbench.colorTheme": "Ayu Dark Bordered",
   "material-icon-theme.folders.color": "#fdd835",
   "material-icon-theme.opacity": 1,
@@ -97,5 +95,8 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "java.refactor.renameFromFileExplorer": "autoApply",
   "latex-workshop.message.update.show": false,
-  "window.menuBarVisibility": "toggle"
+"window.menuBarVisibility": "toggle",
+"jupyter.alwaysTrustNotebooks": true,
+"jupyter.sendSelectionToInteractiveWindow": true,
+"python.languageServer": "Microsoft"
 }

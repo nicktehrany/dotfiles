@@ -5,3 +5,5 @@
     tmux:
     code:
     konsole:
+    apt-transport-https:
+    wget:

@@ -5,7 +5,7 @@ LineSpacing=0
 TabColor=255,255,255
 
 [Cursor Options]
-CursorShape=2
+CursorShape=0
 CustomCursorColor=255,255,255
 UseCustomCursorColor=true
 

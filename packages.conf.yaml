@@ -1,5 +1,4 @@
 - aptget:
-    wget:
     apt-transport-https:
     software-properties-common:
     vim:
@@ -7,6 +6,4 @@
     ncdu:
     tmux:
     code:
-        ppa_source: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-        upgrade: true
     konsole:

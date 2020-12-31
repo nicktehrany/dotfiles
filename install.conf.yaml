@@ -33,4 +33,4 @@
     - sudo mv lf /usr/local/bin
     - rm -rf lf-linux-amd64.tar.gz
     - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    - bash ./vscode/install.sh
+    - ./vscode/install.sh

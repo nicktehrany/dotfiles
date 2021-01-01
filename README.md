@@ -5,7 +5,7 @@
 ```shell
 git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
-./install
+sudo ./install
 ```
 
 Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) for packages that will be installed,

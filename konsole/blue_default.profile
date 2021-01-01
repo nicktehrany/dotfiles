@@ -10,7 +10,7 @@ CustomCursorColor=255,255,255
 UseCustomCursorColor=true
 
 [General]
-Command=/usr/bin/tmux
+Command=/usr/bin/zsh
 Icon=xfce-terminal
 LocalTabTitleFormat=%n %#
 Name=blue_default

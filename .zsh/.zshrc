@@ -25,6 +25,12 @@ bindkey -s '^q' 'ncdu\n'
 # autosuggestions accept suggestion with ctrl + space
 bindkey '^ ' autosuggest-accept
 
+# start tmux automatically when opening terminal
+if [ -z "$TMUX" ]
+then
+    tmux new
+fi
+
 plugins=(git sudo colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh

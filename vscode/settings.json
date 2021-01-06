@@ -12,7 +12,10 @@
     "andian",
     "cacheline",
     "ciphertext",
-    "tehrany"
+    "config",
+    "submodules",
+    "tehrany",
+    "vscode"
   ],
   "latex-workshop.view.pdf.viewer": "tab",
   "window.zoomLevel": 0,
@@ -35,7 +38,7 @@
     "list.activeSelectionBackground": "#131522",
     "activityBarBadge.background": "#07996d",
     "activityBarBadge.foreground": "#ffffff"
-},
+  },
   "editor.fontFamily": "'Droid Sans Mono', 'monospace',  monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "python.pythonPath": "/bin/python3",
@@ -99,5 +102,7 @@
   "jupyter.alwaysTrustNotebooks": true,
   "jupyter.sendSelectionToInteractiveWindow": true,
   "python.languageServer": "Microsoft",
-  "editor.cursorStyle": "block"
+  "editor.cursorStyle": "block",
+  "spellright.language": ["English (American)"],
+  "spellright.documentTypes": ["latex", "plaintext", "markdown"]
 }

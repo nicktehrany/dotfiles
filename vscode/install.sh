@@ -13,11 +13,11 @@ code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode-remote.vscode-remote-extensionpack
-code --install-extension ms-vscode.wordcount
 code --install-extension pkief.material-icon-theme
 code --install-extension ritwickdey.liveserver
-code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension yzane.markdown-pdf
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension teabyii.ayu
 code --install-extension mhutchie.git-graph
+code --install-extension hypnoes.word-count
+code --install-extension ban.spellright

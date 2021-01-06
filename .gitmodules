@@ -84,3 +84,4 @@
 [submodule "vscode/Dictionaries"]
 	path = vscode/Dictionaries
 	url = https://github.com/titoBouzout/Dictionaries
+	ignore = dirty

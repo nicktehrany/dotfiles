@@ -7,16 +7,6 @@
   },
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5,
-  "cSpell.userWords": [
-    "Journaling",
-    "andian",
-    "cacheline",
-    "ciphertext",
-    "config",
-    "submodules",
-    "tehrany",
-    "vscode"
-  ],
   "latex-workshop.view.pdf.viewer": "tab",
   "window.zoomLevel": 0,
   "explorer.confirmDelete": false,
@@ -103,6 +93,14 @@
   "jupyter.sendSelectionToInteractiveWindow": true,
   "python.languageServer": "Microsoft",
   "editor.cursorStyle": "block",
-  "spellright.language": ["English (American)"],
-  "spellright.documentTypes": ["latex", "plaintext", "markdown"]
+  "spellright.language": [
+    "English (American)"
+  ],
+  "spellright.documentTypes": [
+    "latex",
+    "plaintext",
+    "markdown"
+  ],
+  "spellright.notificationClass": "warning",
+  "spellright.configurationScope": "user"
 }

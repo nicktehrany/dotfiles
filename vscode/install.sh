@@ -14,7 +14,6 @@ code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode-remote.vscode-remote-extensionpack
 code --install-extension pkief.material-icon-theme
-code --install-extension ritwickdey.liveserver
 code --install-extension yzane.markdown-pdf
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension teabyii.ayu

@@ -7,3 +7,5 @@
 	rebase = false
 [credentials]
 	helper = store
+[credential]
+	helper = cache

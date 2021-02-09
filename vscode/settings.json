@@ -8,7 +8,6 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5,
   "latex-workshop.view.pdf.viewer": "tab",
-  "window.zoomLevel": 0,
   "explorer.confirmDelete": false,
   "git.confirmSync": false,
   "[latex]": {

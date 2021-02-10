@@ -5,8 +5,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 5,
   "latex-workshop.view.pdf.viewer": "tab",
   "explorer.confirmDelete": false,
   "git.confirmSync": false,
@@ -98,8 +96,11 @@
   "spellright.documentTypes": [
     "latex",
     "plaintext",
-    "markdown"
+    "markdown",
+    "makefile"
   ],
   "spellright.notificationClass": "warning",
-  "spellright.configurationScope": "user"
+  "spellright.configurationScope": "user",
+  "files.autoSave": "afterDelay",
+  "latex-workshop.latex.autoBuild.interval": 5000
 }

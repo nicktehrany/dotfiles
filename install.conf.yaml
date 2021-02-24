@@ -31,9 +31,13 @@
       path: vscode/spellright.dict
 
 - shell:
+    - wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    - sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    - sudo apt install apt-transport-https software-properties-common vim zsh ncdu tmux code konsole
     - wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz
     - tar xvf lf-linux-amd64.tar.gz
     - chmod +x lf
     - sudo mv lf /usr/local/bin
     - rm -rf lf-linux-amd64.tar.gz
+    - git submodules update --remote --merge
     - [bash ./vscode/install.sh, Installing vscode extensions]

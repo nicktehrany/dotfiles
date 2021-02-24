@@ -10,7 +10,7 @@
   "git.confirmSync": false,
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false
   },
   "diffEditor.ignoreTrimWhitespace": true,
   "[jsonc]": {
@@ -90,17 +90,18 @@
   "jupyter.sendSelectionToInteractiveWindow": true,
   "python.languageServer": "Microsoft",
   "editor.cursorStyle": "block",
-  "spellright.language": [
-    "English (American)"
-  ],
-  "spellright.documentTypes": [
-    "latex",
-    "plaintext",
-    "markdown",
-    "makefile"
-  ],
+  "spellright.language": ["English (American)"],
+  "spellright.documentTypes": ["latex", "plaintext", "markdown", "makefile"],
   "spellright.notificationClass": "warning",
   "spellright.configurationScope": "user",
   "files.autoSave": "afterDelay",
-  "latex-workshop.latex.autoBuild.interval": 5000
+  "latex-workshop.latex.autoBuild.interval": 5000,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "metals.customRepositories": [
+    "WASP"
+  ]
 }

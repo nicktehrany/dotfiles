@@ -6,6 +6,14 @@ dist: focal
 addons:
   apt:
     update: true
+    packages:
+      - apt-transport-https
+      - software-properties-common
+      - vim
+      - zsh
+      - ncdu
+      - tmux
+      - konsole
 
 script:
   - ./install

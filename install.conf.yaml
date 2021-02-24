@@ -39,5 +39,5 @@
     - chmod +x lf
     - sudo mv lf /usr/local/bin
     - rm -rf lf-linux-amd64.tar.gz
-    - git submodules update --remote --merge
+    - git submodule update --remote --merge
     - [bash ./vscode/install.sh, Installing vscode extensions]

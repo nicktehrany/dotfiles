@@ -91,17 +91,30 @@
   "python.languageServer": "Microsoft",
   "editor.cursorStyle": "block",
   "spellright.language": ["English (American)"],
-  "spellright.documentTypes": ["latex", "plaintext", "markdown", "makefile"],
+  "spellright.documentTypes": [
+    "latex",
+    "plaintext",
+    "markdown",
+    "makefile",
+    "bibtex"
+  ],
   "spellright.notificationClass": "warning",
   "spellright.configurationScope": "user",
-  "files.autoSave": "afterDelay",
-  "latex-workshop.latex.autoBuild.interval": 5000,
+  "latex-workshop.latex.autoBuild.interval": 1000,
   "files.watcherExclude": {
     "**/.bloop": true,
     "**/.metals": true,
     "**/.ammonite": true
   },
-  "metals.customRepositories": [
-    "WASP"
-  ]
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "spellright.parserByClass": {
+    "bibtex": {
+      "parser": "latex"
+    }
+  },
+  "javascript.suggest.autoImports": false
 }

@@ -78,6 +78,20 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
+      "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+      },
+      "italic": false
+    },
+    {
+      "tag": "[",
+      "color": "#d12613",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "transparent",
+      "bold": true,
       "italic": false
     }
   ],
@@ -91,21 +105,10 @@
   "python.languageServer": "Microsoft",
   "editor.cursorStyle": "block",
   "spellright.language": ["English (American)"],
-  "spellright.documentTypes": [
-    "latex",
-    "plaintext",
-    "markdown",
-    "makefile",
-    "bibtex"
-  ],
+  "spellright.documentTypes": ["latex", "plaintext", "markdown"],
   "spellright.notificationClass": "warning",
   "spellright.configurationScope": "user",
   "latex-workshop.latex.autoBuild.interval": 1000,
-  "files.watcherExclude": {
-    "**/.bloop": true,
-    "**/.metals": true,
-    "**/.ammonite": true
-  },
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -116,5 +119,33 @@
       "parser": "latex"
     }
   },
-  "javascript.suggest.autoImports": false
+  "javascript.suggest.autoImports": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "liveshare.allowGuestDebugControl": false,
+  "liveshare.allowGuestTaskControl": false,
+  "liveshare.guestApprovalRequired": true,
+  "liveshare.authenticationProvider": "GitHub",
+  "[scala]": {
+    "editor.defaultFormatter": "scalameta.metals"
+  },
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true,
+    "**/linux/**": true
+  },
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  }
 }

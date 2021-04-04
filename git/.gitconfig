@@ -9,3 +9,5 @@
 	helper = store
 [credential]
 	helper = cache
+[init]
+	defaultBranch = master

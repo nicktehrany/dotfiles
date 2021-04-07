@@ -34,7 +34,6 @@ Plugin 'lervag/vimtex'
 " Files
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ryanoasis/vim-webdevicons'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

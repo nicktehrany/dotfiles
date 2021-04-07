@@ -6,6 +6,9 @@
 git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
 sudo ./install
+
+# If want to install vscode extensions (takes a couple of minutes)
+./vscode/install.sh
 ```
 
 Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) for packages that will be installed,
@@ -35,7 +38,7 @@ If you only want to relink config files or run all commands except shell (in the
 
 ## Visuals
 
-The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).  
+The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).
 ![Visuals](images/visuals.png)
 
 ### VS Code

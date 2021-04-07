@@ -29,11 +29,12 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'majutsushi/tagbar'
+Plugin 'lervag/vimtex'
 
 " Files
-Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ryanoasis/vim-webdevicons'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,10 +50,13 @@ set shiftwidth=4
 set expandtab
 
 " Open NerdTree on CTRL-n and Auto open Tree if no files specified
-map <C-n> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden=1
+
+" Refresh NerdTree on Ctrl-r
+nmap <C-r> :NERDTreeFocus<cr> \| R \| <c-w><c-p>
 
 " When saving delete all trailing whitespaces at eof
 autocmd BufWritePre * %s/\s\+$//e
@@ -61,6 +65,14 @@ autocmd BufWritePre *.[ch] %s/\%$/\r/e
 
 " Enable autocompletion:
 set wildmode=longest,list,full
+
+" Compiling LaTeX documents with Ctrl+C
+map <C-c> \ll<CR>
+
+" Clear the log of vimtex with Ctrl+l
+map <C-l> \le<CR>
+
+let g:vimtex_view_method = 'zathura'
 
 " Spell Checker on <F6>
 map <F6> :setlocal spell! spelllang=en_us<CR>

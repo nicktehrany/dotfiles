@@ -54,6 +54,14 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden=1
 
+" When saving delete all trailing whitespaces at eof
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritePre * %s/\n\+\%$//e
+autocmd BufWritePre *.[ch] %s/\%$/\r/e
+
+" Enable autocompletion:
+set wildmode=longest,list,full
+
 " Spell Checker on <F6>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 

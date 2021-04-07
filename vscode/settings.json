@@ -147,5 +147,6 @@
   ],
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
-  }
+  },
+  "update.mode": "none"
 }

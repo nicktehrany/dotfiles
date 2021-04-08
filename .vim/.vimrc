@@ -1,3 +1,4 @@
+set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -33,6 +34,7 @@ Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Files
 Plugin 'scrooloose/nerdtree'
@@ -79,6 +81,7 @@ let g:vimtex_view_method = 'zathura'
 " Spell Checker on <F6>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
+let g:airline_powerline_fonts = 1
 
 " Markdown settings
 let g:vim_markdown_folding_disabled = 1

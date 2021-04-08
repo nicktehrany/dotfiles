@@ -47,9 +47,6 @@
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab
-[submodule ".vim/bundle/sparkup"]
-	path = .vim/bundle/sparkup
-	url = https://github.com/rstacruz/sparkup
 [submodule ".vim/bundle/nerdtree-git-plugin"]
 	path = .vim/bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin
@@ -91,3 +88,6 @@
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
+[submodule ".vim/bundle/vim-nerdtree-syntax-highlight"]
+	path = .vim/bundle/vim-nerdtree-syntax-highlight
+	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight

@@ -9,6 +9,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 
 " Color schemes
 Plugin 'flazz/vim-colorschemes'
+Plugin 'ryanoasis/vim-devicons'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -32,11 +33,11 @@ Plugin 'majutsushi/tagbar'
 Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Files
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'vwxyutarooo/nerdtree-devicons-syntax'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,6 +51,8 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
 " Open NerdTree on CTRL-n and Auto open Tree if no files specified
 map <C-b> :NERDTreeToggle<CR>

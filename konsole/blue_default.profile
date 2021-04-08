@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 ColorScheme=DarkPastels
-Font=Hack,10,-1,5,50,0,0,0,0,0
+Font=Hack Nerd Font,10,-1,5,50,0,0,0,0,0
 LineSpacing=0
 TabColor=255,255,255
 UseFontLineChararacters=false

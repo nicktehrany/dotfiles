@@ -30,6 +30,8 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'majutsushi/tagbar'
 Plugin 'lervag/vimtex'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " Files
 Plugin 'scrooloose/nerdtree'
@@ -75,6 +77,12 @@ let g:vimtex_view_method = 'zathura'
 
 " Spell Checker on <F6>
 map <F6> :setlocal spell! spelllang=en_us<CR>
+
+
+" Markdown settings
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_json_frontmatter = 1
 
 nmap <F8> :TagbarToggle<CR>
 

@@ -32,6 +32,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'ryanoasis/vim-devicons'
 
 " Files
 Plugin 'scrooloose/nerdtree'

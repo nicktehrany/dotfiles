@@ -36,6 +36,10 @@ If you only want to relink config files or run all commands except shell (in the
 ./install --except shell
 ```
 
+## Helpful Commands
+
+Since there are a lot of commands for the different applications, I made a handy [gist](https://gist.github.com/nicktehrany/7126ec0ad18f0af050e15596371ceea5) with the most frequently used commands that I use. This does include some applications that are not mentioned in my dotfiles, and overwritten OS shortcuts.
+
 ## Visuals
 
 The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).

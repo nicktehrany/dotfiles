@@ -40,7 +40,7 @@ Plugin 'vwxyutarooo/nerdtree-devicons-syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme codedark
+silent! colorscheme codedark
 
 set number
 set rnu

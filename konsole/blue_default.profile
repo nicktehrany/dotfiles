@@ -26,6 +26,7 @@ TerminalRows=28
 [Interaction Options]
 AutoCopySelectedText=true
 CopyTextAsHTML=false
+MouseWheelZoomEnabled=false
 TrimLeadingSpacesInSelectedText=true
 TrimTrailingSpacesInSelectedText=true
 

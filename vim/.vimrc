@@ -5,7 +5,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'wincent/command-t'
 
 " Color schemes
 Plugin 'flazz/vim-colorschemes'
@@ -56,7 +56,17 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 map <C-b> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
+
+" Vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline_symbols = {}
+let g:airline_symbols.branch = ''
+
+"  Leader (\) + Shift and Leader + Shift + Tab to switch between buffers
+map <Leader><S-tab> :bprevious<CR>
+map <Leader><tab> :bnext<CR>
 
 " Refresh NerdTree on Ctrl-r
 nmap <C-r> :NERDTreeFocus<cr> \| R \| <c-w><c-p>

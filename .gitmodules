@@ -1,16 +1,26 @@
+[submodule "textemp"]
+	path = textemp
+	url = https://github.com/nicktehrany/textemp
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "tmux/tmux-plugins/tpm"]
+	path = tmux/tmux-plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "vscode/Dictionaries"]
+	path = vscode/Dictionaries
+	url = https://github.com/titoBouzout/Dictionaries
+	ignore = dirty
+[submodule "zsh/ohmyzsh"]
+	path = zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/preservim/nerdtree
-[submodule "vim/bundle/ZoomWin"]
-	path = vim/bundle/ZoomWin
-	url = https://github.com/vim-scripts/ZoomWin
-	ignore = dirty
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround
 [submodule "vim/bundle/vim-polyglot"]
 	path = vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
@@ -40,7 +50,7 @@
 	url = https://github.com/tomtom/tcomment_vim
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar
+	url = https://github.com/preservim/tagbar
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic
@@ -53,32 +63,9 @@
 [submodule "vim/bundle/gitv"]
 	path = vim/bundle/gitv
 	url = https://github.com/gregsexton/gitv
-[submodule "vim/bundle/ctrlp.vim"]
-	path = vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/command-t
-[submodule "zsh/ohmyzsh"]
-	path = zsh/ohmyzsh
-	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule ".zsh/zsh-syntax-highlighting"]
-	path = .zsh/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule "textemp"]
-	path = textemp
-	url = https://github.com/nicktehrany/textemp
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
-[submodule "tmux/tmux-plugins/tpm"]
-	path = tmux/tmux-plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
-[submodule "vscode/Dictionaries"]
-	path = vscode/Dictionaries
-	url = https://github.com/titoBouzout/Dictionaries
-	ignore = dirty
 [submodule "vim/bundle/vimtex"]
 	path = vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex
@@ -94,3 +81,6 @@
 [submodule "vim/bundle/nerdtree-devicons-syntax"]
 	path = vim/bundle/nerdtree-devicons-syntax
 	url = https://github.com/vwxyutarooo/nerdtree-devicons-syntax
+[submodule "zsh/zsh-syntax-highlighting"]
+	path = zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting

@@ -21,10 +21,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Utility
-Plugin 'tpope/vim-surround'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'vim-scripts/ZoomWin'
 Plugin 'ervandew/supertab'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-syntastic/syntastic'

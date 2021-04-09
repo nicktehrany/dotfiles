@@ -8,7 +8,7 @@
 
 - link:
     ~/.vimrc:
-      path: .vim/.vimrc
+      path: vim/.vimrc
     ~/.zshrc:
       path: .zsh/.zshrc
     ~/.tmux.conf:
@@ -20,7 +20,7 @@
     ~/.oh-my-zsh:
       path: .zsh/ohmyzsh
     ~/.vim:
-      path: .vim
+      path: vim
     ~/.config/Code/User/settings.json:
       path: vscode/settings.json
     ~/.local/share/konsole/blue_default.profile:

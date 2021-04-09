@@ -59,8 +59,8 @@
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/command-t
-[submodule ".zsh/ohmyzsh"]
-	path = .zsh/ohmyzsh
+[submodule "zsh/ohmyzsh"]
+	path = zsh/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
 [submodule ".zsh/zsh-syntax-highlighting"]
 	path = .zsh/zsh-syntax-highlighting

@@ -10,15 +10,15 @@
     ~/.vimrc:
       path: vim/.vimrc
     ~/.zshrc:
-      path: .zsh/.zshrc
+      path: zsh/.zshrc
     ~/.tmux.conf:
       path: tmux/.tmux.conf
     ~/.gitconfig:
       path: git/.gitconfig
     ~/.zsh:
-      path: .zsh
+      path: zsh
     ~/.oh-my-zsh:
-      path: .zsh/ohmyzsh
+      path: zsh/ohmyzsh
     ~/.vim:
       path: vim
     ~/.config/Code/User/settings.json:

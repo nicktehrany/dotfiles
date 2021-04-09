@@ -2,12 +2,14 @@
 
 ## Installation
 
-```shell
+```bash
 git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
 sudo ./install
+```
 
-# If want to install vscode extensions (takes a couple of minutes)
+I currently don't use vscode so the install is disabled, but if you want to install vscode along with all the extensions run
+```bash
 ./vscode/install.sh
 ```
 

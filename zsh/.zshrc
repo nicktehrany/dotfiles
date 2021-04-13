@@ -3,6 +3,7 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 export TEXTEMP="$HOME/dotfiles/textemp"
 
 # PROMPT='%{$fg_bold[blue]%}%~ %{$reset_color%}%{$fg_bold[white]\$%} '
+stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
 ZSH_THEME="robbyrussell"
 
@@ -39,10 +40,5 @@ source $HOME/dotfiles/textemp/textemp.sh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases
-alias gs="git status"
-alias gc="git commit"
-alias ga="git add"
-alias gpush="git push"
 alias gstore="git config credential.helper store"
 alias glog="git log --all --graph --decorate --oneline"
-alias gd="git diff"

@@ -52,6 +52,10 @@ set expandtab
 
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
+" Mapping Ctrl s to save (a to enter insert mode again)
+nmap <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>a
+
 " Open NerdTree on CTRL-n and Auto open Tree if no files specified
 map <C-b> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1

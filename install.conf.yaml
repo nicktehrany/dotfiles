@@ -31,12 +31,14 @@
       path: vscode/spellright.dict
     ~/.config/zathura/zathurarc:
       path: zathura/zathurarc
+    ~/.config/polybar/config:
+      path: polybar/config
 
 - shell:
     - git submodule update --remote --merge
     - vim -E -s -u ~/.vimrc +PluginInstall +qall
     - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    - sudo apt install -y apt-transport-https software-properties-common vim zsh ncdu tmux konsole zathura-pdf-poppler xdotool exuberant-ctags
+    - sudo apt install -y apt-transport-https software-properties-common vim zsh ncdu tmux konsole zathura-pdf-poppler xdotool exuberant-ctags polybar
     - wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz
     - tar xvf lf-linux-amd64.tar.gz
     - chmod +x lf

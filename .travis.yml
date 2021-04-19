@@ -15,6 +15,7 @@ addons:
       - tmux
       - konsole
       - zathura-pdf-poppler
+      - polybar
 
 script:
   - ./install

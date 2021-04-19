@@ -25,6 +25,14 @@ reloading tmux with `prefix` + `R`.
 
 Next we have to install a font to be able to use nerd font icons in vim. I use the [Hack Regular Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf) for this. Just have to download and install it, devicons should then directly work since the font is already set in the konsole config (if using a different font just change the font in the konsole config).
 
+I'm using gnome therefore I use the `Hide Top Bar` extension for hidin the top bar so that polybar can run on top of it. Then to enable the polybar run
+
+```bash
+polybar/launch.sh
+```
+
+I'm still working on finishing the polybar and adding something for automatically starting polybar
+
 ## Commands
 
 In order to update submodules if their remote repository changes.

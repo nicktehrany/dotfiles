@@ -1,5 +1,9 @@
 # Dotfiles <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a> [![Build Status](https://travis-ci.com/nicktehrany/dotfiles.svg?branch=master)](https://travis-ci.com/nicktehrany/dotfiles)
 
+## Requirements
+
+- [polybar](https://github.com/polybar/polybar), can build it from sources or check if the os repo has it
+
 ## Installation
 
 ```bash
@@ -25,7 +29,7 @@ reloading tmux with `prefix` + `R`.
 
 Next we have to install a font to be able to use nerd font icons in vim. I use the [Hack Regular Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf) for this. Just have to download and install it, devicons should then directly work since the font is already set in the konsole config (if using a different font just change the font in the konsole config).
 
-I'm using gnome therefore I use the `Hide Top Bar` extension for hidin the top bar so that polybar can run on top of it. Then to enable the polybar run
+I'm using gnome therefore I use the [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/) extension for hidin the top bar so that polybar can run on top of it. Then to enable the polybar run
 
 ```bash
 polybar/launch.sh

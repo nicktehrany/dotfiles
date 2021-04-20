@@ -40,7 +40,7 @@ Plugin 'vwxyutarooo/nerdtree-devicons-syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-silent! colorscheme 0x7A69_dark
+silent! colorscheme codedark
 
 let g:airline_theme='deus'
 

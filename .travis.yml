@@ -9,6 +9,7 @@ addons:
     packages:
       - apt-transport-https
       - software-properties-common
+      - tar
       - vim
       - zsh
       - ncdu

@@ -4,3 +4,4 @@ map s set info size
 map i set info size:time
 map I set info
 map h set hidden!
+map <esc> quit

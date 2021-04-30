@@ -39,8 +39,11 @@
     - vim -E -s -u ~/.vimrc +PluginInstall +qall
     - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     - sudo apt install -y apt-transport-https software-properties-common vim zsh ncdu tmux konsole zathura-pdf-poppler xdotool exuberant-ctags
+    - mdkir temp
+    - cd temp
     - wget https://github.com/gokcehan/lf/releases/download/r22/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz
     - tar xvf lf-linux-amd64.tar.gz
     - chmod +x lf
     - sudo mv lf /usr/local/bin
-    - rm -rf lf-linux-amd64.tar.gz
+    - cd ..
+    - rm -rf temp

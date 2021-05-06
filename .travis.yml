@@ -17,4 +17,5 @@ addons:
       - zathura-pdf-poppler
 
 script:
-  - ./install
+  - ./install-profile default
+  - ./install-profile full

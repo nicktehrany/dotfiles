@@ -7,17 +7,7 @@
       path: vscode/spellright.dict
 
 - shell:
-    - 
-      command: wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - && 
+    - wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - &&
       sudo add-apt-repository "deb [arch=amd63] https://packages.microsoft.com/repos/vscode stable main" &&
       sudo apt install code
-      description: Installing VSCode
-      quiet: true
-      stderr: true
-      stdout: true
-    -
-      command: ./vscode/install
-      description: Installing VSCode extensions
-      stdout: true
-      stderr: true
-
+    - ./vscode/install

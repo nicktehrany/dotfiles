@@ -150,6 +150,7 @@
   },
   "update.mode": "none",
   "liveServer.settings.donotShowInfoMsg": true,
-  "dotfiles.repository": "https://github.com/nicktehrany/dotfiles",
-  "dotfiles.installCommand": "sudo ./install-profile container"
+  "remote.containers.dotfiles.targetPath": "~/dotfiles",
+  "remote.containers.dotfiles.repository": "https://github.com/nicktehrany/dotfiles",
+  "remote.containers.dotfiles.installCommand": "~/dotfiles/install-profile container"
 }

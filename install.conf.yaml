@@ -50,6 +50,7 @@
       description: Installing zsh autosuggestions
       stderr: true
       stdout: true
+      quiet: true
     - 
       command: sudo apt install -y apt-transport-https software-properties-common vim zsh ncdu tmux konsole zathura-pdf-poppler xdotool exuberant-ctags
       description: Installing required Packages

@@ -35,17 +35,10 @@
       command: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       description: Installing zsh autosuggestions
       stderr: true
-      stdout: true
       quiet: true
     - 
       command: sudo apt install -y apt-transport-https software-properties-common vim zsh ncdu tmux konsole zathura-pdf-poppler xdotool exuberant-ctags
       description: Installing required Packages
       quiet: true
-      stderr: true
-      stdout: true
     - 
-      commmand: mkdir temp && cd temp && wget https://github.com/gokcehan/lf/releases/download/r22/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz && tar -xvf lf-linux-amd64.tar.gz && chmod +x lf && sudo mv lf /usr/local/bin ; cd .. ; rm -rf temp
-      description: Installing lf terminal file manager
-      quiet: true
-      stderr: true
-      stdout: true
+      mkdir temp-inst && cd temp-inst && wget https://github.com/gokcehan/lf/releases/download/r22/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz && tar -xvf lf-linux-amd64.tar.gz && chmod +x lf && sudo mv lf /usr/local/bin ; cd .. ; rm -rf temp-inst

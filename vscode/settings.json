@@ -148,5 +148,6 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
-  "update.mode": "none"
+  "update.mode": "none",
+  "liveServer.settings.donotShowInfoMsg": true
 }

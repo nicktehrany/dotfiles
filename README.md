@@ -10,8 +10,8 @@
 git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
 
-# For installing the base profile
-sudo ./install-profile base
+# For installing the default profile
+sudo ./install-profile default
 ```
 
 Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) for packages that will be installed,
@@ -44,13 +44,6 @@ In order to update submodules if their remote repository changes.
 
 ```shell
 git submodule update --remote --merge
-```
-
-If you only want to relink config files or run all commands except shell (in the [.install.conf.yaml](https://github.com/nicktehrany/dotfiles/blob/master/install.conf.yaml) file)
-
-```shell
-./install --only link # or
-./install --except shell
 ```
 
 ## Helpful Commands

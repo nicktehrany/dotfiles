@@ -18,5 +18,5 @@ addons:
       - exuberant-ctags
 
 script:
-  - ./install-profile base
+  - ./install-profile default
   - ./install-profile full

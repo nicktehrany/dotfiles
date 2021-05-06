@@ -15,7 +15,8 @@ addons:
       - tmux
       - konsole
       - zathura-pdf-poppler
+      - exuberant-ctags
 
 script:
-  - ./install-profile default
+  - ./install-profile base
   - ./install-profile full

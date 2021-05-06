@@ -10,14 +10,14 @@
 git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
 
-# For installing the default profile
-sudo ./install-profile
+# For installing the base profile
+sudo ./install-profile base
 ```
 
 Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) for packages that will be installed,
-if not already installed. **All existing links or config files will be overwritten!** (Check [.install.conf.yaml](https://github.com/nicktehrany/dotfiles/blob/master/install.conf.yaml) for all links)
+if not already installed. **All existing links or config files will be overwritten!** (Check [default-conf.yaml](https://github.com/nicktehrany/dotfiles/blob/master/meta/configs/default-conf.yaml) for all links)
 
-I currently don't use vscode so the install is disabled, but if you want to install vscode along with all the extensions run
+I currently don't use vscode so the install is in a different config, but if you want to install vscode along with all the extensions run
 
 ```bash
 sudo ./install-profile full

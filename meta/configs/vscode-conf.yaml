@@ -1,9 +1,3 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-      force: true
-
 - link:
     ~/.config/Code/User/settings.json:
       path: vscode/settings.json

@@ -6,6 +6,10 @@ dist: focal
 git:
   depth: 1
 
+branches:
+  only:
+    - master
+
 addons:
   apt:
     update: true

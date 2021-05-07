@@ -24,6 +24,17 @@ addons:
       - zathura-pdf-poppler
       - exuberant-ctags
 
-script:
-  - ./install-profile default
-  - ./install-profile container
+jobs:
+  include:
+    - name: Default Profile Install
+      script:
+      - ./install-profile default
+
+    - name: Container Profile Install
+      script:
+      - ./install-profile container
+    
+    allow_failures:
+      - name: Full Profile Install
+        script:
+        - ./install-profile full

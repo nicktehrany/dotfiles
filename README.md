@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- the default profile contains [polybar](https://github.com/polybar/polybar)configs, however these won't be useful until it is installed, can build it from sources or check if the os repo has it. Therefore if you do not want polybar no need to install it.
+- the default profile contains [polybar](https://github.com/polybar/polybar) configs, however these won't be useful until it is installed, can build it from sources or check if the os repo has it. Therefore if you do not want polybar no need to install it.
 
 ## Installation
 

@@ -25,6 +25,8 @@ sudo ./install-profile full
 
 Next, to set the default konsole theme, open the konsole menu (`Ctrl` + `Shift` + `m`),
 under settings select manage profiles, then select `blue_default` and set it as default.
+Lastly, to have the status bar of tmux work correctly run inside tmux `prefix` + `I` to install required plugins via tpm, followed by
+reloading tmux with `prefix` + `R`.
 
 Next we have to install a font to be able to use nerd font icons in vim. I use the [Hack Regular Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf) for this. Just have to download and install it, devicons should then directly work since the font is already set in the konsole config (if using a different font just change the font in the konsole config).
 
@@ -35,6 +37,12 @@ polybar/launch.sh
 ```
 
 I'm still working on finishing the polybar and adding something for automatically starting polybar
+
+When installing vscode, the extensions can be installed via (this takes quite some time
+
+```bash
+./vscode/install.sh
+```
 
 ## Commands
 

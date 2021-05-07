@@ -27,3 +27,4 @@ addons:
 script:
   - ./install-profile default
   - ./install-profile container
+  - ./install-profile full

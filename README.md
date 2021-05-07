@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- [polybar](https://github.com/polybar/polybar), can build it from sources or check if the os repo has it
+- the default profile contains [polybar](https://github.com/polybar/polybar)configs, however these won't be useful until it is installed, can build it from sources or check if the os repo has it. Therefore if you do not want polybar no need to install it.
 
 ## Installation
 
@@ -17,18 +17,14 @@ sudo ./install-profile default
 Check the [.travis.yml](https://github.com/nicktehrany/dotfiles/blob/master/.travis.yml) for packages that will be installed,
 if not already installed. **All existing links or config files will be overwritten!** (Check [default-conf.yaml](https://github.com/nicktehrany/dotfiles/blob/master/meta/configs/default-conf.yaml) for all links)
 
-I currently don't use vscode so the install is in a different config, but if you want to install vscode along with all the extensions run
-
-```bash
-sudo ./install-profile full
-```
-
 Next, to set the default konsole theme, open the konsole menu (`Ctrl` + `Shift` + `m`),
 under settings select manage profiles, then select `blue_default` and set it as default.
 Lastly, to have the status bar of tmux work correctly run inside tmux `prefix` + `I` to install required plugins via tpm, followed by
 reloading tmux with `prefix` + `R`.
 
 Next we have to install a font to be able to use nerd font icons in vim. I use the [Hack Regular Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf) for this. Just have to download and install it, devicons should then directly work since the font is already set in the konsole config (if using a different font just change the font in the konsole config).
+
+### Running polybar
 
 I'm using gnome therefore I use the [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/) extension for hiding the top bar so that polybar can run on top of it. Then to enable the polybar run
 
@@ -38,10 +34,18 @@ polybar/launch.sh
 
 I'm still working on finishing the polybar and adding something for automatically starting polybar
 
-When installing vscode, the extensions can be installed via (this takes quite some time
+### Installing full profile with VSCode
+
+My vscode configs are in the full profile, as I currently do not really use it, but this can be installed with
 
 ```bash
-./vscode/install.sh
+sudo ./install-profile full
+```
+
+When installing vscode from the [full profile](meta/profiles/full) with the [vscode-conf.yaml](meta/configs/vscode-conf.yaml), only config files will be linked, installing of vscode and extensions still needs to be done (as this takes quite some time I left it out). But this can easily be run with the vscode installer script
+
+```bash
+sudo ./vscode/install.sh
 ```
 
 ## Commands

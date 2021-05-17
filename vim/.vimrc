@@ -54,6 +54,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" auto wrap at 120 width for certain files
+au BufRead,BufNewFile *.md,*.tex,*.txt setlocal textwidth=120
+
 " Disable gitgutter mappings, as they cause delays in other mappings due to
 " vim waiting for timeout of command
 let g:gitgutter_map_keys = 0

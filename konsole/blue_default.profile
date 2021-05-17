@@ -1,6 +1,6 @@
 [Appearance]
 AntiAliasFonts=true
-ColorScheme=DarkPastels
+ColorScheme=Gruvbox
 Font=Hack Nerd Font,10,-1,5,50,0,0,0,0,0
 LineSpacing=0
 TabColor=255,255,255

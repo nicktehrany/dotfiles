@@ -23,6 +23,8 @@ addons:
       - konsole
       - zathura-pdf-poppler
       - exuberant-ctags
+      - fonts-powerline
+      - ack-grep
 
 script:
   - ./install-profile default

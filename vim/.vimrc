@@ -5,11 +5,10 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'wincent/command-t'
 
 " Color schemes
-Plugin 'flazz/vim-colorschemes'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'morhetz/gruvbox'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -24,6 +23,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'ervandew/supertab'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'sheerun/vim-polyglot'
@@ -40,10 +41,11 @@ Plugin 'vwxyutarooo/nerdtree-devicons-syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-silent! colorscheme codedark
+silent! colorscheme gruvbox
 
-let g:airline_theme='deus'
+let g:airline_theme='base16_gruvbox_dark_hard'
 
+let mapleader = "\<Space>"
 set number
 set rnu
 syntax on
@@ -52,25 +54,45 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Disable gitgutter mappings, as they cause delays in other mappings due to
+" vim waiting for timeout of command
+let g:gitgutter_map_keys = 0
+
+" Remap default window movement
+map <leader>h :wincmd h<CR>
+map <leader>l :wincmd l<CR>
+map <leader>j :wincmd j<CR>
+map <leader>k :wincmd k<CR>
+
+" Correct Padding for NerdTree Glyphs
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+
+" CtrlP file finding shortcut
+nmap <leader>f :CtrlP<CR>
+let g:ctrlp_show_hidden = 1
 
 " Mapping Ctrl s to save (a to enter insert mode again)
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
 
-" Open NerdTree on CTRL-n and Auto open Tree if no files specified
+" Open NerdTree on CTRL-b and Auto open Tree if no files specified
 map <C-b> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden = 1
 
+" Quit NerdTree once a file is opened
+let NERDTreeQuitOnOpen = 1
+
 " Vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#scrollbar#enabled = 0
+let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
 let g:airline_symbols.branch = ''
 
-"  Leader (\) + Shift and Leader + Shift + Tab to switch between buffers
+"  Leader + Shift and Leader + Shift + Tab to switch between buffers
 map <Leader><S-tab> :bprevious<CR>
 map <Leader><tab> :bnext<CR>
 

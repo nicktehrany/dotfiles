@@ -1,13 +1,44 @@
 [user]
 	name = Nick
 	email = nicktehrany1@gmail.com
+
 [core]
 	editor = vim
+
+[push]
+    default = simple
+
 [pull]
 	rebase = false
+
 [credentials]
 	helper = store
+
 [credential]
 	helper = cache
+
 [init]
 	defaultBranch = master
+
+[advice]
+    statusHints = false
+
+[color "diff"]
+   meta = yellow
+   frag = magenta
+   old = red
+   new = green
+
+[color "branch"]
+   current = yellow reverse
+   local = yellow
+   remote = green
+
+[color "status"]
+   added = yellow
+   changed = green
+   untracked = cyan
+
+[alias]
+    coloredLog = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !"git coloredLog"

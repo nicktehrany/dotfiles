@@ -32,6 +32,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Files
 Plugin 'scrooloose/nerdtree'
@@ -57,6 +58,10 @@ set expandtab
 " auto wrap at 120 width for certain files
 au BufRead,BufNewFile *.md,*.tex,*.txt setlocal textwidth=120
 
+" For locating tags, and then jumping to function defs with Ctrl + ] and back
+" to previous location with Ctrl + o
+set tags=tags;/
+
 " Disable gitgutter mappings, as they cause delays in other mappings due to
 " vim waiting for timeout of command
 let g:gitgutter_map_keys = 0
@@ -79,9 +84,10 @@ nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
 
 " Open NerdTree on CTRL-b and Auto open Tree if no files specified
-map <C-b> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+map <C-b> :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 
 " Quit NerdTree once a file is opened

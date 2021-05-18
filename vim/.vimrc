@@ -67,11 +67,13 @@ set incsearch
 set noshowmode
 set hidden
 set scrolloff=8
-set colorcolumn=120
 set hls
 
-" auto wrap at 120 width for certain files
-au BufRead,BufNewFile *.md,*.tex,*.txt setlocal textwidth=120
+" Wrap all files where writing text
+augroup WrapText
+    autocmd!
+    autocmd FileType markdown,latex,text setlocal wrap textwidth=120
+augroup END
 
 " double Esc to clear highlights after search
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
@@ -96,7 +98,7 @@ map <leader>u :UndotreeShow<CR>
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
 " CtrlP file finding shortcut
-nmap <leader>f :CtrlP<CR>
+nnoremap <leader>f :CtrlP<CR>
 let g:ctrlp_show_hidden = 1
 
 " Mapping Ctrl s to save (a to enter insert mode again)
@@ -154,10 +156,10 @@ map <F6> :setlocal spell! spelllang=en_us<CR>
 " Automatically load spell check in certain files
 " Use autogroup to group listeners and remove all active listeners from
 " group with autocmd! when resourcing vimrc
-augroup Spell
+augroup Spellcheck
     autocmd!
-    autocmd FileType markdown,text,latex setlocal spell
-    autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell
+    autocmd FileType markdown,text,latex setlocal spell spelllang=en_us
+    autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
 augroup END
 
 " Markdown settings

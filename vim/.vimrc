@@ -54,6 +54,13 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set noerrorbells
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
 
 " auto wrap at 120 width for certain files
 au BufRead,BufNewFile *.md,*.tex,*.txt setlocal textwidth=120
@@ -100,6 +107,9 @@ let g:airline#extensions#scrollbar#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
 let g:airline_symbols.branch = ''
+
+" tagbar settings
+let g:tagbar_compact = 1
 
 "  Leader + Shift and Leader + Shift + Tab to switch between buffers
 map <Leader><S-tab> :bprevious<CR>

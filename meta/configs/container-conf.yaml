@@ -15,24 +15,27 @@
       path: vim
 
 - shell:
-    - 
+    -
       command: git submodule update --remote --merge
       description: Updating Submodules
       stderr: true
       stdout: true
-    - 
+    -
       command: vim -E -s -u ~/.vimrc +PluginInstall +qall
       description: Installing Vim plugins
       stderr: true
       stdout: true
-    - 
+    -
+      command: mkdir -p ~/.vim/undodir
+      description: Creating vim undodir
+    -
       command: test -d zsh/ohmyzsh/custom/plugins/zsh-autosuggestions && echo "zsh-autosuggestions exists" || git clone https://github.com/zsh-users/zsh-autosuggestions zsh/ohmyzsh/custom/plugins/zsh-autosuggestions
       description: Installing zsh autosuggestions
       stderr: true
       quiet: true
-    - 
+    -
       command: sudo apt install -y vim zsh ncdu tmux exuberant-ctags
       description: Installing required Packages
       quiet: true
-    - 
+    -
       mkdir temp-inst && cd temp-inst && wget https://github.com/gokcehan/lf/releases/download/r22/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz && tar -xvf lf-linux-amd64.tar.gz && chmod +x lf && sudo mv lf /usr/local/bin ; cd .. ; rm -rf temp-inst

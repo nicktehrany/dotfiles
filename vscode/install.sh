@@ -31,3 +31,4 @@ code --install-extension teabyii.ayu --user-data-dir=$HOME
 code --install-extension mhutchie.git-graph --user-data-dir=$HOME
 code --install-extension hypnoes.word-count --user-data-dir=$HOME
 code --install-extension ban.spellright --user-data-dir=$HOME
+code --install-extension sainhe.gruvbox-material --user-data-dir=$HOME

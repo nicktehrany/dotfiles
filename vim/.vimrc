@@ -33,6 +33,7 @@ Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'mbbill/undotree'
 
 " Files
 Plugin 'scrooloose/nerdtree'
@@ -42,6 +43,7 @@ Plugin 'vwxyutarooo/nerdtree-devicons-syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+let g:gruvbox_guisp_fallback = "bg"
 silent! colorscheme gruvbox
 
 let g:airline_theme='base16_gruvbox_dark_hard'
@@ -55,15 +57,24 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set noerrorbells
+set ignorecase
 set smartcase
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set noshowmode
+set hidden
+set scrolloff=8
+set colorcolumn=120
+set hls
 
 " auto wrap at 120 width for certain files
 au BufRead,BufNewFile *.md,*.tex,*.txt setlocal textwidth=120
+
+" double Esc to clear highlights after search
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
 " For locating tags, and then jumping to function defs with Ctrl + ] and back
 " to previous location with Ctrl + o
@@ -78,6 +89,8 @@ map <leader>h :wincmd h<CR>
 map <leader>l :wincmd l<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
+
+map <leader>u :UndotreeShow<CR>
 
 " Correct Padding for NerdTree Glyphs
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
@@ -96,6 +109,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 map <C-b> :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
+let NERDTreeMinimalUI = 1
 
 " Quit NerdTree once a file is opened
 let NERDTreeQuitOnOpen = 1
@@ -136,6 +150,15 @@ let g:vimtex_view_method = 'zathura'
 
 " Spell Checker on <F6>
 map <F6> :setlocal spell! spelllang=en_us<CR>
+
+" Automatically load spell check in certain files
+" Use autogroup to group listeners and remove all active listeners from
+" group with autocmd! when resourcing vimrc
+augroup Spell
+    autocmd!
+    autocmd FileType markdown,text,latex setlocal spell
+    autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell
+augroup END
 
 " Markdown settings
 let g:vim_markdown_folding_disabled = 1

@@ -45,6 +45,7 @@ filetype plugin indent on    " required
 
 let g:gruvbox_guisp_fallback = "bg"
 silent! colorscheme gruvbox
+set background=dark
 
 let g:airline_theme='base16_gruvbox_dark_hard'
 

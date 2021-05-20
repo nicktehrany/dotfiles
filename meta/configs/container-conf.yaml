@@ -1,6 +1,6 @@
 - link:
     ~/.vimrc:
-      path: vim/.vimrc
+      path: vim/.min-vimrc
     ~/.zshrc:
       path: zsh/.zshrc
     ~/.tmux.conf:
@@ -16,22 +16,14 @@
 
 - shell:
     -
-      command: git submodule update --init --merge --remote zsh/ohmyzsh vim/bundle/Vundle.vim meta/dotbot
+      command: git submodule update --init --merge --remote zsh/ohmyzsh meta/dotbot
       description: Updating Submodules
       stderr: true
       stdout: true
     -
-      command: sudo apt install -y vim zsh ncdu tmux exuberant-ctags
+      command: sudo apt install -y vim zsh ncdu
       description: Installing required Packages
       quiet: true
-    -
-      command: mkdir -p ~/.vim/undodir
-      description: Creating vim undodir
-    -
-      command: vim -E -s -u ~/.vimrc +PluginInstall +qall
-      description: Installing Vim plugins
-      stderr: true
-      stdout: true
     -
       command: test -d zsh/ohmyzsh/custom/plugins/zsh-autosuggestions && echo "zsh-autosuggestions exists" || git clone https://github.com/zsh-users/zsh-autosuggestions zsh/ohmyzsh/custom/plugins/zsh-autosuggestions
       description: Installing zsh autosuggestions

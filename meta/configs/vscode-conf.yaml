@@ -5,3 +5,10 @@
       path: vscode/Dictionaries
     ~/.config/Code/User/spellright.dict:
       path: vscode/spellright.dict
+
+- shell:
+    -
+      command: git submodule update --init --merge --remote vscode/Dictionaries
+      description: Updating Submodules
+      stderr: true
+      stdout: true

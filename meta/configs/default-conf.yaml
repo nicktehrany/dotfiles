@@ -17,8 +17,6 @@
       path: konsole/blue_default.profile
     ~/.config/zathura/zathurarc:
       path: zathura/zathurarc
-    ~/.config/polybar/config:
-      path: polybar/config
 
 - shell:
     -

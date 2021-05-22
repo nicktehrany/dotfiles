@@ -1,0 +1,9 @@
+- link:
+    ~/.config/polybar/config:
+      path: polybar/config
+
+- shell:
+    -
+      command: sudo apt install -y polybar
+      description: Installing required Packages
+      quiet: true

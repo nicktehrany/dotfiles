@@ -27,6 +27,6 @@ addons:
       - ack-grep
 
 script:
-  - ./install-profile default
+  - ./install-profile default polybar
   - ./install-profile container
   - ./install-profile full

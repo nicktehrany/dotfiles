@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 BLUE=$'\033[1;34m'
 RED=$'\033[1;31m'
 WHITE=$'\033[1;37m'
@@ -22,7 +21,7 @@ function startPolybar(){
     # Terminate already running bar instances
     killall -q polybar
 
-    echo "---" | tee -a /tmp/polybar.log $> /dev/null
+    echo "---" | tee -a /tmp/polybar.log &> /dev/null
     polybar bar 2>&1 | tee -a /tmp/polybar.log & disown
     echo "${GREEN}Launched polybar! You can close this terminal now."
 }

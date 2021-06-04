@@ -4,6 +4,7 @@
 [submodule "tmux/tmux-plugins/tpm"]
 	path = tmux/tmux-plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+    ignore = dirty
 [submodule "vscode/Dictionaries"]
 	path = vscode/Dictionaries
 	url = https://github.com/titoBouzout/Dictionaries

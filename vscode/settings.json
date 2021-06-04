@@ -12,7 +12,7 @@
     "editor.defaultFormatter": "James-Yu.latex-workshop",
     "editor.formatOnSave": false
   },
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -143,5 +143,6 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "remote.containers.dotfiles.targetPath": "~/dotfiles",
   "remote.containers.dotfiles.repository": "https://github.com/nicktehrany/dotfiles",
-  "remote.containers.dotfiles.installCommand": "~/dotfiles/install-profile container"
+  "remote.containers.dotfiles.installCommand": "~/dotfiles/install-profile container",
+  "python.showStartPage": false
 }

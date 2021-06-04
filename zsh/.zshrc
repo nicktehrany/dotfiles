@@ -44,4 +44,4 @@ alias gstore="git config credential.helper store"
 alias glog="git log --all --graph --decorate --oneline"
 
 # Need to run discord with no-sandbox to stop lagging on calls and setsid to detach process from parent terminal process
-alias discord='setsid discord --no-sandbox'
+#alias discord='setsid discord --no-sandbox'

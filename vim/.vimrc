@@ -133,8 +133,8 @@ let g:tagbar_compact = 1
 map <Leader><S-tab> :bprevious<CR>
 map <Leader><tab> :bnext<CR>
 
-" Refresh NerdTree on Ctrl-r
-nmap <C-r> :NERDTreeFocus<cr> \| R \| <c-w><c-p>
+" Ack remaps
+nnoremap <C-k> :Ack!
 
 " When saving delete all trailing whitespaces at eof
 autocmd BufWritePre * %s/\s\+$//e

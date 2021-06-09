@@ -13,6 +13,8 @@
       path: zsh/ohmyzsh
     ~/.vim:
       path: vim
+    ~/.config/git/.gitignore:
+      path: git/.gitignore
 
 - shell:
     -

@@ -1,0 +1,6 @@
+# Vim files
+tags
+*.swp
+
+# Vscode
+.vscode/*

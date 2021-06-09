@@ -19,6 +19,8 @@
       path: zathura/zathurarc
     ~/.config/polybar/config:
       path: polybar/config
+    ~/.config/git/.gitignore:
+      path: git/.gitignore
 
 - shell:
     -

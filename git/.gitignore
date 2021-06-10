@@ -4,3 +4,59 @@ tags
 
 # Vscode
 .vscode/*
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.toc
+
+# Compressed folders
+*.tar.gz
+*.gz
+*.zip
+*.rar
+
+# C-files
+## Object files
+*.o
+*.obj
+*.elf
+
+## Linker files
+*.map
+*.exp
+
+## Lib files
+*.lib
+*.so
+*.so.*
+
+## Executable files
+*.out
+*.hex
+*.x86_64
+
+## Kernel files
+*.cmd
+dkms.conf
+
+# Java
+*.log
+*.class
+*.jar
+
+## maven
+pom.xml.tag
+pom.xml.versionsBackup
+pom.xml.releaseBackup
+release.properties
+dependency-reduced-pom.xml
+
+# Python
+__pycache__/*
+*.pkl
+*.log

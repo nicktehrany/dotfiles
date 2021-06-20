@@ -9,7 +9,7 @@ git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
 
 # For installing the workstation profile (check meta/profiles/)
-./install-profile workstation
+sudo ./install-profile workstation
 ```
 
 **Note** all previously linked files will be overwritten, check the `meta/configs/` for symlinks that will be created.
@@ -32,7 +32,7 @@ To install the configs manually run
 ./install-config <config>
 ```
 
-Check `meta/configs/` for available configs. For the vscode config, as I currently don't use it it's not in the workstation profile and therefore won't be installed. Also, when installing vscode, only config files will be linked, installing of vscode and extensions still needs to be done (as this takes quite some time I left it out). But this can easily be run with the vscode installer script
+Check `meta/configs/` for available configs, and configs with `-sudo` have to be run as sudo. For the vscode config, as I currently don't use it it's not in the workstation profile and therefore won't be installed. Also, when installing vscode, only config files will be linked, installing of vscode and extensions still needs to be done (as this takes quite some time I left it out). But this can easily be run with the vscode installer script
 
 ```bash
 ./vscode/install.sh

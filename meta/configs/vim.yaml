@@ -11,7 +11,7 @@
       sterr: true
       stdout: true
     -
-      command: apt install -y vim xdotool exuberant-ctags fonts-powerline ack-grep
+      command: apt install -y vim xdotool exuberant-ctags fonts-powerline ack-grep mono-complete golang nodejs default-jdk npm python3-dev
       description: Installing required Packages
       quiet: true
     -
@@ -23,7 +23,7 @@
       command: mkdir -p ~/.vim/undodir
       description: Creating vim undodir
     -
-      command: apt install -y build-essential cmake python3-dev mono-complete golang nodejs default-jdk npm && cd ~/.vim/bundle/YouCompleteMe && python3 install.py --all
+      command: sudo apt install -y build-essential cmake && cd ~/.vim/bundle/YouCompleteMe && python3 install.py --all
       description: Installing and Building YouCompleteMe
       sterr: true
       quite: true

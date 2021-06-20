@@ -9,6 +9,6 @@
       stderr: true
       stdout: true
     -
-      command: apt install -y tmux
+      command: sudo apt install -y tmux
       description: Installing required Packages
       quiet: true

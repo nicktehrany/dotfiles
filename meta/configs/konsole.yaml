@@ -2,7 +2,6 @@
     ~/.local/share/konsole/blue_default.profile:
       path: konsole/blue_default.profile
 
-
 - shell:
     -
       command: sudo apt install -y konsole

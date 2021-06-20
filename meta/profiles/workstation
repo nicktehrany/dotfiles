@@ -1,7 +1,7 @@
 git
-konsole
+konsole-sudo
 lf
-tmux
+tmux-sudo
 vim
 zathura
 zsh

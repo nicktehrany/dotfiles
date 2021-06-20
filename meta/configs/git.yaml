@@ -3,3 +3,5 @@
       path: git/.gitconfig
     ~/.config/git/.gitignore:
       path: git/.gitignore
+    ~/.config/git/.gitattributes:
+      path: git/.gitattributes

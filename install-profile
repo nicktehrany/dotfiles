@@ -16,7 +16,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 
 cd "${BASE_DIR}"
-git submodule update --init --recursive
+git submodule update --init --recursive --remote meta/dotbot
 
 
 while IFS= read -r config; do

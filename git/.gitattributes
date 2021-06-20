@@ -1,0 +1,40 @@
+# File detection
+## C
+*.c     text diff=c
+*.cc    text diff=cpp
+*.cxx   text diff=cpp
+*.cpp   text diff=cpp
+*.c++   text diff=cpp
+*.hpp   text diff=cpp
+*.h     text diff=c
+*.h++   text diff=cpp
+*.hh    text diff=cpp
+
+## Binaries and Libs
+*.slo   binary
+*.lo    binary
+*.o     binary
+*.obj   binary
+*.lib   binary
+*.out   binary
+*.so    binary
+*.dylib binary
+*.dll   binary
+
+# Markdown
+*.md    text diff=markdown
+
+# Java
+*.java          text diff=java
+*.gradle        text diff=java
+*.gradle.kts    text diff=java
+*.jar           binary
+*.class         binary
+
+# Pdf
+*.pdf diff=pdf
+
+# Files to ingore
+*.png diff=nodiff
+*.jpg diff=nodiff
+*.svg diff=nodiff

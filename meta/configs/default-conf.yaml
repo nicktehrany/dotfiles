@@ -1,6 +1,4 @@
 - link:
-    ~/.vimrc:
-      path: vim/.vimrc
     ~/.zshrc:
       path: zsh/.zshrc
     ~/.tmux.conf:
@@ -11,8 +9,6 @@
       path: zsh
     ~/.oh-my-zsh:
       path: zsh/ohmyzsh
-    ~/.vim:
-      path: vim
     ~/.local/share/konsole/blue_default.profile:
       path: konsole/blue_default.profile
     ~/.config/zathura/zathurarc:
@@ -24,22 +20,14 @@
 
 - shell:
     -
-      command: git submodule update --init --merge --remote textemp tmux/tmux-plugins/tpm zsh/ohmyzsh vim/bundle/Vundle.vim zsh/zsh-syntax-highlighting meta/dotbot
+      command: git submodule update --init --merge --remote textemp tmux/tmux-plugins/tpm zsh/ohmyzsh zsh/zsh-syntax-highlighting meta/dotbot
       description: Updating Submodules
       stderr: true
       stdout: true
     -
-      command: sudo apt install -y apt-transport-https software-properties-common vim zsh ncdu tmux konsole zathura-pdf-poppler xdotool exuberant-ctags fonts-powerline ack-grep
+      command: sudo apt install -y apt-transport-https software-properties-common zsh ncdu tmux konsole zathura-pdf-poppler xdotool exuberant-ctags fonts-powerline ack-grep
       description: Installing required Packages
       quiet: true
-    -
-      command: mkdir -p ~/.vim/undodir
-      description: Creating vim undodir
-    -
-      command: vim -E -s -u ~/.vimrc +PluginInstall +qall
-      description: Installing Vim plugins
-      stderr: true
-      stdout: true
     -
       command: test -d zsh/ohmyzsh/custom/plugins/zsh-autosuggestions && echo "zsh-autosuggestions exists" || git clone https://github.com/zsh-users/zsh-autosuggestions zsh/ohmyzsh/custom/plugins/zsh-autosuggestions
       description: Installing zsh autosuggestions
@@ -47,8 +35,3 @@
       quiet: true
     -
       mkdir temp-inst && cd temp-inst && wget https://github.com/gokcehan/lf/releases/download/r22/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz && tar -xvf lf-linux-amd64.tar.gz && chmod +x lf && sudo mv lf /usr/local/bin ; cd .. ; rm -rf temp-inst
-    -
-      command: sudo apt install -y build-essential cmake python3-dev mono-complete golang nodejs default-jdk npm && cd ~/.vim/bundle/YouCompleteMe && python3 install.py --all
-      description: Installing and Building YouCompleteMe
-      sterr: true
-      quite: true

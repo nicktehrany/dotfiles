@@ -103,7 +103,6 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 500,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,
   "spellright.parserByClass": {
     "bibtex": {
@@ -144,5 +143,8 @@
   "remote.containers.dotfiles.targetPath": "~/dotfiles",
   "remote.containers.dotfiles.repository": "https://github.com/nicktehrany/dotfiles",
   "remote.containers.dotfiles.installCommand": "~/dotfiles/install-profile container",
-  "python.showStartPage": false
+  "python.showStartPage": false,
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.linux": "/home/nicktehrany/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+  }
 }

@@ -25,6 +25,14 @@ addons:
       - exuberant-ctags
       - fonts-powerline
       - ack-grep
+      - build-essential
+      - cmake
+      - python3-dev
+      - mono-complete
+      - golang
+      - nodejs
+      - default-jdk
+      - npm
 
 script:
   - ./install-profile default

@@ -20,9 +20,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " Utility
-Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'ervandew/supertab'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -34,6 +32,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'mbbill/undotree'
+Plugin 'tenfyzhong/CompleteParameter.vim'
+Plugin 'ycm-core/YouCompleteMe'
 
 " Files
 Plugin 'scrooloose/nerdtree'
@@ -117,6 +117,16 @@ let NERDTreeMinimalUI = 1
 " Quit NerdTree once a file is opened
 let NERDTreeQuitOnOpen = 1
 
+" CompleteParameter
+inoremap <silent><expr> ( complete_parameter#pre_complete("()")
+smap <C-j> <Plug>(complete_parameter#goto_next_parameter)
+imap <C-j> <Plug>(complete_parameter#goto_next_parameter)
+smap <C-k> <Plug>(complete_parameter#goto_previous_parameter)
+imap <C-k> <Plug>(complete_parameter#goto_previous_parameter)
+
+" YCM
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 " Vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
@@ -131,9 +141,6 @@ let g:tagbar_compact = 1
 "  Leader + Shift and Leader + Shift + Tab to switch between buffers
 map <Leader><S-tab> :bprevious<CR>
 map <Leader><tab> :bnext<CR>
-
-" Ack remaps
-nnoremap <C-k> :Ack!
 
 " When saving delete all trailing whitespaces at eof
 autocmd BufWritePre * %s/\s\+$//e

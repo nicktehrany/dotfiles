@@ -47,3 +47,8 @@
       quiet: true
     -
       mkdir temp-inst && cd temp-inst && wget https://github.com/gokcehan/lf/releases/download/r22/lf-linux-amd64.tar.gz -O lf-linux-amd64.tar.gz && tar -xvf lf-linux-amd64.tar.gz && chmod +x lf && sudo mv lf /usr/local/bin ; cd .. ; rm -rf temp-inst
+    -
+      command: sudo apt install -y build-essential cmake python3-dev mono-complete golang nodejs default-jdk npm && cd ~/.vim/bundle/YouCompleteMe && python3 install.py --all
+      description: Installing and Building YouCompleteMe
+      sterr: true
+      quite: true

@@ -44,5 +44,3 @@ for config in ${CONFIGS} ${@}; do
 done
 
 cd "${BASE_DIR}"
-
-echo "Restart your terminal..."

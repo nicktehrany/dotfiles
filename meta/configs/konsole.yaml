@@ -5,6 +5,6 @@
 
 - shell:
     -
-      command: apt install -y konsole
+      command: sudo apt install -y konsole
       description: Installing required Packages
       quiet: true

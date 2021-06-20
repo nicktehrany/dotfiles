@@ -30,8 +30,7 @@ To install the configs manually run
 ./install-config <config>
 ```
 
-This can for example be used for vscode, as I currently don't use it it's not in the workstation profile and therefore won't be installed.
-Also, when installing vscode, only config files will be linked, installing of vscode and extensions still needs to be done (as this takes quite some time I left it out). But this can easily be run with the vscode installer script
+Check `meta/configs/` for available configs. For the vscode config, as I currently don't use it it's not in the workstation profile and therefore won't be installed. Also, when installing vscode, only config files will be linked, installing of vscode and extensions still needs to be done (as this takes quite some time I left it out). But this can easily be run with the vscode installer script
 
 ```bash
 ./vscode/install.sh

@@ -2,6 +2,8 @@
 
 ## Installation
 
+I use [dotbot](https://github.com/anishathalye/dotbot) for installing and linking all files.
+
 ```bash
 git clone https://github.com/nicktehrany/dotfiles
 cd dotfiles
@@ -38,6 +40,7 @@ Check `meta/configs/` for available configs. For the vscode config, as I current
 
 ### Running polybar
 
+Note, my polybar setup is not done yet, therefore it's not yet in the workstation profile, once it's complete it will be added.
 I'm using gnome therefore I use the [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/) extension for hiding the top bar so that polybar can run on top of it. Then to enable the polybar run
 
 ```bash

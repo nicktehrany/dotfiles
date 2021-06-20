@@ -4,6 +4,6 @@
 
 - shell:
     -
-      command: apt install -y polybar
+      command: sudo apt install -y polybar
       description: Installing required Packages
       quiet: true

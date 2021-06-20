@@ -1,0 +1,12 @@
+- link:
+  ~/.vimrc:
+    path: vim/.min-vimrc
+  ~/.vim:
+    path: vim
+
+- shell:
+    -
+      command: apt install -y vim
+      description: Installing required Packages
+      quiet: true
+    -

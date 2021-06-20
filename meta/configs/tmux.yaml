@@ -1,0 +1,15 @@
+- link:
+    ~/.tmux.conf:
+      path: tmux/.tmux.conf
+
+- shell:
+    -
+      command: git submodule update --init --merge --remote tmux/tmux-plugins/tpm
+      description: Updating Submodules
+      stderr: true
+      stdout: true
+    -
+      command: apt install -y tmux
+      description: Installing required Packages
+      quiet: true
+    -

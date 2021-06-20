@@ -35,5 +35,5 @@ addons:
       - npm
 
 script:
-  - ./install-profile default
-  - ./install-profile container
+  - ./install-profile workstation
+  - ./install-profile server

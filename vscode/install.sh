@@ -5,8 +5,8 @@ BLUE=$'\033[0;34m'
 
 echo "${BLUE}Setting up vscode repo"
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd63] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt install -y code
+add-apt-repository "deb [arch=amd63] https://packages.microsoft.com/repos/vscode stable main"
+apt install -y code
 
 echo "${BLUE}Installing extensions"
 code --install-extension aaron-bond.better-comments --user-data-dir=$HOME

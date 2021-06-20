@@ -5,3 +5,10 @@
       force: true
 
 - clean: ["~"]
+
+- shell:
+    -
+      command: git submodule update --init --merge --remote meta/dotbot
+      description: Updating Submodules
+      stderr: true
+      stdout: true

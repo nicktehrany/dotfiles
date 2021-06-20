@@ -1,0 +1,10 @@
+- link:
+    ~/.local/share/konsole/blue_default.profile:
+      path: konsole/blue_default.profile
+
+
+- shell:
+    -
+      command: apt install -y konsole
+      description: Installing required Packages
+      quiet: true

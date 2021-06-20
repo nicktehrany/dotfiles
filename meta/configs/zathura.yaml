@@ -1,0 +1,9 @@
+- link:
+    ~/.config/zathura/zathurarc:
+      path: zathura/zathurarc
+
+- shell:
+    -
+      command: apt install -y zathura-pdf-poppler
+      description: Installing required Packages
+      quiet: true

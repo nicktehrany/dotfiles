@@ -31,4 +31,3 @@
       command: cd ~/.vim/bundle/YouCompleteMe && python3 install.py --all
       description: Building YouCompleteMe
       sterr: true
-      quite: true

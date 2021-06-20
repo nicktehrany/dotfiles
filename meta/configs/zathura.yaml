@@ -4,6 +4,6 @@
 
 - shell:
     -
-      command: apt install -y zathura-pdf-poppler
+      command: sudo apt install -y zathura-pdf-poppler
       description: Installing required Packages
       quiet: true

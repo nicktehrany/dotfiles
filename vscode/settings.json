@@ -146,5 +146,6 @@
   "python.showStartPage": false,
   "vs-kubernetes": {
     "vscode-kubernetes.minikube-path.linux": "/home/nicktehrany/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-  }
+  },
+  "redhat.telemetry.enabled": false
 }

@@ -32,7 +32,7 @@ To install the configs manually run
 ./install-config <config>
 ```
 
-Check `meta/configs/` for available configs, and configs with `-sudo` have to be run as sudo. For the vscode config, as I currently don't use it it's not in the workstation profile and therefore won't be installed. Also, when installing vscode, only config files will be linked, installing of vscode and extensions still needs to be done (as this takes quite some time I left it out). But this can easily be run with the vscode installer script
+Check `meta/configs/` for available configs, and configs with `-sudo` in the profile have to be run as sudo (typically package installs that require root). For the vscode config, as I currently don't use it it's not in the workstation profile and therefore won't be installed. Also, when installing vscode, only config files will be linked, installing of vscode and extensions still needs to be done (as this takes quite some time I left it out). But this can easily be run with the vscode installer script
 
 ```bash
 ./vscode/install.sh

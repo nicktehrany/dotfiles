@@ -1,5 +1,4 @@
-# File detection
-## C
+# C
 *.c     text diff=c
 *.cc    text diff=cpp
 *.cxx   text diff=cpp

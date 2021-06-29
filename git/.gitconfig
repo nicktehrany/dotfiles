@@ -14,7 +14,7 @@
     rebase = false
 
 [credential]
-    helper = cache
+	helper = store
 
 [init]
     defaultBranch = master

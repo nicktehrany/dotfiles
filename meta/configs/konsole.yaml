@@ -1,6 +1,6 @@
 - link:
-    ~/.local/share/konsole/blue_default.profile:
-      path: konsole/blue_default.profile
+    ~/.local/share/konsole/default.profile:
+      path: konsole/default.profile
 
 - shell:
     -

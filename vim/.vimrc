@@ -174,6 +174,8 @@ augroup END
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_json_frontmatter = 1
+" Strikethrough with ~~text~~
+let g:vim_markdown_strikethrough = 1
 
 nmap <F8> :TagbarToggle<CR>
 

@@ -1,0 +1,11 @@
+- link:
+    ~/.config/vifm/vifmrc:
+      path: vifm/vifmrc
+    ~/.config/vifm/colors:
+      path: vifm/colors
+
+- shell:
+    -
+      command: sudo apt install -y vifm sxiv
+      description: Installing required Packages
+      quiet: true

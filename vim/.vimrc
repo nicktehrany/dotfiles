@@ -30,6 +30,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'lervag/vimtex'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'mbbill/undotree'
 Plugin 'tenfyzhong/CompleteParameter.vim'
@@ -176,6 +177,22 @@ let g:vim_markdown_math = 1
 let g:vim_markdown_json_frontmatter = 1
 " Strikethrough with ~~text~~
 let g:vim_markdown_strikethrough = 1
+
+" Vim markdown tables, enable it on <leader>tm
+let g:table_mode_corner='|'
+function! s:isAtStartOfLine(mapping)
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+inoreabbrev <expr> <bar><bar>
+          \ <SID>isAtStartOfLine('\|\|') ?
+          \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+          \ <SID>isAtStartOfLine('__') ?
+          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
 
 nmap <F8> :TagbarToggle<CR>
 

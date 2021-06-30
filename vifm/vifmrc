@@ -1,0 +1,69 @@
+"set vicmd=vim
+
+" Use vifm internal calls instead of libs (less universal but faster)
+set syscalls
+
+set history=100
+"set nofollowlinks
+set sortnumbers
+set undolevels=100
+colorscheme gruvbox
+
+"set wildmenu
+set ignorecase
+set smartcase
+set incsearch
+
+" TODO: Customize status line (line 108 in sample)!
+"set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+
+" Default applications for File types (most have mutliple fallback options)
+filextype {*.pdf},<application/pdf> zathura %c %i &, apvlv %c, xpdf %c
+
+" man pages
+filetype {*.[1-8]},<text/troff> man ./%c
+fileviewer {*.[1-8]},<text/troff> man ./%c | col -b
+
+" Object files
+filetype {*.o},<application/x-object> nm %f | less
+
+" html
+filextype {*.html,*.htm},<text/html>
+        \ {Open with dwb}
+        \ dwb %f %i &,
+        \ {Open with firefox}
+        \ firefox %f &,
+        \ {Open with uzbl}
+        \ uzbl-browser %f %i &,
+filetype {*.html,*.htm},<text/html> links, lynx
+
+" images
+filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
+        \ {View in sxiv}
+        \ sxiv %f,
+        \ {View in gpicview}
+        \ gpicview %c,
+        \ {View in shotwell}
+        \ shotwell,
+fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
+         \ identify %f
+
+" ArchiveMount
+filetype {*.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz,*.tar.zst,*.tzst},
+        \<application/x-tar>
+       \ {Mount with archivemount}
+       \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR,
+fileviewer *.tgz,*.tar.gz tar -tzf %c
+fileviewer *.tar.bz2,*.tbz2 tar -tjf %c
+fileviewer *.tar.xz,*.txz tar -tJf %c
+fileviewer *.tar.zst,*.tzst tar -t --zstd -f %c
+fileviewer {*.tar},<application/x-tar> tar -tf %c
+
+" Crytpo
+" GPG signature
+filetype {*.asc},<application/pgp-signature>
+       \ {Check signature}
+       \ !!gpg --verify %c,
+
+nnoremap w :view<cr>
+vnoremap w :view<cr>gv

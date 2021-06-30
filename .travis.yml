@@ -20,7 +20,7 @@ addons:
       - zsh
       - ncdu
       - tmux
-      - konsole
+      - alacritty
       - zathura-pdf-poppler
       - exuberant-ctags
       - fonts-powerline

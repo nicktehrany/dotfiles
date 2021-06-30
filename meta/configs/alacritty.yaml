@@ -1,0 +1,9 @@
+- link:
+    ~/.config/alacritty/alacritty.yml:
+      path: alacritty/alacritty.yml
+
+- shell:
+    -
+      command: sudo apt install -y alacritty
+      description: Installing required Packages
+      quiet: true

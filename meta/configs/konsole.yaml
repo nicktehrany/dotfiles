@@ -1,9 +1,0 @@
-- link:
-    ~/.local/share/konsole/default.profile:
-      path: konsole/default.profile
-
-- shell:
-    -
-      command: sudo apt install -y konsole
-      description: Installing required Packages
-      quiet: true

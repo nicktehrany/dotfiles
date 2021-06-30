@@ -53,6 +53,20 @@ In order to update submodules if their remote repository changes.
 git submodule update --remote --merge
 ```
 
+## Import custom keyboard shortcuts
+
+The keyboard shortcuts I use are exported in `bin/custom-shortcuts.conf` using
+
+```bash
+dconf dump / | sed -n '/\[org.gnome.settings-daemon.plugins.media-keys/,/^$/p' > custom-shortcuts.conf
+```
+
+and can be imported again with
+
+```bash
+dconf load / < custom-shortcuts.conf
+```
+
 ## Helpful Commands
 
 Since there are a lot of commands for the different applications, I made a handy [gist](https://gist.github.com/nicktehrany/7126ec0ad18f0af050e15596371ceea5) with the most frequently used commands that I use. This does include some applications that are not mentioned in my dotfiles, and overwritten OS shortcuts.

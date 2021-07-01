@@ -2,3 +2,4 @@ vim/*.swp
 vim/bundle/*
 tags
 vim/undodir/*
+.uuid

@@ -64,7 +64,7 @@ dconf dump / | sed -n '/\[org.gnome.settings-daemon.plugins.media-keys/,/^$/p' >
 and can be imported again with
 
 ```bash
-dconf load / < custom-shortcuts.conf
+dconf load / < bin/custom-shortcuts.conf
 ```
 
 ## Helpful Commands

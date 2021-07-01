@@ -1,3 +1,10 @@
 - link:
-    ~/.fonts:
+    $HOME/.local/fonts:
       path: fonts
+
+- shell:
+    -
+      command: fc-cache -f -v
+      description: Installing fonts
+      sterr: true
+      stdout: false

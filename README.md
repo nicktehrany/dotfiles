@@ -67,6 +67,25 @@ and can be imported again with
 dconf load / < bin/custom-shortcuts.conf
 ```
 
+## Installing refind boot manager
+
+I use the [refind boot manager](https://www.rodsbooks.com/refind/), with a [theme](https://github.com/EvanPurkhiser/rEFInd-minimal) which I modified, hence it is included in these dotfiles.
+Installing it can be done as follows, note this also requires privileges as it is modifying `/boot/EFI`
+
+```bash
+# install refind
+sudo apt install refind
+
+# create a themes folder for refind (in /boot/EFI/refind)
+mkdir themes
+
+# copy the theme in there
+cp $HOME/dotfiles/bin/refind/refind-minimal /boot/EFI/refind/themes
+
+# Add theme to the refind config at the end of file(in /boot/EFI/refind/refind.conf)
+include themes/refind-minimal/theme.conf
+```
+
 ## Helpful Commands
 
 Since there are a lot of commands for the different applications, I made a handy [gist](https://gist.github.com/nicktehrany/7126ec0ad18f0af050e15596371ceea5) with the most frequently used commands that I use. This does include some applications that are not mentioned in my dotfiles, and overwritten OS shortcuts.

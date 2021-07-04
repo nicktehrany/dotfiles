@@ -1,9 +1,0 @@
-- link:
-    ~/.config/rofi/config:
-      path: rofi/config
-
-- shell:
-    -
-      command: sudo apt install -y rofi
-      description: Installing required Packages
-      quiet: true

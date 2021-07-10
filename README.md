@@ -58,7 +58,7 @@ git submodule update --remote --merge
 The keyboard shortcuts I use are exported in `bin/custom-shortcuts.conf` using
 
 ```bash
-dconf dump / | sed -n '/\[org.gnome.settings-daemon.plugins.media-keys/,/^$/p' > custom-shortcuts.conf
+dconf dump / | sed -n '/\[org.gnome.settings-daemon.plugins.media-keys/,/^$/p' > bin/custom-shortcuts.conf
 ```
 
 and can be imported again with

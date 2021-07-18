@@ -2,7 +2,6 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 export TEXTEMP="$HOME/dotfiles/textemp"
 
-# PROMPT='%{$fg_bold[blue]%}%~ %{$reset_color%}%{$fg_bold[white]\$%} '
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
 ZSH_THEME="robbyrussell"
@@ -43,7 +42,6 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/dotfiles/fzf/.fzfrc
 
 # Aliases
-alias gstore="git config credential.helper store"
 alias glog="git log --all --graph --decorate --oneline"
 
 # Need to run discord with no-sandbox to stop lagging on calls and setsid to detach process from parent terminal process

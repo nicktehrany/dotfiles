@@ -26,7 +26,7 @@ bindkey -s '^z' 'vifm\n'
 # autosuggestions accept suggestion with ctrl + space
 bindkey '^ ' autosuggest-accept
 
-plugins=(git sudo colored-man-pages zsh-autosuggestions)
+plugins=(git colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.config/textemp/textemp.sh

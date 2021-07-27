@@ -94,4 +94,4 @@ Since there are a lot of commands for the different applications, I made a handy
 
 The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).
 
-![Visuals](meta/images/visuals_new.png)
+![Visuals](meta/images/visuals.png)

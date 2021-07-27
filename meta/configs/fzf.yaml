@@ -4,3 +4,7 @@
 
 - shell:
   - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install --all
+  -
+    command: apt install -y tree bat silversearcher-ag
+    description: Installing required Packages
+    quiet: true

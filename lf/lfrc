@@ -8,7 +8,7 @@ map <enter> shell
 map f $vi $(fzf)
 
 cmd fzf_jump ${{
-    res="$(find ~ | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    res="$(ag -l --path-to-ignore ~/.config/git/.gitignore --nocolor --hidden -g "" | fzf --ansi --preview-window 'right:60%' --preview "batcat --color=always --style=header,grid --line-range :500 {}" --layout=default --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
     if [ -d "$res" ]; then
         cmd="cd"
     else

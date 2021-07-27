@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-export TEXTEMP="$HOME/dotfiles/textemp"
+export TEXTEMP="$HOME/.config/textemp"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
@@ -22,7 +22,6 @@ bindkey -s '^d' 'lfcd\n'
 bindkey -s '^x' 'tmux\n'
 bindkey -s '^q' 'ncdu\n'
 bindkey -s '^z' 'vifm\n'
-bindkey -s '^f' 'fzf\n'
 
 # autosuggestions accept suggestion with ctrl + space
 bindkey '^ ' autosuggest-accept
@@ -30,9 +29,8 @@ bindkey '^ ' autosuggest-accept
 plugins=(git sudo colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/dotfiles/textemp/textemp.sh
+source $HOME/.config/textemp/textemp.sh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/dotfiles/fzf/.fzfrc
 
 # Aliases
 alias glog="git log --all --graph --decorate --oneline"
@@ -47,3 +45,6 @@ export LS_COLORS
 # lf icons
 export LF_ICONS="\
 tw=:st=:ow=:dt=:di=:fi=:ln=:or=:ex=:*.c=:*.cc=:*.clj=:*.coffee=:*.cpp=:*.css=:*.d=:*.dart=:*.erl=:*.exs=:*.fs=:*.go=:*.h=:*.hh=:*.hpp=:*.hs=:*.html=:*.java=:*.jl=:*.js=:*.json=:*.lua=:*.md=:*.php=:*.pl=:*.pro=:*.py=:*.rb=:*.rs=:*.scala=:*.ts=:*.vim=:*.cmd=:*.ps1=:*.sh=:*.bash=:*.zsh=:*.fish=:*.tar=:*.tgz=:*.arc=:*.arj=:*.taz=:*.lha=:*.lz4=:*.lzh=:*.lzma=:*.tlz=:*.txz=:*.tzo=:*.t7z=:*.zip=:*.z=:*.dz=:*.gz=:*.lrz=:*.lz=:*.lzo=:*.xz=:*.zst=:*.tzst=:*.bz2=:*.bz=:*.tbz=:*.tbz2=:*.tz=:*.deb=:*.rpm=:*.jar=:*.war=:*.ear=:*.sar=:*.rar=:*.alz=:*.ace=:*.zoo=:*.cpio=:*.7z=:*.rz=:*.cab=:*.wim=:*.swm=:*.dwm=:*.esd=:*.jpg=:*.jpeg=:*.mjpg=:*.mjpeg=:*.gif=:*.bmp=:*.pbm=:*.pgm=:*.ppm=:*.tga=:*.xbm=:*.xpm=:*.tif=:*.tiff=:*.png=:*.svg=:*.svgz=:*.mng=:*.pcx=:*.mov=:*.mpg=:*.mpeg=:*.m2v=:*.mkv=:*.webm=:*.ogm=:*.mp4=:*.m4v=:*.mp4v=:*.vob=:*.qt=:*.nuv=:*.wmv=:*.asf=:*.rm=:*.rmvb=:*.flc=:*.avi=:*.fli=:*.flv=:*.gl=:*.dl=:*.xcf=:*.xwd=:*.yuv=:*.cgm=:*.emf=:*.ogv=:*.ogx=:*.aac=:*.au=:*.flac=:*.m4a=:*.mid=:*.midi=:*.mka=:*.mp3=:*.mpc=:*.ogg=:*.ra=:*.wav=:*.oga=:*.opus=:*.spx=:*.xspf=:*.pdf=:*.nix=:"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source $HOME/.config/env/.fzfrc

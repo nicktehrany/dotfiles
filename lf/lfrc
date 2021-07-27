@@ -4,3 +4,16 @@ map s set info size
 map i set info size:time
 map I set info
 map <esc> quit
+map <enter> shell
+map f $vi $(fzf)
+
+cmd fzf_jump ${{
+    res="$(find ~ | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    if [ -d "$res" ]; then
+        cmd="cd"
+    else
+        cmd="select"
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+map <c-f> :fzf_jump

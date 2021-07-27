@@ -6,3 +6,5 @@ vim-sudo
 zathura-sudo
 zsh
 fonts
+fzf
+textemp

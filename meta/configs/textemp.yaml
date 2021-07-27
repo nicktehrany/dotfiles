@@ -1,5 +1,5 @@
 - link:
-    ~/.config/textemp:
+    ~/.config/env/textemp:
       path: env/textemp
 
 - shell:

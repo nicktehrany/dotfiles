@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-export TEXTEMP="$HOME/.config/textemp"
+export TEXTEMP="$HOME/.config/env/textemp"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
@@ -29,7 +29,7 @@ bindkey '^ ' autosuggest-accept
 plugins=(git colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.config/textemp/textemp.sh
+source $HOME/.config/env/textemp/textemp.sh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Aliases

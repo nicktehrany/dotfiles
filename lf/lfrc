@@ -1,5 +1,5 @@
 # set info size:time
-
+set icons
 map s set info size
 map i set info size:time
 map I set info

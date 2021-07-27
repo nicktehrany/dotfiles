@@ -1,5 +1,11 @@
 # dotfiles <a href="https://opensource.org/licenses/MIT"> <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
 
+## Visuals
+
+The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).
+
+![Visuals](meta/images/visual.png)
+
 ## Installation
 
 I use [dotbot](https://github.com/anishathalye/dotbot) for installing and linking all files.
@@ -89,9 +95,3 @@ include themes/refind-minimal/theme.conf
 ## Helpful Commands
 
 Since there are a lot of commands for the different applications, I made a handy [gist](https://gist.github.com/nicktehrany/7126ec0ad18f0af050e15596371ceea5) with the most frequently used commands that I use. This does include some applications that are not mentioned in my dotfiles, and overwritten OS shortcuts.
-
-## Visuals
-
-The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).
-
-![Visuals](meta/images/visual.png)

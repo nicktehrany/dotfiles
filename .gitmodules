@@ -1,6 +1,6 @@
-[submodule "textemp"]
-	path = textemp
-	url = https://github.com/nicktehrany/textemp
+[submodule "env/textemp"]
+	path = env/textemp
+	url = https://github.com/nicktehrany/textemp.git
 [submodule "tmux/tmux-plugins/tpm"]
 	path = tmux/tmux-plugins/tpm
 	url = https://github.com/tmux-plugins/tpm

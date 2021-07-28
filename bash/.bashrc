@@ -1,9 +1,8 @@
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
-export TEXTEMP="$HOME/.config/env/textemp"
+[ -d $HOME/.config/env/textemp ] && export TEXTEMP="$HOME/.config/env/textemp"
 
-#source $HOME/.config/env/textemp/textemp.sh
-source ~/Documents/Projects/textemp/textemp.sh
+[ -f $HOME/.config/env/textemp/textemp.sh ] && source $HOME/.config/env/textemp/textemp.sh
 
 # Aliases
 alias glog="git log --all --graph --decorate --oneline"

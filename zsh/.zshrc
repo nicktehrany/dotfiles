@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-export TEXTEMP="$HOME/.config/env/textemp"
+
+[ -d $HOME/.config/env/textemp ] && export TEXTEMP="$HOME/.config/env/textemp"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
@@ -29,8 +30,9 @@ bindkey '^ ' autosuggest-accept
 plugins=(git colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.config/env/textemp/textemp.sh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f $HOME/.config/env/textemp/textemp.sh ] && source $HOME/.config/env/textemp/textemp.sh
 
 # Aliases
 alias glog="git log --all --graph --decorate --oneline"

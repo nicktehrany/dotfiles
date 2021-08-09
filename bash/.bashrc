@@ -1,5 +1,3 @@
-stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
-
 [ -d $HOME/.config/env/textemp ] && export TEXTEMP="$HOME/.config/env/textemp"
 
 [ -f $HOME/.config/env/textemp/textemp.sh ] && source $HOME/.config/env/textemp/textemp.sh

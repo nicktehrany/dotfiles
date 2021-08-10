@@ -22,7 +22,7 @@
       stderr: true
       quiet: true
     -
-      command: ln -s $HOME/dotfiles/zsh/lambda-mod.zsh-theme zsh/ohmyzsh/custom/themes/lambda-mod.zsh-theme
+      command: ln -s $HOME/dotfiles/zsh/themes/lambda-mod/lambda-mod.zsh-theme zsh/ohmyzsh/custom/themes/lambda-mod.zsh-theme
       description: Installing zsh theme
       stderr: true
       quiet: true

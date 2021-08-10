@@ -125,8 +125,11 @@ imap <C-j> <Plug>(complete_parameter#goto_next_parameter)
 smap <C-k> <Plug>(complete_parameter#goto_previous_parameter)
 imap <C-k> <Plug>(complete_parameter#goto_previous_parameter)
 
-" YCM
+" YCM (if goto doesn't work use Ctrl+] and Ctrl+o to go places)
 let g:ycm_autoclose_preview_window_after_completion = 1
+nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <Leader>gr :YcmCompleter GoToReferences<CR>
+nnoremap <Leader>gi :YcmCompleter GoToImplemenation<CR>
 
 " Vim-airline
 let g:airline#extensions#tabline#enabled = 1

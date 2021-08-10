@@ -17,3 +17,4 @@ cmd fzf_jump ${{
     lf -remote "send $id $cmd \"$res\""
 }}
 map <c-f> :fzf_jump
+cmd open $vi $fx

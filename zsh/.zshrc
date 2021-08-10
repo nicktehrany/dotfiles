@@ -5,7 +5,7 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="lambda-mod"
 
 # Use lf to switch directories and bind it to ctrl-d
 # hidden files are shown with zh when in lfcd

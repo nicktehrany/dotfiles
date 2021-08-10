@@ -129,12 +129,9 @@
     "**/.ammonite": true,
     "**/linux/**": true
   },
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },

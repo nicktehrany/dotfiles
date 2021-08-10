@@ -21,3 +21,8 @@
       description: Installing zsh autosuggestions
       stderr: true
       quiet: true
+    -
+      command: git clone https://github.com/halfo/lambda-mod-zsh-theme && mv lambda-mod-zsh-theme/lambda-mod.zsh-theme zsh/ohmyzsh/custom/themes/ && rm -r lambda-mod-zsh-theme
+      description: Installing zsh theme
+      stderr: true
+      quiet: true

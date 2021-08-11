@@ -16,5 +16,14 @@ cmd fzf_jump ${{
     fi
     lf -remote "send $id $cmd \"$res\""
 }}
+
+cmd open ${{
+    case $(xdg-mime query filetype $f) in
+    application/pdf) nohup zathura $fx > /dev/null 2> /dev/null &;;
+    image/*) nohup sxiv $fx $(fd --no-ignore-vcs -t f -d 1 . ./) > /dev/null 2> /dev/null &;;
+    text/*|application/x-yaml) vi $fx;;
+    *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
 map <c-f> :fzf_jump
-cmd open $vi $fx

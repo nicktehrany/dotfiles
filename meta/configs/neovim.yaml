@@ -9,7 +9,7 @@
       sterr: true
       stdout: true
     -
-      command: apt install -y neovim clangd
+      command: apt install -y neovim clangd ripgrep
       description: Installing required Packages
       quiet: true
  -

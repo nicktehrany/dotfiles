@@ -1,0 +1,24 @@
+- link:
+    ~/.config/nvim:
+      path: nvim
+
+- shell:
+    -
+      command: sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+      description: Setting up neovim
+      sterr: true
+      stdout: true
+    -
+      command: apt install -y neovim clangd
+      description: Installing required Packages
+      quiet: true
+ -
+      command: nvim --headless +PlugInstall +q
+      description: Installing nvim plugins
+      stderr: true
+      stdout: true
+    -
+      command: curl -sL install-node.now.sh/lts | bash
+      description: Installing coc
+      stderr: true
+      stdout: false

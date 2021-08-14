@@ -1,4 +1,4 @@
-"set vicmd=vim
+"set vicmd=nvim
 
 " Use vifm internal calls instead of libs (less universal but faster)
 set syscalls

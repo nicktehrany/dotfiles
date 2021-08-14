@@ -1,6 +1,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
+[ -d $HOME/.cargo/bin ] && path+=('/home/nicktehrany/.cargo/bin') && export PATH
+
 [ -d $HOME/.config/env/textemp ] && export TEXTEMP="$HOME/.config/env/textemp"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend

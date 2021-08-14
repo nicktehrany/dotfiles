@@ -15,16 +15,19 @@ Plug 'windwp/nvim-autopairs'
 Plug 'Pocco81/AutoSave.nvim'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
+
+" Telescope
+Plug 'nvim-telescope/telescope.nvim'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 
-" TODO: might replace with labtex server
+" LaTeX (Compiling)
 Plug 'lervag/vimtex'
 
+" Markdown table automation
 Plug 'dhruvasagar/vim-table-mode'
 
 " Git

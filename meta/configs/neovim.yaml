@@ -9,10 +9,10 @@
       sterr: true
       stdout: true
     -
-      command: apt install -y neovim ripgrep
+      command: apt install -y neovim ripgrep cargo
       description: Installing required Packages
       quiet: true
- -
+    -
       command: nvim --headless +PlugInstall +q
       description: Installing nvim plugins
       stderr: true
@@ -22,8 +22,13 @@
       description: Installing LSP servers
       stderr: true
       stdout: false
- -
+    -
       command: nvim --headless +TSInstall cpp c bash python lua json latex regex yaml cmake bibtex dockerfile jsonc +q
       description: Installing nvim plugins
+      stderr: true
+      stdout: true
+    -
+      command: cargo install --git https://github.com/latex-lsp/texlab.git --locked
+      description: Installing texlab server
       stderr: true
       stdout: true

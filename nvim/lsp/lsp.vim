@@ -24,8 +24,7 @@ source $HOME/.config/nvim/lsp/json.lua
 source $HOME/.config/nvim/lsp/pyright.lua
 source $HOME/.config/nvim/lsp/vim.lua
 source $HOME/.config/nvim/lsp/yaml.lua
-
-lua require'lspconfig'.texlab.setup{}
+source $HOME/.config/nvim/lsp/texlab.lua
 
 " Disable the diagnostics (H in the gutter and inline messages for errors)
 lua vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end

@@ -27,3 +27,5 @@ let g:startify_lists = [
 function! StartifyEntryFormat()
     return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
 endfunction
+
+let g:startify_enable_special = 0

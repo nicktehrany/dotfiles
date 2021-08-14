@@ -39,3 +39,5 @@ autocmd BufWritePre * %s/\n\+\%$//e
 autocmd BufWritePre *.[ch] %s/\%$/\r/e
 
 set spell spelllang=en_us
+
+set completeopt=menuone,noselect

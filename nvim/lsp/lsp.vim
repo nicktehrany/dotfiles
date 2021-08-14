@@ -16,3 +16,12 @@ autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 " Source all language servers
 source $HOME/.config/nvim/lsp/clangd.lua
 source $HOME/.config/nvim/lsp/bashls.lua
+source $HOME/.config/nvim/lsp/cmake.lua
+source $HOME/.config/nvim/lsp/docker.lua
+"source $HOME/.config/nvim/lsp/java.lua
+source $HOME/.config/nvim/lsp/json.lua
+source $HOME/.config/nvim/lsp/pyright.lua
+source $HOME/.config/nvim/lsp/vim.lua
+source $HOME/.config/nvim/lsp/yaml.lua
+
+lua require'lspconfig'.texlab.setup{}

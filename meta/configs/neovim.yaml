@@ -18,7 +18,12 @@
       stderr: true
       stdout: true
     -
-      command: npm i -g clangd bash-language-server
+      command: npm i -g clangd bash-language-server cmake dockerfile-language-server-nodejs vscode-langservers-extracted pyright vim-language-server yaml-language-server
       description: Installing LSP servers
       stderr: true
       stdout: false
+ -
+      command: nvim --headless +TSInstall cpp c bash python lua json latex regex yaml cmake bibtex dockerfile jsonc +q
+      description: Installing nvim plugins
+      stderr: true
+      stdout: true

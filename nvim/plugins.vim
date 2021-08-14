@@ -29,9 +29,9 @@ Plug 'dhruvasagar/vim-table-mode'
 
 " Git
 Plug 'nvim-lua/plenary.nvim'
-Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
+Plug 'mhinz/vim-signify'
 
 " Startup page
 Plug 'mhinz/vim-startify'
@@ -42,7 +42,7 @@ source $HOME/.config/nvim/plugins/nvim-tree.vim
 source $HOME/.config/nvim/plugins/nvim-autopairs.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/bufferline.vim
-source $HOME/.config/nvim/plugins/gitsigns.lua
+source $HOME/.config/nvim/plugins/signify.vim
 source $HOME/.config/nvim/plugins/startify.vim
 source $HOME/.config/nvim/plugins/undotree.vim
 source $HOME/.config/nvim/plugins/vimtex.vim

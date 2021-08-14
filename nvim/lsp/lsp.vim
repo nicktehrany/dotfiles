@@ -12,6 +12,7 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+"autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync(nil, 100)
 
 " Source all language servers
 source $HOME/.config/nvim/lsp/clangd.lua
@@ -25,3 +26,6 @@ source $HOME/.config/nvim/lsp/vim.lua
 source $HOME/.config/nvim/lsp/yaml.lua
 
 lua require'lspconfig'.texlab.setup{}
+
+" Disable the diagnostics (H in the gutter and inline messages for errors)
+lua vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end

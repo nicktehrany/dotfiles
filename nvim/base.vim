@@ -32,12 +32,34 @@ augroup WrapText
     autocmd FileType markdown,latex,text setlocal wrap textwidth=120
 augroup END
 
-
 " When saving delete all trailing whitespaces at eof
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * %s/\n\+\%$//e
 autocmd BufWritePre *.[ch] %s/\%$/\r/e
 
-set spell spelllang=en_us
+" Automatically load spell check in certain files
+" Use autogroup to group listeners and remove all active listeners from
+" group with autocmd! when resourcing vimrc
+augroup Spellcheck
+    autocmd!
+    autocmd FileType markdown,text,latex setlocal spell spelllang=en_us
+    autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
+augroup END
 
 set completeopt=menuone,noselect
+
+highlight clear SignColumn
+
+" Disable mouse scroll and arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+vnoremap <up> <nop>
+vnoremap <down> <nop>
+vnoremap <left> <nop>
+vnoremap <right> <nop>

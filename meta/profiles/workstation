@@ -9,4 +9,4 @@ fonts
 fzf
 textemp
 bash
-neovim
+neovim-sudo

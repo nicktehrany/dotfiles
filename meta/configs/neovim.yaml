@@ -9,7 +9,7 @@
       sterr: true
       stdout: true
     -
-      command: apt install -y neovim clangd ripgrep
+      command: apt install -y neovim ripgrep
       description: Installing required Packages
       quiet: true
  -
@@ -18,7 +18,7 @@
       stderr: true
       stdout: true
     -
-      command: curl -sL install-node.now.sh/lts | bash
-      description: Installing coc
+      command: npm i -g clangd bash-language-server
+      description: Installing LSP servers
       stderr: true
       stdout: false

@@ -21,3 +21,4 @@ set hls
 let &fcs='eob: '
 set completeopt=menuone,noselect
 highlight clear SignColumn
+set shortmess+=c

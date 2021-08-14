@@ -17,9 +17,3 @@ augroup Spellcheck
     autocmd FileType markdown,text,latex setlocal spell spelllang=en_us
     autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
 augroup END
-
-" Run formatting on save
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END

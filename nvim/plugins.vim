@@ -1,4 +1,4 @@
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Themes
 Plug 'morhetz/gruvbox'

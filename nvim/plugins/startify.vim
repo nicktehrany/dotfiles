@@ -3,7 +3,6 @@ function! s:gitModified()
     return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 
-" same as above, but show untracked files, honouring .gitignore
 function! s:gitUntracked()
     let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
     return map(files, "{'line': v:val, 'path': v:val}")

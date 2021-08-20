@@ -4,7 +4,7 @@
     signingkey = 7C1B884FD5053260
 
 [core]
-    editor = vim
+    editor = nvim
     excludesfile = ~/.config/git/.gitignore
 
 [push]

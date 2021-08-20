@@ -12,10 +12,6 @@
       command: add-apt-repository ppa:neovim-ppa/unstable && apt update && apt install -y neovim ripgrep cargo
       description: Installing required Packages
       quiet: true
-    -
-      command: nvim --headless +PlugInstall +q
-      description: Installing nvim plugins
-      stderr: true
       stdout: true
     -
       command: npm i -g clangd bash-language-server cmake dockerfile-language-server-nodejs vscode-langservers-extracted pyright vim-language-server yaml-language-server
@@ -23,8 +19,12 @@
       stderr: true
       stdout: false
     -
-      command: nvim --headless +TSInstall cpp c bash python lua json latex regex yaml cmake bibtex dockerfile jsonc +q
+      command: nvim --headless +PlugInstall +q
       description: Installing nvim plugins
+      stderr: true
+    -
+      command: nvim --headless +TSInstall cpp c bash python lua json latex regex yaml cmake bibtex dockerfile jsonc +q
+      description: Installing nvim Treesitter language supports
       stderr: true
       stdout: true
     -

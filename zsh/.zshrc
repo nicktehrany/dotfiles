@@ -22,7 +22,7 @@ lfcd () {
     fi
 }
 
-bindkey -s '^d' 'lfcd\n'
+bindkey -s '^b' 'lfcd\n'
 #bindkey -s '^x' 'tmux\n'
 bindkey -s '^q' 'ncdu\n'
 bindkey -s '^z' 'vifm\n'

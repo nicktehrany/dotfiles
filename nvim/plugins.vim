@@ -14,11 +14,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'windwp/nvim-autopairs'
 Plug 'Pocco81/AutoSave.nvim'
 Plug 'nvim-lua/lsp-status.nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
 
 " Telescope
+Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'

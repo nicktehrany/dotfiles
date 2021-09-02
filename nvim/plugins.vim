@@ -33,7 +33,6 @@ Plug 'lervag/vimtex'
 Plug 'dhruvasagar/vim-table-mode'
 
 " Git
-Plug 'nvim-lua/plenary.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'

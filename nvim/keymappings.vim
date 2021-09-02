@@ -6,6 +6,7 @@ map <leader>k :wincmd k<CR>
 
 " double Esc to clear highlights after search
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+
 nnoremap Y y$
 
 " When going next center cursor and unfold after
@@ -25,3 +26,6 @@ inoremap <C-j> <Esc>:m .+1<CR>i
 inoremap <C-k> <Esc>:m .-2<CR>i
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
+
+" substitution
+nnoremap S :%s// <Left><Left>

@@ -26,6 +26,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'onsails/lspkind-nvim'
 
 " LaTeX (Compiling)
 Plug 'lervag/vimtex'

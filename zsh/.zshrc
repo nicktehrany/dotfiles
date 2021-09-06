@@ -10,7 +10,7 @@ stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 ZSH_THEME="lambda-mod"
 export LAMBDA_MOD_N_DIR_LEVELS=5
 
-# Use lf to switch directories and bind it to ctrl-d
+# Use lfcd to switch directories
 # hidden files are shown with zh when in lfcd
 lfcd () {
     tmp="$(mktemp)"

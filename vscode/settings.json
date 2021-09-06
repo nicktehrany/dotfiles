@@ -139,7 +139,7 @@
   "liveServer.settings.donotShowInfoMsg": true,
   "remote.containers.dotfiles.targetPath": "~/dotfiles",
   "remote.containers.dotfiles.repository": "https://github.com/nicktehrany/dotfiles",
-  "remote.containers.dotfiles.installCommand": "~/dotfiles/install-profile container",
+  "remote.containers.dotfiles.installCommand": "~/dotfiles/install-profile server",
   "python.showStartPage": false,
   "vs-kubernetes": {
     "vscode-kubernetes.minikube-path.linux": "/home/nicktehrany/.vs-kubernetes/tools/minikube/linux-amd64/minikube"

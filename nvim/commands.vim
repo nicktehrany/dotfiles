@@ -17,3 +17,6 @@ augroup Spellcheck
     autocmd FileType markdown,text,latex setlocal spell spelllang=en_us
     autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
 augroup END
+
+" Use completion-nvim in every buffer
+autocmd BufEnter * lua require'completion'.on_attach()

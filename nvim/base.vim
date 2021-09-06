@@ -19,7 +19,7 @@ set hidden
 set scrolloff=8
 set hls
 let &fcs='eob: '
-set completeopt=menuone,noselect
+set completeopt=menuone,noinsert,noselect
 highlight clear SignColumn
 set shortmess+=c
 set noshowcmd

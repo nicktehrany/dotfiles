@@ -14,7 +14,7 @@ autocmd BufWritePre *.[ch] %s/\%$/\r/e
 " group with autocmd! when resourcing vimrc
 augroup Spellcheck
     autocmd!
-    autocmd FileType markdown,text,latex setlocal spell spelllang=en_us
+    autocmd FileType markdown,text,tex setlocal spell spelllang=en_us
     autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
 augroup END
 

@@ -3,3 +3,6 @@ dotbot
 dotfiles
 submodules
 github
+parallelizable
+prefetching
+parallelized

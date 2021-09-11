@@ -4,7 +4,7 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 [ -d $HOME/.cargo/bin ] && path+=('/home/nicktehrany/.cargo/bin') && export PATH
 
 [ -d $HOME/.config/env/textemp ] && export TEXTEMP="$HOME/.config/env/textemp"
-#[ -d $HOME/.config/env/mdtemp ] && export MDTEMP="$HOME/.config/env/mdtemp"
+[ -d $HOME/.config/env/mdtemp ] && export MDTEMP="$HOME/.config/env/mdtemp"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
@@ -37,7 +37,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f $HOME/.config/env/textemp/textemp.sh ] && source $HOME/.config/env/textemp/textemp.sh
-#[ -f $HOME/.config/env/mdtemp/mdtemp.sh ] && source $HOME/.config/env/mdtemp/mdtemp.sh
+[ -f $HOME/.config/env/mdtemp/mdtemp.sh ] && source $HOME/.config/env/mdtemp/mdtemp.sh
 
 # Need to run discord with no-sandbox to stop lagging on calls and setsid to detach process from parent terminal process
 alias discord='setsid discord --no-sandbox'

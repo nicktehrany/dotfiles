@@ -22,3 +22,6 @@
 	path = meta/dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "env/mdtemp"]
+	path = env/mdtemp
+	url = https://github.com/nicktehrany/mdtemp.git

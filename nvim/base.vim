@@ -9,7 +9,7 @@ set expandtab
 set noerrorbells
 set ignorecase
 set smartcase
-set noswapfile
+set directory=$HOME/.config/nvim/swpfiles//
 set nobackup
 set undodir=~/.nvim/undodir
 set undofile

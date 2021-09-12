@@ -59,7 +59,7 @@ In order to update submodules if their remote repository changes.
 git submodule update --remote --merge
 ```
 
-## Import custom keyboard shortcuts
+### Import custom keyboard shortcuts
 
 The keyboard shortcuts I use are exported in `bin/custom-shortcuts.conf` using
 

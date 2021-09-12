@@ -28,4 +28,4 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 
 " substitution
-nnoremap S :%s// <Left><Left>
+nnoremap S :%s///g <Left><Left><Left><Left>

@@ -23,9 +23,10 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'L3MON4D3/LuaSnip'
 Plug 'onsails/lspkind-nvim'
 
 " LaTeX (Compiling)
@@ -53,7 +54,5 @@ source $HOME/.config/nvim/plugins/startify.vim
 source $HOME/.config/nvim/plugins/undotree.vim
 source $HOME/.config/nvim/plugins/vimtex.vim
 source $HOME/.config/nvim/plugins/table-mode.vim
-source $HOME/.config/nvim/plugins/ultisnip.vim
 source $HOME/.config/nvim/plugins/lualine.lua
 source $HOME/.config/nvim/plugins/treesitter.lua
-source $HOME/.config/nvim/plugins/nvim-completion.vim

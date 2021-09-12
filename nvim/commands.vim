@@ -5,9 +5,9 @@ augroup WrapText
 augroup END
 
 " When saving delete all trailing whitespaces at eof
-autocmd BufWritePre * %s/\s\+$//e
-autocmd BufWritePre * %s/\n\+\%$//e
-autocmd BufWritePre *.[ch] %s/\%$/\r/e
+"autocmd BufWritePre * %s/\s\+$//e
+"autocmd BufWritePre * %s/\n\+\%$//e
+"autocmd BufWritePre *.[ch] %s/\%$/\r/e
 
 " Automatically load spell check in certain files
 " Use autogroup to group listeners and remove all active listeners from

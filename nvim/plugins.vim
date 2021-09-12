@@ -12,7 +12,6 @@ Plug 'ryanoasis/vim-devicons'
 
 " Utility
 Plug 'windwp/nvim-autopairs'
-Plug 'Pocco81/AutoSave.nvim'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
 
@@ -57,4 +56,3 @@ source $HOME/.config/nvim/plugins/vimtex.vim
 source $HOME/.config/nvim/plugins/table-mode.vim
 source $HOME/.config/nvim/plugins/lualine.lua
 source $HOME/.config/nvim/plugins/treesitter.lua
-source $HOME/.config/nvim/plugins/autosave.lua

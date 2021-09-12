@@ -28,6 +28,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'onsails/lspkind-nvim'
+Plug 'sbdchd/neoformat'
 
 " LaTeX (Compiling)
 Plug 'lervag/vimtex'
@@ -56,3 +57,4 @@ source $HOME/.config/nvim/plugins/vimtex.vim
 source $HOME/.config/nvim/plugins/table-mode.vim
 source $HOME/.config/nvim/plugins/lualine.lua
 source $HOME/.config/nvim/plugins/treesitter.lua
+source $HOME/.config/nvim/plugins/autosave.lua

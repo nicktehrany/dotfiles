@@ -1,10 +1,10 @@
 - link:
-    ~/.config/env/mdtemp:
-      path: env/mdtemp
+    ~/bin/mdtemp:
+      path: bin/mdtemp
 
 - shell:
     -
-      command: git submodule update --init --merge --remote env/mdtemp
+      command: git submodule update --init --merge --remote bin/mdtemp
       description: Updating Submodules
       stderr: true
       stdout: true

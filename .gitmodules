@@ -1,5 +1,5 @@
-[submodule "env/textemp"]
-	path = env/textemp
+[submodule "bin/textemp"]
+	path = bin/textemp
 	url = https://github.com/nicktehrany/textemp.git
 [submodule "vscode/Dictionaries"]
 	path = vscode/Dictionaries
@@ -18,6 +18,6 @@
 	path = meta/dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "env/mdtemp"]
-	path = env/mdtemp
+[submodule "bin/mdtemp"]
+	path = bin/mdtemp
 	url = https://github.com/nicktehrany/mdtemp.git

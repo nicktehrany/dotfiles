@@ -9,8 +9,7 @@ map <leader>t :term<CR>
 " remap to close current buffer
 map <leader>q :bd<CR>
 
-" double Esc to clear highlights after search
-nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+nnoremap <silent> <C-h> :nohlsearch<CR><Esc>
 
 nnoremap Y y$
 

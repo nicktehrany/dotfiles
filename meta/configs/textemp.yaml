@@ -1,10 +1,10 @@
 - link:
-    ~/.config/env/textemp:
-      path: env/textemp
+    ~/bin/textemp:
+      path: bin/textemp
 
 - shell:
     -
-      command: git submodule update --init --merge --remote env/textemp
+      command: git submodule update --init --merge --remote bin/textemp
       description: Updating Submodules
       stderr: true
       stdout: true

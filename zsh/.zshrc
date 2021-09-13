@@ -4,8 +4,10 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
 [ -d $HOME/.cargo/bin ] && path+=('/home/nicktehrany/.cargo/bin') && export PATH
 
-[ -d $HOME/.config/env/textemp ] && export TEXTEMP="$HOME/.config/env/textemp"
-[ -d $HOME/.config/env/mdtemp ] && export MDTEMP="$HOME/.config/env/mdtemp"
+path+=('/home/nicktehrany/bin') && export PATH
+
+[ -d $HOME/bin/textemp ] && export TEXTEMP="$HOME/bin/textemp"
+[ -d $HOME/bin/mdtemp ] && export MDTEMP="$HOME/bin/mdtemp"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 
@@ -34,8 +36,9 @@ plugins=(git colored-man-pages zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-[ -f $HOME/.config/env/textemp/textemp.sh ] && source $HOME/.config/env/textemp/textemp.sh
-[ -f $HOME/.config/env/mdtemp/mdtemp.sh ] && source $HOME/.config/env/mdtemp/mdtemp.sh
+# FOR DEBUGGING ONLY
+#[ -f $HOME/Documents/Projects/textemp/textemp.sh ] && source $HOME/Documents/Projects/textemp/textemp.sh
+#[ -f $HOME/Documents/Projects/mdtemp/mdtemp.sh ] && source $HOME/Documents/Projects/mdtemp/mdtemp.sh
 
 # Need these below ohmyzsh source to make it work in tmux
 bindkey '^ ' autosuggest-accept

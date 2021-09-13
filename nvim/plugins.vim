@@ -27,7 +27,6 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'onsails/lspkind-nvim'
-Plug 'sbdchd/neoformat'
 
 " LaTeX (Compiling)
 Plug 'lervag/vimtex'

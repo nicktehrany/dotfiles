@@ -1,5 +1,5 @@
 - link:
-    ~/bin/mdtemp:
+    ~/.bin/mdtemp:
       path: bin/mdtemp/mdtemp
 
 - shell:

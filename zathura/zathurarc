@@ -12,5 +12,6 @@ map K zoom in
 map J zoom out
 map i recolor
 map p print
-map t goto top
+map gg goto top
+map G goto bottom
 set guioptions none

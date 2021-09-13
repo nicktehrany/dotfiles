@@ -4,7 +4,7 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
 [ -d $HOME/.cargo/bin ] && path+=('/home/nicktehrany/.cargo/bin') && export PATH
 
-path+=('/home/nicktehrany/bin') && export PATH
+path+=('/home/nicktehrany/.bin') && export PATH
 
 [ -d $HOME/dotfiles/bin/textemp ] && export TEXTEMP="$HOME/dotfiles/bin/textemp"
 [ -d $HOME/dotfiles/bin/mdtemp ] && export MDTEMP="$HOME/dotfiles/bin/mdtemp"

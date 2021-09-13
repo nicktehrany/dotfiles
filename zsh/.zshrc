@@ -36,10 +36,6 @@ plugins=(git colored-man-pages zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# FOR DEBUGGING ONLY
-#[ -f $HOME/Documents/Projects/textemp/textemp.sh ] && source $HOME/Documents/Projects/textemp/textemp.sh
-#[ -f $HOME/Documents/Projects/mdtemp/mdtemp.sh ] && source $HOME/Documents/Projects/mdtemp/mdtemp.sh
-
 # Need these below ohmyzsh source to make it work in tmux
 bindkey '^ ' autosuggest-accept
 bindkey -s '^b' 'lfcd\n'

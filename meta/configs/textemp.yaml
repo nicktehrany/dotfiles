@@ -1,6 +1,6 @@
 - link:
     ~/bin/textemp:
-      path: bin/textemp
+      path: bin/textemp/textemp
 
 - shell:
     -

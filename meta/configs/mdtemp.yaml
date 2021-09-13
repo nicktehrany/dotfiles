@@ -1,6 +1,6 @@
 - link:
     ~/bin/mdtemp:
-      path: bin/mdtemp
+      path: bin/mdtemp/mdtemp
 
 - shell:
     -

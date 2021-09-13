@@ -6,10 +6,8 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
 path+=('/home/nicktehrany/bin') && export PATH
 
-[ -f $HOME/bin/textemp/textemp.sh ] && source $HOME/bin/textemp/textemp.sh
-[ -d $HOME/bin/textemp ] && export TEXTEMP="$HOME/bin/textemp"
-[ -f $HOME/bin/mdtemp/mdtemp.sh ] && source $HOME/bin/mdtemp/mdtemp.sh
-[ -d $HOME/bin/mdtemp ] && export MDTEMP="$HOME/bin/mdtemp"
+[ -d $HOME/dotfiles/bin/textemp ] && export TEXTEMP="$HOME/dotfiles/bin/textemp"
+[ -d $HOME/dotfiles/bin/mdtemp ] && export MDTEMP="$HOME/dotfiles/bin/mdtemp"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
 

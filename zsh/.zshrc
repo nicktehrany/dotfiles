@@ -29,13 +29,6 @@ if [ -z "$TMUX" ]; then
     tmux attach -t tmux || tmux new -s tmux
 fi
 
-bindkey -s '^b' 'lfcd\n'
-bindkey -s '^q' 'ncdu\n'
-bindkey -s '^z' 'vifm\n'
-
-# autosuggestions accept suggestion with ctrl + space
-bindkey '^ ' autosuggest-accept
-
 plugins=(git colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
@@ -43,6 +36,12 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f $HOME/.config/env/textemp/textemp.sh ] && source $HOME/.config/env/textemp/textemp.sh
 [ -f $HOME/.config/env/mdtemp/mdtemp.sh ] && source $HOME/.config/env/mdtemp/mdtemp.sh
+
+# Need these below ohmyzsh source to make it work in tmux
+bindkey '^ ' autosuggest-accept
+bindkey -s '^b' 'lfcd\n'
+bindkey -s '^q' 'ncdu\n'
+bindkey -s '^z' 'vifm\n'
 
 # Need to run discord with no-sandbox to stop lagging on calls and setsid to detach process from parent terminal process
 alias discord='setsid discord --no-sandbox'

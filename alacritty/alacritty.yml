@@ -1,6 +1,9 @@
 # Colors (Gruvbox dark)
 live_config_reload: true
 
+env:
+  TERM: xterm-256color
+
 colors:
   # Default colors
   primary:

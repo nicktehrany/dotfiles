@@ -24,9 +24,3 @@ source $HOME/.config/nvim/lsp/lspkind-nvim.lua
 
 " Disable the diagnostics (H in the gutter and inline messages for errors)
 "lua vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
-
-" Auto format on save
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END

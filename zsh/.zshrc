@@ -1,3 +1,4 @@
+export EDITOR='nvim'
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
@@ -23,8 +24,12 @@ lfcd () {
     fi
 }
 
+# Start tmux on zsh start
+if [ -z "$TMUX" ]; then
+    tmux attach -t tmux || tmux new -s tmux
+fi
+
 bindkey -s '^b' 'lfcd\n'
-#bindkey -s '^x' 'tmux\n'
 bindkey -s '^q' 'ncdu\n'
 bindkey -s '^z' 'vifm\n'
 

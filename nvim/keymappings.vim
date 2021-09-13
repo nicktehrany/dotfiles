@@ -4,6 +4,11 @@ map <leader>l :wincmd l<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 
+map <leader>t :term<CR>
+
+" remap to close current buffer
+map <leader>q :bd<CR>
+
 " double Esc to clear highlights after search
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
@@ -29,3 +34,6 @@ nnoremap <leader>k :m .-2<CR>==
 
 " substitution
 nnoremap S :%s///g <Left><Left><Left><Left>
+
+" terminal mode exit
+tnoremap <Esc><Esc> <C-\><C-n>

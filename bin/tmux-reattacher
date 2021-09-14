@@ -7,7 +7,6 @@ PS3=$(printf "\nEnter number of tmux session to reattach to or 0 to create a new
 
 select item in $sessions
 do
-    [ -z "$item" ] && ([ "$REPLY" == "0" ] && (printf "New session name: " && read name && tmux new -s $name) || echo "Invalid Input.")
-    [ ! -z "$item" ] && tmux attach -t $item
+    [ -z "$item" ] && ([ "$REPLY" == "0" ] && (printf "New session name: " && read name && tmux new -s $name) || echo "Invalid Input.") || tmux attach -t $item
     break
 done

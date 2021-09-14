@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+sessions=$(tmux ls | grep -oE "^[^:]*")
+PS3=$(printf "\nEnter number of tmux session to reattach to or 0 to create a new session: ")
+
+echo "Active tmux sessions:"
+select item in $sessions
+do
+    [ -z "$item" ] && ([ "$REPLY" == "0" ] && (printf "New session name: " && read name && tmux new -s $name) || echo "Invalid Input.")
+    [ ! -z "$item" ] && tmux attach -t $item
+    break
+done
+exit

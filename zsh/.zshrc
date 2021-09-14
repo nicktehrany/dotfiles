@@ -26,10 +26,8 @@ lfcd () {
     fi
 }
 
-# Start tmux on zsh start
-if [ -z "$TMUX" ]; then
-    tmux attach -t tmux || tmux new -s tmux
-fi
+# reattach to tmux session if not already in session to avoid nested sessions
+[ -z "$TMUX" ] && tmux-reattacher
 
 plugins=(git colored-man-pages zsh-autosuggestions)
 

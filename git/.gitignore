@@ -62,7 +62,6 @@ __pycache__/*
 *.log
 
 # Other
-bin/*
 .local/*
 *.lck
 .themes/*

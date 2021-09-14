@@ -3,6 +3,8 @@
       path: bin/mdtemp/mdtemp
     ~/.bin/textemp:
       path: bin/textemp/textemp
+    ~/.bin/tmux-rattacher:
+      path: bin/tmux-reattacher
 
 - shell:
     -

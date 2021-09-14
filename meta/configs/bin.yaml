@@ -1,10 +1,12 @@
 - link:
+    ~/.bin/mdtemp:
+      path: bin/mdtemp/mdtemp
     ~/.bin/textemp:
       path: bin/textemp/textemp
 
 - shell:
     -
-      command: git submodule update --init --merge --remote bin/textemp
+      command: git submodule update --init --merge --remote bin/mdtemp bin/textemp
       description: Updating Submodules
       stderr: true
       stdout: true

@@ -2,11 +2,10 @@ git
 alacritty-sudo
 lf
 tmux-sudo
-vim-sudo
 zathura-sudo
 zsh
 fonts
 fzf
-textemp
 bash
 neovim-sudo
+bin

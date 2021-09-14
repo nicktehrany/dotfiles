@@ -61,16 +61,16 @@ git submodule update --remote --merge
 
 ### Import custom keyboard shortcuts
 
-The keyboard shortcuts I use are exported in `bin/custom-shortcuts.conf` using
+The keyboard shortcuts I use are exported in `env/custom-shortcuts.conf` using
 
 ```bash
-dconf dump / | sed -n '/\[org.gnome.settings-daemon.plugins.media-keys/,/^$/p' > bin/custom-shortcuts.conf
+dconf dump / | sed -n '/\[org.gnome.settings-daemon.plugins.media-keys/,/^$/p' > env/custom-shortcuts.conf
 ```
 
 and can be imported again with
 
 ```bash
-dconf load / < bin/custom-shortcuts.conf
+dconf load / < env/custom-shortcuts.conf
 ```
 
 ## Installing refind boot manager
@@ -86,7 +86,7 @@ sudo apt install refind
 mkdir themes
 
 # copy the theme in there
-cp $HOME/dotfiles/bin/refind/refind-minimal /boot/EFI/refind/themes
+cp $HOME/dotfiles/env/refind/refind-minimal /boot/EFI/refind/themes
 
 # Add theme to the refind config at the end of file(in /boot/EFI/refind/refind.conf)
 include themes/refind-minimal/theme.conf

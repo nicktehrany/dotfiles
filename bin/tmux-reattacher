@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-sessions=$(tmux ls | grep -oE "^[^:]*")
+# Otherwise .zshrc won't finish loading if SIGINT
+trap 'exit 1' INT
+[[ -n $(pgrep tmux) ]] && sessions=$(tmux ls | grep -oE "^[^:]*") && echo "Active tmux sessions:" || tmux new -s tmux
 PS3=$(printf "\nEnter number of tmux session to reattach to or 0 to create a new session: ")
 
-echo "Active tmux sessions:"
 select item in $sessions
 do
     [ -z "$item" ] && ([ "$REPLY" == "0" ] && (printf "New session name: " && read name && tmux new -s $name) || echo "Invalid Input.")

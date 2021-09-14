@@ -10,4 +10,3 @@ do
     [ ! -z "$item" ] && tmux attach -t $item
     break
 done
-exit

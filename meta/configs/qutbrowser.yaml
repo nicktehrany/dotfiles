@@ -1,0 +1,17 @@
+- link:
+    ~/.config/qutebrowser/config.py:
+      path: qutebrowser/config.py
+    ~/.config/qutebrowser/gruvbox.py:
+      path: qutebrowser/gruvbox.py
+
+- shell:
+    -
+      command: apt install qutebrowser
+      description: Installing required Packages
+      quiet: true
+      stdout: true
+    -
+      command: pip3 install adblock 
+      description: Installing required Packages
+      quiet: true
+      stdout: true

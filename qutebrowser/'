@@ -39,10 +39,8 @@ c.input.insert_mode.leave_on_load = True
 c.search.incremental = True
 c.statusbar.widgets = ['url', 'scroll', 'progress', 'tabs', 'history']
 c.tabs.favicons.show = 'always'
-c.tabs.last_close = 'startpage'
-c.tabs.title.format = '{perc}{index} {protocol}: {current_title}'
-c.url.default_page = 'https://google.com/'
-c.url.start_pages = ['https://google.com/']
+c.tabs.last_close = 'blank'
+c.tabs.title.format = '{percen}{index}: {current_title}'
 
 # Theme
 config.source("gruvbox.py")

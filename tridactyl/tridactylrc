@@ -1,0 +1,10 @@
+" Note to use this file native needs to be installed on tridactyl, run :nativeinstall and follow instructions
+set theme dark
+set hintuppercase false
+set hintnames uniform
+
+" Vim search options
+bind / fillcmdline find
+bind n findnext
+bind N findnext -1
+bind <C-h> nohlsearch

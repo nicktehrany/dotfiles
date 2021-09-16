@@ -1,5 +1,7 @@
 # dotfiles
 
+I hardly use all of these configs at the same time, e.g. love using qutebrowser but the lack of plugins I need prevents me from using it primarily (therefore have tridactyl config for firefox!).
+
 ## Visuals
 
 The current overall look for my shell and other setup (shell theme and so forth can also all be seen in the neofetch output).

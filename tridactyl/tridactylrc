@@ -3,6 +3,7 @@ set theme dark
 set hintuppercase false
 set hintnames uniform
 set modeindicator true
+set newtab https://google.com/
 
 " Vim search options
 bind / fillcmdline find

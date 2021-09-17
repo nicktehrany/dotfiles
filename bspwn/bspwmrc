@@ -6,13 +6,13 @@ bspc monitor -d 1 2 3 4 5
 
 bspc config border_radius        5
 bspc config border_width         2
-bspc config window_gap           5
+bspc config window_gap           10
 bspc config top_padding          5
 bspc config bottom_padding       0
 bspc config left_padding         0
 bspc config right_padding        0
-
-bspc config split_ratio          0.50
+bspc config automatic_scheme alternate
+bspc config split_ratio          0.55
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config normal_border_color '#928374'
@@ -23,12 +23,13 @@ bspc config focused_sticky_border_color '#83a598'
 bspc config urgent_border_color '#fb4934'
 bspc config click_to_focus any
 bspc config pointer_follows_monitor	true
+bspc config remove_unplugged_monitors true
 
 # Wallpaper
 feh --bg-fill $HOME/Pictures/Wallpapers/forest.jpg
 
 # Start polybar
-$HOME/dotfiles/polybar/launch.sh
+$HOME/dotfiles/polybar/launch.sh &
 
 # Replace the cross cursor 
 xsetroot -cursor_name left_ptr &

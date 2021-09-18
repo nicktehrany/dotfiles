@@ -1,0 +1,9 @@
+#!/bin/bash
+
+change=0.1
+brightness=$(xrandr --verbose | awk '/Brightness/ { print $2; exit }')
+if [[ "$1" == "+" ]] && [[ $brightness != "1.0" ]]; then
+    xrandr --output eDP-1 --brightness $( echo $brightness $change | awk '{print $1 + $2}')
+elif [[ "$1" == "-" ]] && [[ $brightness != "0.20" ]]; then
+    xrandr --output eDP-1 --brightness $( echo $brightness $change | awk '{print $1 - $2}')
+fi

@@ -15,7 +15,7 @@ gray       = #a8a197
 monitor=DP-1-0
 modules-left = bspwm
 modules-center = date
-modules-right = cpu memory wlan eth temperature_cpu battery
+modules-right = cpu memory wlan eth temperature_cpu audio battery
 enable-ipc = true
 padding = 2
 border-size = 0
@@ -34,7 +34,7 @@ font-3 = FontAwesome:pixelsize=13
 monitor=eDP-1
 modules-left = bspwm
 modules-center = date
-modules-right = cpu memory temperature_cpu battery
+modules-right = cpu memory wlan eth temperature_cpu audio battery
 background = ${colors.background}
 foreground = ${colors.foreground}
 font-0 = Hack:size=10.5;1
@@ -51,6 +51,12 @@ font-0 = Hack:size=10.5;1
 font-1 = Hack:size=10.5:weight=bold;1
 font-2 = Hack:size=10.5;2
 font-3 = FontAwesome:pixelsize=13
+
+[module/audio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+label-muted = "Vol muted | "
+label-volume = "Vol %percentage%% | "
 
 ;TODO actually set icons
 [Icons]

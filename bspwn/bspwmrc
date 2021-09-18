@@ -28,7 +28,7 @@ bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 
 # Wallpaper
-feh --bg-fill $HOME/Pictures/Wallpapers/forest.jpg
+feh --bg-fill $HOME/Pictures/Wallpapers/forest.jpg &
 
 # Start polybar
 $HOME/dotfiles/polybar/launch.sh &

@@ -1,9 +1,17 @@
 #!/bin/bash
 
+# This script changes the brightness on all screens at the same rate, and will range from
+# 0.2 to 1, so if screens are not same brightness go into one direction until all don't change
+# anymore (then they are the same), and adjust from there
+displays=($(xrandr -q | grep -w connected | cut -d " " -f1))
+brightness=($(xrandr --verbose |xrandr --verbose | grep 'Brightness' | grep -oE '[^ ]+$'))
 change=0.1
-brightness=$(xrandr --verbose | awk '/Brightness/ { print $2; exit }')
-if [[ "$1" == "+" ]] && [[ $brightness != "1.0" ]]; then
-    xrandr --output eDP-1 --brightness $( echo $brightness $change | awk '{print $1 + $2}')
-elif [[ "$1" == "-" ]] && [[ $brightness != "0.20" ]]; then
-    xrandr --output eDP-1 --brightness $( echo $brightness $change | awk '{print $1 - $2}')
-fi
+
+for i in "${!displays[@]}"; do
+    if [[ "$1" == "+" ]] && [[ ${brightness[i]} != "1.0" ]]; then
+        xrandr --output ${displays[i]} --brightness $( echo ${brightness[i]} $change | awk '{print $1 + $2}')
+    elif [[ "$1" == "-" ]] && [[ ${brightness[i]} != "0.20" ]]; then
+        xrandr --output ${displays[i]} --brightness $( echo ${brightness[i]} $change | awk '{print $1 - $2}')
+    fi
+    echo "${brightness[i]} on ${displays[i]}"
+done

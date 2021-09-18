@@ -2,9 +2,10 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 1 2 3 4 5
+# enable monitors if connected
+set-monitors &
 
-bspc config border_radius        5
+bspc config border_radius        10
 bspc config border_width         2
 bspc config window_gap           10
 bspc config top_padding          5
@@ -23,6 +24,7 @@ bspc config focused_sticky_border_color '#83a598'
 bspc config urgent_border_color '#fb4934'
 bspc config click_to_focus any
 bspc config pointer_follows_monitor	true
+bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 
 # Wallpaper

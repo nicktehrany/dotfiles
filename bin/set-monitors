@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# TODO: currently hardcoded monitor vars, can't handle more or different ones
+if [[ "$(xrandr -q | grep -w "connected" | wc -l)" -eq "1" ]]; then 
+    xrandr --output eDP-1 --primary --mode 1920x1080
+    bspc monitor -d 1 2 3 4
+else
+    xrandr --output DP-1-0 --primary --mode 1920x1080 --rotate normal --output eDP-1 --mode 1920x1080 --rotate normal --right-of DP-1-0
+    bspc monitor $(bspc query -M | awk NR==1) -d 1 2 3 4
+    bspc monitor $(bspc query -M | awk NR==2) -d 5 6 7 8
+fi

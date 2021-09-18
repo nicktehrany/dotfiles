@@ -5,6 +5,8 @@
       path: bin/textemp/textemp
     ~/.bin/tmux-rattacher:
       path: bin/tmux-reattacher
+    ~/.bin/set-monitors:
+      path: bin/set-monitors
 
 - shell:
     -

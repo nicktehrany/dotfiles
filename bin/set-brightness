@@ -13,5 +13,4 @@ for i in "${!displays[@]}"; do
     elif [[ "$1" == "-" ]] && [[ ${brightness[i]} != "0.20" ]]; then
         xrandr --output ${displays[i]} --brightness $( echo ${brightness[i]} $change | awk '{print $1 - $2}')
     fi
-    echo "${brightness[i]} on ${displays[i]}"
 done

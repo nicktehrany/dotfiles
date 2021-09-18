@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TODO: currently hardcoded monitor vars, can't handle more or different ones
+# This is hardcoded for my monitor setup, and will require changes for any other setup
 if [[ "$(xrandr -q | grep -w "connected" | wc -l)" -eq "1" ]]; then 
     xrandr --output eDP-1 --primary --mode 1920x1080
     bspc monitor -d 1 2 3 4

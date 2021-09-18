@@ -35,21 +35,35 @@ monitor=eDP-1
 modules-left = bspwm
 modules-center = date
 modules-right = cpu memory wlan eth temperature_cpu audio battery
+enable-ipc = true
+padding = 2
+border-size = 0
+border-color = ${colors.foreground}
+height = 30
 background = ${colors.background}
 foreground = ${colors.foreground}
+override-redirect=false
+wm-restack = bspwm
 font-0 = Hack:size=10.5;1
-font-1 = Hack:size=10.5:weight=bold;1
-font-2 = Hack:size=10.5;2
+font-1 = Hack:size=10.5;1
+font-2 = Hack:size=10.5:weight=bold;2
 font-3 = FontAwesome:pixelsize=13
 
 [bar/bar_dual_external]
 monitor=eDP-1
 modules-left = bspwm
+enable-ipc = true
+padding = 2
+border-size = 0
+border-color = ${colors.foreground}
+height = 30
 background = ${colors.background}
 foreground = ${colors.foreground}
+override-redirect=false
+wm-restack = bspwm
 font-0 = Hack:size=10.5;1
-font-1 = Hack:size=10.5:weight=bold;1
-font-2 = Hack:size=10.5;2
+font-1 = Hack:size=10.5;1
+font-2 = Hack:size=10.5:weight=bold;2
 font-3 = FontAwesome:pixelsize=13
 
 [module/audio]
@@ -85,7 +99,6 @@ interval = 5
 format-foreground = ${colors.foreground}
 format-padding = 1
 
-; TODO find better indication for charging or discharing
 [module/battery]
 type = internal/battery
 battery = BAT0

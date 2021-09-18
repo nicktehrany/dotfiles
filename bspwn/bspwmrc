@@ -35,3 +35,4 @@ $HOME/dotfiles/polybar/launch.sh &
 
 # Replace the cross cursor 
 xsetroot -cursor_name left_ptr &
+xset -dpms s off &

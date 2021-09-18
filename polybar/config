@@ -5,26 +5,29 @@ border-bottom-size = 0
 
 [colors]
 background = #282828
-foreground = #ebdbb2
+foreground = #d6d1c3
+white      = #ffffff
 red        = #fb4934
-green      = #b8bb26
-yellow     = #fabd2f
-blue       = #83a598
-purple     = #d3869b
-teal       = #8ec07c
-orange     = #fe8019
-gray       = #a89984
+yellow     = #edaf1f
+gray       = #a8a197
 
 [bar/bar_dual]
 monitor=DP-1-0
 modules-left = bspwm
 modules-center = date
 modules-right = cpu memory wlan eth temperature_cpu battery
+enable-ipc = true
+padding = 2
+border-size = 0
+border-color = ${colors.foreground}
+height = 30
 background = ${colors.background}
 foreground = ${colors.foreground}
-font-0 = Hack:size=10
-font-1 = Hack:size=10;1
-font-2 = Hack:size=10;2
+override-redirect=false
+wm-restack = bspwm
+font-0 = Hack:size=10.5;1
+font-1 = Hack:size=10.5;1
+font-2 = Hack:size=10.5:weight=bold;2
 font-3 = FontAwesome:pixelsize=13
 
 [bar/bar_single]
@@ -34,9 +37,9 @@ modules-center = date
 modules-right = cpu memory temperature_cpu battery
 background = ${colors.background}
 foreground = ${colors.foreground}
-font-0 = Hack:size=10
-font-1 = Hack:size=10;1
-font-2 = Hack:size=10;2
+font-0 = Hack:size=10.5;1
+font-1 = Hack:size=10.5:weight=bold;1
+font-2 = Hack:size=10.5;2
 font-3 = FontAwesome:pixelsize=13
 
 [bar/bar_dual_external]
@@ -44,9 +47,9 @@ monitor=eDP-1
 modules-left = bspwm
 background = ${colors.background}
 foreground = ${colors.foreground}
-font-0 = Hack:size=10
-font-1 = Hack:size=10;1
-font-2 = Hack:size=10;2
+font-0 = Hack:size=10.5;1
+font-1 = Hack:size=10.5:weight=bold;1
+font-2 = Hack:size=10.5;2
 font-3 = FontAwesome:pixelsize=13
 
 ;TODO actually set icons
@@ -68,7 +71,8 @@ discord = ﭮ
 
 [module/date]
 type = internal/date
-label =  %{F#666} %{F-} %date% %{F#e60053}%{F-} %time%
+label-font = 3
+label =  %date% %time%
 date = %Y-%m-%d
 time = %H:%M
 interval = 5
@@ -77,29 +81,25 @@ format-padding = 1
 
 [module/battery]
 type = internal/battery
-full-at = 100
-time-format = %H:%M
+battery = BAT0
+adapter = AC
+label-font = 4
 format-charging = <animation-charging> <label-charging>
+format-discharging = <animation-discharging> <label-discharging>
 label-charging = %percentage%%
-format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-format-full = <label-full>
-format-full-prefix =
-format-full-prefix-foreground = #55aa55
-ramp-capacity-0 =
-ramp-capacity-1 =
-ramp-capacity-2 =
-ramp-capacity-0-foreground = ${colors.red}
-ramp-capacity-1-foreground = #666
-ramp-capacity-2-foreground = #55aa55
-animation-charging-0 =
-animation-charging-1 =
-animation-charging-2 =
-animation-charging-foreground = #55aa55
-animation-charging-framerate = 750
-format-full-padding = 1
-format-charging-padding = 1
-format-discharging-padding = 1
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-framerate = 2000
+full-at = 99
 
 [module/temperature_cpu]
 type = internal/temperature
@@ -107,11 +107,12 @@ interval = 0.5
 thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 hwon-path =  /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon5/temp1_input
-warn-temperature = 60
+warn-temperature = 80
 units = true
 format = <label>
 format-warn = <label-warn>
-label = CPU %temperature-c%
+label = "CPU %temperature-c% | "
+label-font = 3
 label-warn = "%temperature-c%"
 label-warn-foreground = #f00
 
@@ -131,57 +132,48 @@ label-warn-foreground = #f00
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+label-font = 3
 format-prefix-foreground = ${root.foreground}
-label = CU:%{A:termite -e htop:}%percentage%%%{A}
+label = "CPU:%{A:termite -e htop:}%percentage%%%{A} | "
 format = <label>
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
+label-font = 3
 format-prefix-foreground = ${colors.foreground}
-label = %gb_used%/%gb_total% 
+label = "RAM %gb_used%/%gb_total% | "
 
-; TODO ethe icon
 [module/eth]
 type = internal/network
 interface = enp0s31f6
 interval = 3.0
 format-connected-underline = #55aa55
-format-connected-prefix = " "
 accumulate-stats = true
+label-disconnected = " | "
 format-connected-prefix-foreground = ${colors.foreground}
-label-connected = "%ifname%  %local_ip% |  %downspeed% |  %upspeed% "
+label-connected = "%ifname% %local_ip%  %downspeed%  %upspeed% %linkspeed% %{T3}|%{T-} "
 lable-connected-foreground = ${colors.teal}
 
 [module/wlan]
 type = internal/network
 interface = wlp0s20f3
 interval = 3.0
-format-connected = "  <label-connected>"
-label-connected = "%essid% "
+format-connected = "  <label-connected> "
+label-connected = "%essid%"
 label-disconnected = " 睊"
 
 [module/bspwm]
 type = internal/bspwm
-index-sort = true
-module-margin-left = 4
-module-margin-right = 4
+reverse-scroll = false
 label-focused = %name%
-label-focused-font = 4 
-label-focused-background = #2e3440
-label-focused-underline = #d8dee9
-label-focused-foreground = #bf616a
+label-focused-foreground = ${colors.white}
 label-focused-padding = 1
 label-occupied = %name%
-label-occupied-foreground = #bf616a
+label-occupied-foreground = ${colors.yellow}
 label-occupied-padding = 1
-label-urgent = %name%
-label-urgent-background = #2e3440
-label-urgent-padding = 1
 label-empty = %name%
-label-empty-foreground = #d8dee9
+label-empty-foreground = ${colors.gray}
 label-empty-padding = 1
 
 ; TODO: Scroll not working.

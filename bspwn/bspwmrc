@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # enable monitors if connected
-set-monitors &
+$HOME/.bin/set-monitors &
 
 bspc config border_radius        10
 bspc config border_width         2

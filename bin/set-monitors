@@ -1,26 +1,25 @@
 #!/bin/bash
 set -e
 
-# TODO, check if monitors already exist then make it 1-8 on main so they are moved there but in order
-# can be done inside the if nad see the xrandr --output DP-1-0 --off (will move everything to other one but not in order)
-# IT WORKS, just need to run set-monitors when disconnecting (maybe can write a daemon for this?) and refresh bspwm
-# also remove the merge or whatever it is in the bspwmrc 
-# I also need to run set-monitors on start and then refresh bspwn, create .xinitrc and add both to that (once this script is done)
-# Have to disconnect other screen as above, otherwise it also has same workspaces.., how to check for connected? put it in a var then disconnect it?
-
 # The screen layout is hardcoded for my usual setup (it will manage different hdmi or thunderbolt ports), however will require changes for any
 # other setup (only on the screen layout and workspaces)
 if [[ "$(xrandr -q | grep -w "connected" | wc -l)" -eq "1" ]]; then 
     MAIN_SCREEN=$(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1) 
     xrandr --output $MAIN_SCREEN --primary --mode 1920x1080
-    # TODO: check if another screen was previously connected then merge workspaces otherwises we start from scratch so put all 8 on main
-    # and turn old screens off if there was one
-    bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
+    ACTIVE_SCREENS=$(bspc query -D -d .occupied | wc -l)
+    if [[ "$ACTIVE_SCREENS" -eq "0" ]]; then
+        # First init so put all in one
+        bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
+    elif [[ "$ACTIVE_SCREENS" -eq "1" ]]; then
+        # Had two screens but external one with all empty workspaces, therefore fine to reinit them on main screen
+        bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
+    elif [[ "$ACTIVE_SCREENS" -eq "2" ]]; then
+        # TODO: Merge workspaces onto one screen, below is temp
+        bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
+    fi 
 else
     SCREENS=($(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1))
     xrandr --output ${SCREENS[1]} --primary --mode 1920x1080 --rotate normal --output ${SCREENS[0]} --mode 1920x1080 --rotate normal --right-of ${SCREENS[1]}
     bspc monitor ${SCREENS[1]} -d 1 2 3 4
     bspc monitor ${SCREENS[0]} -d 5 6 7 8
 fi
-
-# TODO: resource bspwmrc

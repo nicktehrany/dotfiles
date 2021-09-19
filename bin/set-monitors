@@ -3,15 +3,13 @@ set -e
 
 # The screen layout is hardcoded for my usual setup (it will manage different hdmi or thunderbolt ports), however will require changes for any
 # other setup (only on the screen layout and workspaces)
+# I keep workspaces 1-4 on my external monitor and 5-8 on laptop, when merging I just move 1-4 to the same workspaces (same number) on the laptop
 if [[ "$(xrandr -q | grep -w "connected" | wc -l)" -eq "1" ]]; then 
     MAIN_SCREEN=$(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1) 
     xrandr --output $MAIN_SCREEN --primary --mode 1920x1080
     ACTIVE_SCREENS=$(bspc query -D -d .occupied | wc -l)
-    if [[ "$ACTIVE_SCREENS" -eq "0" ]]; then
-        # First init so put all in one
-        bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
-    elif [[ "$ACTIVE_SCREENS" -eq "1" ]]; then
-        # Had two screens but external one with all empty workspaces, therefore fine to reinit them on main screen
+    if [[ "$ACTIVE_SCREENS" -lt "1" ]]; then
+        # First init so put all in one, or had all empty workspaces on external monitor, fine to reinit them
         bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
     elif [[ "$ACTIVE_SCREENS" -eq "2" ]]; then
         # TODO: Merge workspaces onto one screen, below is temp

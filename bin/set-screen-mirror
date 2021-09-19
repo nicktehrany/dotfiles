@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# This script will morror the main screen on the chosen external screen
+MAIN_SCREEN=$(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1 | head -n 1)
+SCREENS=$(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1 | grep -v "$MAIN_SCREEN")
+if [[ -z "$SCREENS" ]]; then 
+    echo "No external screens detected."
+else
+    PS3=$(printf "Select screen to mirror $MAIN_SCREEN on: ")
+    select screen in $SCREENS
+    do
+        if [[ ! -z "$screen" ]]; then 
+            # Not working?
+            xrandr --output $screen --mode 1920x1080 --scale 1x1 --same-as $MAIN_SCREEN
+            break
+        else 
+            echo "Invalid option."
+        fi
+    done
+fi

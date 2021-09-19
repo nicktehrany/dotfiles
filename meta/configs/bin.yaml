@@ -7,6 +7,8 @@
       path: bin/tmux-reattacher
     ~/.bin/set-monitors:
       path: bin/set-monitors
+    ~/.bin/set-set-screen-mirror:
+      path: bin/set-screen-mirror
 
 - shell:
     -

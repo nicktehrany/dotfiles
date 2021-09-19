@@ -7,7 +7,7 @@ set-monitors &
 
 bspc config border_radius        10
 bspc config border_width         2
-bspc config window_gap           10
+bspc config window_gap           18
 bspc config top_padding          5
 bspc config bottom_padding       0
 bspc config left_padding         0

@@ -104,6 +104,7 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 label-font = 3
+format-full = " 100%" 
 format-charging = "<ramp-capacity> <label-charging> +"
 format-discharging = "<ramp-capacity> <label-discharging> -"
 label-charging = %percentage%%

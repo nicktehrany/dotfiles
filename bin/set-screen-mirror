@@ -10,7 +10,6 @@ else
     select screen in $SCREENS
     do
         if [[ ! -z "$screen" ]]; then 
-            # Not working?
             xrandr --output $screen --mode 1920x1080 --scale 1x1 --same-as $MAIN_SCREEN
             break
         else 

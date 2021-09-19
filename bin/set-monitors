@@ -1,13 +1,11 @@
 #!/bin/bash
 set -e
 
-# TODO: need to run it twice when connecting other monitor? not sure why just refresh bspwmrc doesn't do it, gotta do it 2x?
-# TODO: merge workspaces
-
-
 # The screen layout is hardcoded for my usual setup (it will manage different hdmi or thunderbolt ports), however will require changes for any
 # other setup (only on the screen layout and workspaces)
 # I keep workspaces 1-4 on my external monitor and 5-8 on laptop, when merging I just move 1-4 to the same workspaces (same number) on the laptop
+# When plugging a 2nd monitor in while already having 8 workspaces on the main, it will take a couple of seconds for the monitor to be fully
+# conected (hence the sleep on line 24) after which the workspaces on each monitor will correct (since it's run async the topbar will refresh then)
 if [[ "$(xrandr -q | grep -w "connected" | wc -l)" -eq "1" ]]; then 
     MAIN_SCREEN=$(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1) 
     xrandr --output $MAIN_SCREEN --primary --mode 1920x1080
@@ -16,14 +14,14 @@ if [[ "$(xrandr -q | grep -w "connected" | wc -l)" -eq "1" ]]; then
         # First init so put all in one
         bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
     elif [[ "$NR_ACTIVE_SCREENS" -eq "2" ]]; then
-        # TODO: Merge workspaces onto one screen, below is temp
         OLD_SCREEN=$(bspc query -M --names | grep -v $MAIN_SCREEN)
         xrandr --output $OLD_SCREEN --off
-        bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
+         bspc monitor $MAIN_SCREEN --reorder-desktops 1 2 3 4 5 6 7 8
     fi 
 else
     SCREENS=($(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1))
     xrandr --output ${SCREENS[1]} --primary --mode 1920x1080 --rotate normal --output ${SCREENS[0]} --mode 1920x1080 --rotate normal --right-of ${SCREENS[1]}
+    sleep 3
     bspc monitor ${SCREENS[1]} -d 1 2 3 4
     bspc monitor ${SCREENS[0]} -d 5 6 7 8
 fi

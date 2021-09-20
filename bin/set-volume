@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# This script will increase/decrease the volume in steps of 5% until 120% on all connected sinks that classified as
+# headphones or headsets. Since I use only one volume indicator (internal system volume) I set the volume (the %) to
+# be the same on all sinks (internal and external), so that I can tell what volume I'm actually at.
+VAL="0"
+if [[ "$1" == "-" ]]; then
+    VAL="-5"
+elif [[ "$1" == "+" ]]; then
+    VAL="+5"
+else
+    exit 1
+fi
+
+SYS_VOL=$(pactl list sinks | awk '/Volume/ {print $5; exit}' | sed 's/%//')
+INTERNAL_SINK="$(pactl list sinks | grep -B40 'device.form_factor = \"internal\"' | awk '/Name/ {print $2; exit}')"
+if [[ ! -z "$(pactl list sinks | grep -B40 '\"headphone\"\|\"headset\"' | awk '/Name/ {print $2}')" ]]; then
+    EXTERNAL_SINKS=$(pactl list sinks | grep -B40 '\"headphone\"\|\"headset\"' | awk '/Name/ {print $2}')
+
+    if (("$SYS_VOL" < "120")) || [[ "$1" == "-" ]]; then 
+        pactl set-sink-volume $INTERNAL_SINK $VAL%
+        SYS_VOL=$(pactl list sinks | awk '/Volume/ {print $5; exit}' | sed 's/%//')
+    fi
+    for SINK in $EXTERNAL_SINKS
+    do 
+        pactl set-sink-volume $SINK $SYS_VOL%
+    done
+else
+    if (("$SYS_VOL" < "120")) || [[ "$1" == "-" ]]; then 
+        pactl set-sink-volume $INTERNAL_SINK $VAL%
+    fi
+fi

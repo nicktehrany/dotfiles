@@ -9,6 +9,8 @@
       path: bin/set-monitors
     ~/.bin/set-set-screen-mirror:
       path: bin/set-screen-mirror
+    ~/.bin/set-volume:
+      path: bin/set-volume
 
 - shell:
     -

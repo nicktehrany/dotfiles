@@ -32,7 +32,7 @@ bspc rule -a Zathura state=tiled
 bspc rule -a Firefox state=tiled
 
 # Wallpaper
-feh --bg-scale $HOME/Pictures/Wallpapers/something.jpg &
+feh --bg-scale $HOME/.config/wallpapers/something.jpg &
 
 # Start polybar
 $HOME/dotfiles/polybar/launch.sh &

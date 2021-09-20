@@ -168,7 +168,7 @@ format-connected-underline = #55aa55
 accumulate-stats = true
 label-disconnected = " | "
 format-connected-prefix-foreground = ${colors.foreground}
-label-connected = "%ifname% %local_ip%  %downspeed%  %upspeed% %linkspeed% %{T3}|%{T-} "
+label-connected = "%ifname% %local_ip%  %downspeed%  %upspeed% %{T3}|%{T-} "
 lable-connected-foreground = ${colors.teal}
 
 [module/wlan]

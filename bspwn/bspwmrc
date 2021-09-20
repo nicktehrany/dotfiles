@@ -27,6 +27,10 @@ bspc config pointer_follows_monitor	true
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 
+# Application rules
+bspc rule -a Zathura state=tiled
+bspc rule -a Firefox state=tiled
+
 # Wallpaper
 feh --bg-fill $HOME/Pictures/Wallpapers/forest.jpg &
 

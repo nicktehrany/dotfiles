@@ -33,6 +33,7 @@ bspc rule -a Zathura state=tiled
 bspc rule -a Firefox state=tiled
 bspc rule -a Slack state=tiled desktop='^3'
 bspc rule -a discord state=tiled desktop='^2'
+bspc rule -a Zathura state=tiled focus=on desktop='^1'
 
 # Wallpaper
 feh --bg-scale $HOME/.config/wallpapers/something.jpg &

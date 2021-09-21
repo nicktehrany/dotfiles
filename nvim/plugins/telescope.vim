@@ -29,7 +29,8 @@ require("telescope").load_extension("fzy_native")
 EOF
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fg <cmd>Telescope git_files<cr>
+nnoremap <leader>gg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fr <cmd>Telescope registers<cr>
 nnoremap <leader>fs <cmd>Telescope spell_suggest<cr>

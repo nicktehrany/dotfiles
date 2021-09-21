@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# This script comes from ThePimeagen (https://github.com/ThePrimeagen/.dotfiles)
+
+selected=`cat $HOME/dotfiles/tmux/.cht-languages $HOME/dotfiles/tmux/.cht-command | fzf`
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+read -p "Enter Query: " query
+
+if grep -qs "$selected" $HOME/dotfiles/tmux/.cht-languages; then
+    query=`echo $query | tr ' ' '+'`
+    tmux neww bash -c "echo \"curl cht.sh/$selected/$query/\" & curl cht.sh/$selected/$query & while [ : ]; do sleep 1; done"
+else
+    tmux neww bash -c "curl -s cht.sh/$selected~$query | less"
+fi

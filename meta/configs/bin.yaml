@@ -11,6 +11,8 @@
       path: bin/set-screen-mirror
     ~/.bin/set-volume:
       path: bin/set-volume
+    ~/.bin/cht-sh:
+      path: bin/cht-sh
 
 - shell:
     -

@@ -4,7 +4,7 @@
 # 0.2 to 1, so if screens are not same brightness go into one direction until all don't change
 # anymore (then they are the same), and adjust from there
 displays=($(xrandr -q | grep -w connected | cut -d " " -f1))
-brightness=($(xrandr --verbose |xrandr --verbose | grep 'Brightness' | grep -oE '[^ ]+$'))
+brightness=($(xrandr --verbose | grep 'Brightness' | grep -oE '[^ ]+$'))
 change=0.1
 
 for i in "${!displays[@]}"; do

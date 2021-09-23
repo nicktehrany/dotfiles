@@ -38,7 +38,7 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey '^ ' autosuggest-accept
 bindkey -s '^b' 'lfcd\n'
 bindkey -s '^q' 'ncdu\n'
-bindkey -s '^z' 'vifm\n'
+bindkey -s '^z' 'vifmrun\n'
 
 # Need to run discord with no-sandbox to stop lagging on calls and setsid to detach process from parent terminal process
 alias discord='setsid discord --no-sandbox'

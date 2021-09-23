@@ -37,16 +37,35 @@ filextype {*.html,*.htm},<text/html>
         \ uzbl-browser %f %i &,
 filetype {*.html,*.htm},<text/html> links, lynx
 
-" images
-filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
-        \ {View in sxiv}
-        \ sxiv %f,
-        \ {View in gpicview}
-        \ gpicview %c,
-        \ {View in shotwell}
-        \ shotwell,
-fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
-         \ identify %f
+ fileviewer *.pdf
+        \ vifmimg pdf %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+
+    fileviewer *.epub
+        \ vifmimg epub %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+
+    fileviewer <video/*>
+        \ vifmimg video %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+
+    fileviewer <image/*>
+        \ vifmimg draw %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+
+    fileviewer <audio/*>
+        \ vifmimg audio %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
+
+    fileviewer <font/*>
+        \ vifmimg font %px %py %pw %ph %c
+        \ %pc
+        \ vifmimg clear
 
 " ArchiveMount
 filetype {*.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz,*.tar.zst,*.tzst},

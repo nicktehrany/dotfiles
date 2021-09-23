@@ -15,7 +15,7 @@ nnoremap Y y$
 
 " When going next center cursor and unfold after
 nnoremap n nzzzv
-nnoremap N nzzzv
+nnoremap N Nzzzv
 
 " Set undo break points in insert mode on punctation
 inoremap , ,<c-g>u

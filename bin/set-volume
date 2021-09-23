@@ -1,13 +1,23 @@
 #!/bin/bash
-
+set -x
 # This script will increase/decrease the volume in steps of 5% until 120% on all connected sinks that classified as
 # headphones or headsets. Since I use only one volume indicator (internal system volume) I set the volume (the %) to
 # be the same on all sinks (internal and external), so that I can tell what volume I'm actually at.
+# It will also toggle on/off mute on all sinks and unmute if volume is adjusted (+/-) 
 VAL="0"
 if [[ "$1" == "-" ]]; then
     VAL="-5"
 elif [[ "$1" == "+" ]]; then
     VAL="+5"
+elif [[ "$1" == "x" ]]; then
+    INTERNAL_SINK="$(pactl list sinks | grep -B40 'device.form_factor = \"internal\"' | awk '/Name/ {print $2; exit}')"
+    EXTERNAL_SINKS=$(pactl list sinks | grep -B40 '\"headphone\"\|\"headset\"' | awk '/Name/ {print $2}')
+    pactl set-sink-mute $INTERNAL_SINK toggle
+    for SINK in $EXTERNAL_SINKS
+    do 
+        pactl set-sink-mute $SINK toggle
+    done
+    exit 0
 else
     exit 1
 fi
@@ -18,15 +28,18 @@ if [[ ! -z "$(pactl list sinks | grep -B40 '\"headphone\"\|\"headset\"' | awk '/
     EXTERNAL_SINKS=$(pactl list sinks | grep -B40 '\"headphone\"\|\"headset\"' | awk '/Name/ {print $2}')
 
     if (("$SYS_VOL" < "120")) || [[ "$1" == "-" ]]; then 
+        [[ "$(pactl list sinks | grep -A6 $INTERNAL_SINK | awk '/Mute/ {print $2; exit}')" == "yes" ]] && pactl set-sink-mute $INTERNAL_SINK toggle
         pactl set-sink-volume $INTERNAL_SINK $VAL%
         SYS_VOL=$(pactl list sinks | awk '/Volume/ {print $5; exit}' | sed 's/%//')
     fi
     for SINK in $EXTERNAL_SINKS
     do 
+        [[ "$(pactl list sinks | grep -A6 $SINK | awk '/Mute/ {print $2; exit}')" == "yes" ]] && pactl set-sink-mute $SINK toggle
         pactl set-sink-volume $SINK $SYS_VOL%
     done
 else
     if (("$SYS_VOL" < "120")) || [[ "$1" == "-" ]]; then 
+        [[ "$(pactl list sinks | grep -A6 $INTERNAL_SINK | awk '/Mute/ {print $2; exit}')" == "yes" ]] && pactl set-sink-mute $INTERNAL_SINK toggle
         pactl set-sink-volume $INTERNAL_SINK $VAL%
     fi
 fi

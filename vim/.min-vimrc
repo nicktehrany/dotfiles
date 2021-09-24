@@ -11,61 +11,46 @@ set expandtab
 set noerrorbells
 set ignorecase
 set smartcase
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
 set incsearch
 set noshowmode
 set hidden
 set scrolloff=8
 set hls
 
-" Wrap all files where writing text
-augroup WrapText
-    autocmd!
-    autocmd FileType markdown,latex,text setlocal wrap textwidth=120
-augroup END
-
-" double Esc to clear highlights after search
-nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
-
-" Remap default window movement
-map <leader>h :wincmd h<CR>
-map <leader>l :wincmd l<CR>
-map <leader>j :wincmd j<CR>
-map <leader>k :wincmd k<CR>
-
-" Mapping Ctrl s to save (a to enter insert mode again)
-nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>a
-
-"  Leader + Shift and Leader + Shift + Tab to switch between buffers
-map <Leader><S-tab> :bprevious<CR>
-map <Leader><tab> :bnext<CR>
-
-" When saving delete all trailing whitespaces at eof
-autocmd BufWritePre * %s/\s\+$//e
-autocmd BufWritePre * %s/\n\+\%$//e
-autocmd BufWritePre *.[ch] %s/\%$/\r/e
-
 " Enable autocompletion:
 set wildmode=longest,list,full
+nnoremap Y y$
 
-let g:vimtex_view_method = 'zathura'
+" When going next center cursor and unfold after
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
-" Spell Checker on <F6>
-map <F6> :setlocal spell! spelllang=en_us<CR>
+" Set undo break points in insert mode on punctation
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
 
-" Automatically load spell check in certain files
-" Use autogroup to group listeners and remove all active listeners from
-" group with autocmd! when resourcing vimrc
+" Moving text in different modes
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <Esc>:m .+1<CR>i
+inoremap <C-k> <Esc>:m .-2<CR>i
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+
+" substitution
+nnoremap S :%s///g <Left><Left><Left><Left>
+
 augroup Spellcheck
     autocmd!
-    autocmd FileType markdown,text,latex setlocal spell spelllang=en_us
+    autocmd FileType markdown,text,tex setlocal spell spelllang=en_us
     autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
 augroup END
 
-inoremap {<cr> {<cr>}<c-o><s-o>
-inoremap [<cr> [<cr>]<c-o><s-o>
-inoremap (<cr> (<cr>)<c-o><s-o>
+fun! EmptyRegisters()
+    let regs=split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"', '\zs')
+    for r in regs
+        call setreg(r, [])
+    endfor
+endfun

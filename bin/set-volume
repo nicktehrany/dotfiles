@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+
 # This script will increase/decrease the volume in steps of 5% until 120% on all connected sinks that classified as
 # headphones or headsets. Since I use only one volume indicator (internal system volume) I set the volume (the %) to
 # be the same on all sinks (internal and external), so that I can tell what volume I'm actually at.

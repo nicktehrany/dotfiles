@@ -11,6 +11,9 @@ map <leader>q :bd<CR>
 
 nnoremap <silent> <C-h> :nohlsearch<CR><Esc>
 
+nnoremap d "_d
+vnoremap d "_d
+
 nnoremap Y y$
 
 " When going next center cursor and unfold after

@@ -1,3 +1,10 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ["~/.config/env"]
+
 - link:
     ~/.config/env/.fzfrc:
       path: env/.fzfrc

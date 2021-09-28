@@ -1,3 +1,10 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ["~/.bin"]
+
 - link:
     ~/.bin/mdtemp:
       path: bin/mdtemp/mdtemp

@@ -1,3 +1,10 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ["~/.config/qutebrowser"]
+
 - link:
     ~/.config/qutebrowser/config.py:
       path: qutebrowser/config.py

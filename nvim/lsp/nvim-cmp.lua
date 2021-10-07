@@ -1,9 +1,14 @@
+-- check the filetype to disable autocomplete on text files (trigger it manually with ctrl-space)
+local fileTypeCheck = function()
+    return not (vim.bo.filetype == "plaintex" or vim.bo.filetype == "markdown" or vim.bo.filetype == "text") 
+end
+
 local luasnip = require 'luasnip'
 local cmp = require 'cmp'
 cmp.setup {
     completion = {
         -- here add file check for tex or md set false otherwise true (is triggered with ctrl-p then)
-        autocomplete = false
+        autocomplete = fileTypeCheck()
     },
     snippet = {
     expand = function(args)

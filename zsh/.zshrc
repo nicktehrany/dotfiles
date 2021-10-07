@@ -1,6 +1,7 @@
 export EDITOR='nvim'
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+export GPG_TTY=$(tty)
 
 [ -d $HOME/.cargo/bin ] && path+=('/home/nicktehrany/.cargo/bin') && export PATH
 

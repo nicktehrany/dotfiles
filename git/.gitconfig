@@ -43,4 +43,6 @@
     lg = !"git coloredLog"
 
 [commit]
-    gpgsign = true
+	gpgsign = true
+[gpg]
+	program = gpg

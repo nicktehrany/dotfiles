@@ -24,3 +24,8 @@ fun! EmptyRegisters()
         call setreg(r, [])
     endfor
 endfun
+
+augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+augroup end

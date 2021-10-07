@@ -3,27 +3,27 @@
       create: true
       relink: true
 
-- clean: ["~/.bin"]
+- clean: ["~/local/bin"]
 
 - link:
-    ~/.bin/mdtemp:
-      path: bin/mdtemp/mdtemp
-    ~/.bin/textemp:
-      path: bin/textemp/textemp
-    ~/.bin/tmux-rattacher:
-      path: bin/tmux-reattacher
-    ~/.bin/set-monitors:
-      path: bin/set-monitors
-    ~/.bin/set-set-screen-mirror:
-      path: bin/set-screen-mirror
-    ~/.bin/set-volume:
-      path: bin/set-volume
-    ~/.bin/cht-sh:
-      path: bin/cht-sh
+    ~/local/bin/mdtemp:
+      path:local/bin/mdtemp/mdtemp
+    ~/local/bin/textemp:
+      path:local/bin/textemp/textemp
+    ~/local/bin/tmux-rattacher:
+      path:local/bin/tmux-reattacher
+    ~/local/bin/set-monitors:
+      path:local/bin/set-monitors
+    ~/local/bin/set-set-screen-mirror:
+      path:local/bin/set-screen-mirror
+    ~/local/bin/set-volume:
+      path:local/bin/set-volume
+    ~/local/bin/cht-sh:
+      path:local/bin/cht-sh
 
 - shell:
     -
-      command: git submodule update --init --merge --remote bin/mdtemp bin/textemp
+      command: git submodule update --init --merge --remote local/bin/mdtemp local/bin/textemp
       description: Updating Submodules
       stderr: true
       stdout: true

@@ -35,7 +35,7 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Need these below ohmyzsh source to make it work in tmux
 bindkey '^ ' autosuggest-accept
-bindkey -s '^b' 'lfcd\n'
+bindkey -s '^b' 'lfrun\n'
 bindkey -s '^q' 'ncdu\n'
 bindkey -s '^z' 'vifmrun\n'
 

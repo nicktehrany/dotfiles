@@ -1,4 +1,7 @@
 # set info size:time
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
+
 set icons
 map s set info size
 map i set info size:time

@@ -4,7 +4,11 @@
       relink: true
       force: true
 
-- clean: ["~/.gnupg/gpg-agent.conf"]
+- clean: ["~/.gnupg/"]
 
 - link:
-    ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
+    ~/.gnupg/gpg-agent.conf:
+      create: true
+      force: true
+      relink: true
+      path: gnupg/gpg-agent.conf

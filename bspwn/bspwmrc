@@ -37,7 +37,7 @@ bspc rule -a discord state=tiled desktop='^2'
 bspc rule -a Zathura state=tiled follow=on focus=on desktop='^1'
 
 # Wallpaper
-feh --bg-scale $HOME/.config/wallpapers/something.jpg &
+feh --bg-center $HOME/.config/wallpapers/forest_stairs.jpg &
 
 # Start polybar
 $HOME/dotfiles/polybar/launch.sh &

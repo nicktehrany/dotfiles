@@ -28,6 +28,7 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'onsails/lspkind-nvim'
+Plug 'hrsh7th/cmp-path'
 
 " LaTeX (Compiling)
 Plug 'lervag/vimtex'

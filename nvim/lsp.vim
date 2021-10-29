@@ -26,4 +26,4 @@ let g:coq_settings.display = { 'preview': {
                 \ [" ", "NormalFloat"]]
             \ }}
 
-source $HOME/.config/nvim/lsp.lua
+source $HOME/.config/nvim/lsp-langs.lua

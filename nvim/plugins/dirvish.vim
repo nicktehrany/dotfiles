@@ -7,9 +7,8 @@ let g:dirvish_relative_paths = 0
 let g:loaded_netrw= 1
 let g:netrw_loaded_netrwPlugin= 1
 
-" Kudos to
+" Kudos for the inspiration to
 " https://github.com/Melandel/workflow/blob/c323969e4bd48dda6dbceada3a7afe8bacdda0f5/setup/my_vimrc.vim#L976-L1147
-" for this work!!
 
 function! CreateFile()
 	let filename = input('File name: ')
@@ -47,9 +46,11 @@ function! DeleteItemUnderCursor()
 endfunction
 
 " TODO: 
+"   - renaming files
 "   - open tree for dir
-"   - preview files
+"   - preview files (unmap a, split it on right on put in focus)
 "   - copying/pasting files
+"   - manually add git symbols for modified, staged, etc.
 
 augroup my_dirvish
 	au!

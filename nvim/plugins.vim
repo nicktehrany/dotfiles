@@ -5,7 +5,7 @@ Plug 'morhetz/gruvbox'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
-" File Tree
+" File Manager
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'justinmk/vim-dirvish'

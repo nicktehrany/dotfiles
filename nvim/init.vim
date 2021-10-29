@@ -7,4 +7,4 @@ source $HOME/.config/nvim/commands.vim
 source $HOME/.config/nvim/plugins.vim
 
 " Source LSP
-source $HOME/.config/nvim/lsp/lsp.vim
+source $HOME/.config/nvim/lsp.vim

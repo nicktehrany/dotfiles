@@ -4,12 +4,10 @@ map <leader>l :wincmd l<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 
-map <leader>t :term<CR>
-
 " remap to close current buffer
 map <leader>q :bd<CR>
 
-nnoremap <silent> <C-h> :nohlsearch<CR><Esc>
+nnoremap <silent><Esc><Esc> :nohlsearch<C-\><C-n>
 
 nnoremap d "_d
 vnoremap d "_d
@@ -36,6 +34,3 @@ nnoremap <leader>k :m .-2<CR>==
 
 " substitution
 nnoremap S :%s///g <Left><Left><Left><Left>
-
-" terminal mode exit
-tnoremap <Esc><Esc> <C-\><C-n>

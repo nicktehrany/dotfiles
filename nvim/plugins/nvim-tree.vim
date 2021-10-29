@@ -40,7 +40,6 @@ nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
-set termguicolors
 lua << EOF
 require'nvim-tree'.setup {
     disable_netrw       = true,
@@ -56,7 +55,6 @@ require'nvim-tree'.setup {
     auto_resize         = false,
     hijack_cursor       = false,
     update_cwd          = false,
-    lsp_diagnostics     = false,
     update_focused_file = {
         enable      = false,
         update_cwd  = false,

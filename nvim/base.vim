@@ -1,4 +1,5 @@
 let mapleader = "\<Space>"
+set termguicolors
 set number
 set rnu
 syntax on

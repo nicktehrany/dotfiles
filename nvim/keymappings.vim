@@ -7,7 +7,7 @@ map <leader>k :wincmd k<CR>
 " remap to close current buffer
 map <leader>q :bd<CR>
 
-nnoremap <silent><Esc><Esc> :nohlsearch<C-\><C-n>
+nnoremap <silent><Esc><Esc> :nohlsearch<CR>
 
 nnoremap d "_d
 vnoremap d "_d

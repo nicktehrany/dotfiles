@@ -2,6 +2,7 @@
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
 "let g:nvim_tree_auto_open = 1
 let g:nvim_tree_git_hl = 1
+let g:nvim_tree_quit_on_open = 1
 let g:nvim_tree_highlight_opened_files = 1
 let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 }
 let g:nvim_tree_indent_markers = 1
@@ -50,7 +51,6 @@ require'nvim-tree'.setup {
         enable = true,
         auto_open = false,
     },
-    auto_close          = true,
     open_on_tab         = false,
     auto_resize         = false,
     hijack_cursor       = false,

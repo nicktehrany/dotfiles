@@ -2,6 +2,7 @@
 source $HOME/.config/nvim/base.vim
 source $HOME/.config/nvim/keymappings.vim
 source $HOME/.config/nvim/commands.vim
+source $HOME/.config/nvim/functions.vim
 
 " Source all plugins and their configs
 source $HOME/.config/nvim/plugins.vim

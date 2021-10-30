@@ -11,10 +11,13 @@ let g:netrw_loaded_netrwPlugin=1
 " https://github.com/Melandel/workflow/blob/c323969e4bd48dda6dbceada3a7afe8bacdda0f5/setup/my_vimrc.vim#L976-L1147
 
 function! CreateFile()
-    let filename = input('File name: ')
-    if trim(filename) == ''
+    let name = input('File name: ')
+    if trim(name) == ''
         return
-    elseif !empty(glob(filename))
+    endif
+    let path = expand('%', 1)
+    let filename = printf('%s%s', path, name)
+    if !empty(glob(filename))
         redraw
         echomsg printf('"%s" already exists.', filename)
         return
@@ -25,10 +28,13 @@ function! CreateFile()
 endf
 
 function! CreateDir()
-    let dirname = input('Dir name: ')
-    if trim(dirname) == ''
+    let name = input('Dir name: ')
+    if trim(name) == ''
         return
-    elseif !empty(glob(dirname))
+    endif
+    let path = expand('%', 1)
+    let dirname = printf('%s%s', path, name)
+    if !empty(glob(dirname))
         redraw
         echomsg printf('"%s" already exists.', dirname)
         return
@@ -40,7 +46,9 @@ endf
 
 function! DeleteItemUnderCursor()
     let target = trim(getline('.'), '/\')
-    let filename = fnamemodify(target, ':t')
+    let name = fnamemodify(target, ':t')
+    let path = expand('%', 1)
+    let filename = printf('%s%s', path, name)
     silent execute(printf(':! rm -rf %s', filename))
     normal R
 endfunction
@@ -51,12 +59,16 @@ function! Rename()
     let newname = input('New file/dir name: ')
     if trim(newname) == ''
         return
-    elseif !empty(glob(newname))
+    endif
+    let path = expand('%', 1)
+    let fulloldname = printf('%s%s', path, oldname)
+    let fullnewname = printf('%s%s', path, newname)
+    if !empty(glob(fullnewname))
         redraw
-        echomsg printf('"%s" already exists.', newname)
+        echomsg printf('%s already exists in %s.', newname, path)
         return
     endif
-    let cmd = printf('!mv %s %s', oldname, newname)
+    let cmd = printf('!mv %s %s', fulloldname, fullnewname)
     silent execute(cmd)
     normal R
 endfunction

@@ -18,13 +18,6 @@ augroup Spellcheck
     autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
 augroup END
 
-fun! EmptyRegisters()
-    let regs=split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"', '\zs')
-    for r in regs
-        call setreg(r, [])
-    endfor
-endfun
-
 augroup YankHighlight
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()

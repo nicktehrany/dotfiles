@@ -24,3 +24,5 @@ set completeopt=menuone,noinsert,noselect
 highlight clear SignColumn
 set shortmess+=c
 set noshowcmd
+set conceallevel=2
+set splitright

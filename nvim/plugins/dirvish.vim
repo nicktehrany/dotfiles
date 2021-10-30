@@ -19,10 +19,10 @@ function! CreateFile()
     let filename = printf('%s%s', path, name)
     if !empty(glob(filename))
         redraw
-        echomsg printf('"%s" already exists.', filename)
+        echomsg printf('%s already exists.', filename)
         return
     endif
-    let cmd = printf(':!touch "%s"', filename)
+    let cmd = printf(':!touch %s', filename)
     silent execute(cmd)
     normal R
 endf
@@ -36,10 +36,10 @@ function! CreateDir()
     let dirname = printf('%s%s', path, name)
     if !empty(glob(dirname))
         redraw
-        echomsg printf('"%s" already exists.', dirname)
+        echomsg printf('%s already exists.', dirname)
         return
     endif
-    let cmd = printf(':!mkdir "%s"', dirname)
+    let cmd = printf(':!mkdir %s', dirname)
     silent execute(cmd)
     normal R
 endf
@@ -76,7 +76,7 @@ endfunction
 " TODO: 
 "   - open tree for dir
 "   - preview files (unmap a, split it on right, instead of left, on put in focus)
-"   - copying/pasting files
+"   - copying/pasting/moving files
 
 augroup dirvish_config
     au!

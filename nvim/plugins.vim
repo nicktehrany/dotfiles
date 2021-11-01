@@ -26,9 +26,6 @@ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 
-" LaTeX (Compiling)
-Plug 'lervag/vimtex'
-
 " Markdown table automation
 Plug 'dhruvasagar/vim-table-mode'
 
@@ -43,7 +40,6 @@ source $HOME/.config/nvim/plugins/nvim-autopairs.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/signify.vim
 source $HOME/.config/nvim/plugins/undotree.vim
-source $HOME/.config/nvim/plugins/vimtex.vim
 source $HOME/.config/nvim/plugins/table-mode.vim
 source $HOME/.config/nvim/plugins/lualine.lua
 source $HOME/.config/nvim/plugins/treesitter.lua

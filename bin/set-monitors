@@ -12,17 +12,17 @@ if [[ "$(xrandr -q | grep -w "connected" | wc -l)" -eq "1" ]]; then
     NR_ACTIVE_SCREENS=$(bspc query -M | wc -l)
     if [[ "$NR_ACTIVE_SCREENS" -eq "1" ]]; then
         # First init so put all in one
-        bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8
+        bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8 9 10
     elif [[ "$NR_ACTIVE_SCREENS" -eq "2" ]]; then
         OLD_SCREEN=$(bspc query -M --names | grep -v $MAIN_SCREEN)
         xrandr --output $OLD_SCREEN --off
         sleep 3
-        bspc monitor $MAIN_SCREEN --reorder-desktops 1 2 3 4 5 6 7 8
+        bspc monitor $MAIN_SCREEN --reorder-desktops 1 2 3 4 5 6 7 8 9 10
     fi 
 else
     SCREENS=($(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1))
     xrandr --output ${SCREENS[1]} --primary --mode 1920x1080 --rotate normal --output ${SCREENS[0]} --mode 1920x1080 --rotate normal --right-of ${SCREENS[1]}
     sleep 3
-    bspc monitor ${SCREENS[1]} -d 1 2 3 4
-    bspc monitor ${SCREENS[0]} -d 5 6 7 8
+    bspc monitor ${SCREENS[1]} -d 1 2 3 4 5
+    bspc monitor ${SCREENS[0]} -d 6 7 8 9 10
 fi

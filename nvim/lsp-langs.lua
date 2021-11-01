@@ -19,7 +19,15 @@ require'lspconfig'.dockerls.setup{
 }
 
 require'lspconfig'.jsonls.setup{
-    coq.lsp_ensure_capabilities{}
+    coq.lsp_ensure_capabilities{
+       commands = {
+          Format = {
+            function()
+              vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
+            end
+          }
+        }
+    }
 }
 
 require'lspconfig'.pyright.setup{

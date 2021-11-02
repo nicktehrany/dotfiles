@@ -73,10 +73,26 @@ function! Rename()
     normal R
 endfunction
 
+function! MoveOrCopy(type)
+    if @d == ''
+        echo 'No path to selected.'
+        return
+    endif
+    
+    let curr_item = getline(".")
+    if !isdirectory(curr_item)
+        let path = expand('%', 1)
+    else
+        let path = curr_item
+    endif
+    let cmd = printf('!%s %s %s', a:type, @d, path)
+    silent execute(cmd)
+    normal R
+endfunction
+
 " TODO: 
 "   - open tree for dir
 "   - preview files (unmap a, split it on right, instead of left, on put in focus)
-"   - copying/pasting/moving files
 
 augroup dirvish_config
     au!
@@ -84,4 +100,8 @@ augroup dirvish_config
     autocmd FileType dirvish nnoremap <silent> <buffer>C :call CreateDir()<CR>
     autocmd FileType dirvish nnoremap <silent> <buffer>dd :call DeleteItemUnderCursor()<CR>
     autocmd FileType dirvish nnoremap <silent> <buffer>r :call Rename()<CR>
+    autocmd FileType dirvish nnoremap <buffer>yy ^"dy$
+    autocmd FileType dirvish unmap <buffer>p
+    autocmd FileType dirvish nnoremap <silent> <buffer>p :call MoveOrCopy('cp -r')<CR>
+    autocmd FileType dirvish nnoremap <silent> <buffer>P :call MoveOrCopy('mv')<CR>
 augroup end

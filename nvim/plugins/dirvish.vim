@@ -44,7 +44,7 @@ function! CreateDir()
     normal R
 endf
 
-function! DeleteItemUnderCursor()
+function! Delete()
     let target = trim(getline('.'), '/\')
     let name = fnamemodify(target, ':t')
     let path = expand('%', 1)
@@ -90,18 +90,33 @@ function! MoveOrCopy(type)
     normal R
 endfunction
 
-" TODO: 
-"   - open tree for dir
-"   - preview files (unmap a, split it on right, instead of left, on put in focus)
+function! PreviewFile()
+	let path = trim(getline('.'))
+    
+    " I never split windows, so preview checks if I already have a split
+    " preview then replace it, otherwise just split 
+    " TODO: Make this not hardcoded!
+    let winnr = winnr('$')
+    if winnr == 2
+        silent execute('wincmd l')
+        let winid = win_getid()
+        call win_execute(winid, 'close', 'silent')
+    endif
+
+    let cmd = printf('vs %s', path)
+    silent execute(cmd)
+    normal R
+endfunction
 
 augroup dirvish_config
     au!
     autocmd FileType dirvish nnoremap <silent> <buffer>c :call CreateFile()<CR>
     autocmd FileType dirvish nnoremap <silent> <buffer>C :call CreateDir()<CR>
-    autocmd FileType dirvish nnoremap <silent> <buffer>dd :call DeleteItemUnderCursor()<CR>
+    autocmd FileType dirvish nnoremap <silent> <buffer>dd :call Delete()<CR>
     autocmd FileType dirvish nnoremap <silent> <buffer>r :call Rename()<CR>
     autocmd FileType dirvish nnoremap <buffer>yy ^"dy$
     autocmd FileType dirvish unmap <buffer>p
     autocmd FileType dirvish nnoremap <silent> <buffer>p :call MoveOrCopy('cp -r')<CR>
     autocmd FileType dirvish nnoremap <silent> <buffer>P :call MoveOrCopy('mv')<CR>
+    autocmd FileType dirvish nnoremap <silent> <buffer>s :call PreviewFile()<CR>
 augroup end

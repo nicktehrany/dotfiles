@@ -14,6 +14,7 @@ Plug 'kristijanhusak/vim-dirvish-git'
 " Utility
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-lua/lsp-status.nvim'
+Plug 'tpope/vim-commentary'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'

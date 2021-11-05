@@ -123,7 +123,7 @@ interval = 0.5
 thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 hwon-path =  /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon5/temp1_input
-warn-temperature = 80
+warn-temperature = 85
 units = true
 format = <label>
 format-warn = <label-warn>
@@ -137,7 +137,7 @@ type = internal/temperature
 interval = 0.5
 thermal-zone = 0
 hwon-path = /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon5/temp2_input
-warn-temperature = 60
+warn-temperature = 65
 units = true
 format = <label>
 format-warn = <label-warn>

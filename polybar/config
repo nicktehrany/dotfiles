@@ -12,7 +12,7 @@ yellow     = #edaf1f
 gray       = #a8a197
 
 [bar/bar_dual]
-monitor=DP-1-0
+monitor=${env:MONITOR:}
 modules-left = bspwm
 modules-center = date
 modules-right = cpu memory wlan eth temperature_cpu audio battery

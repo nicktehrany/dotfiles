@@ -15,9 +15,6 @@
 	path = meta/dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "local/bin/mdtemp"]
-	path = local/bin/mdtemp
-	url = https://github.com/nicktehrany/mdtemp.git
 [submodule "bin/textemp"]
 	path = bin/textemp
 	url = https://github.com/nicktehrany/textemp.git

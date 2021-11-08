@@ -15,6 +15,7 @@ Plug 'kristijanhusak/vim-dirvish-git'
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-lua/lsp-status.nvim'
 Plug 'tpope/vim-commentary'
+Plug 'ThePrimeagen/harpoon'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -45,3 +46,4 @@ source $HOME/.config/nvim/plugins/table-mode.vim
 source $HOME/.config/nvim/plugins/lualine.lua
 source $HOME/.config/nvim/plugins/treesitter.lua
 source $HOME/.config/nvim/plugins/dirvish.vim
+source $HOME/.config/nvim/plugins/harpoon.vim

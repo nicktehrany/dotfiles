@@ -47,3 +47,4 @@ xsetroot -cursor_name left_ptr &
 xset -dpms s off &
 setxkbmap -option caps:escape &
 xinput set-prop "Synaptics TM3418-002" "libinput Natural Scrolling Enabled" 1 &
+xinput set-prop "Synaptics TM3418-002" "libinput Tapping Enabled" 1 &

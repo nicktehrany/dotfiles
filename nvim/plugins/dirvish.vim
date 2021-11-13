@@ -1,4 +1,4 @@
-map <C-i> :Dirvish<CR>
+map <C-b> :Dirvish<CR>
 
 let g:dirvish_mode=1
 let g:dirvish_relative_paths=0

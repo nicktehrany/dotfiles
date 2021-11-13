@@ -9,7 +9,7 @@ super + b
     brave-browser
 
 super + space
-    rofi -combi-modi window,drun,ssh -show-icons -theme gruvbox-dark-soft -font "hack 10" -show combi &
+    rofi -combi-modi window,drun,ssh -show-icons -m -4 -theme gruvbox-dark-soft -font "hack 10" -show combi &
 
 # make sxhkd reload its configuration files:
 super + Escape

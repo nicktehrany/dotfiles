@@ -110,7 +110,7 @@ endfunction
 
 augroup dirvish_config
     au!
-    autocmd FileType dirvish nnoremap <silent> <buffer>c :call CreateFile()<CR>
+    autocmd FileType dirvish nnoremap <silent> <buffer>cc :call CreateFile()<CR>
     autocmd FileType dirvish nnoremap <silent> <buffer>C :call CreateDir()<CR>
     autocmd FileType dirvish nnoremap <silent> <buffer>dd :call Delete()<CR>
     autocmd FileType dirvish nnoremap <silent> <buffer>r :call Rename()<CR>

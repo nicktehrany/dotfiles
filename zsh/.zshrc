@@ -24,9 +24,6 @@ lfcd () {
     fi
 }
 
-# reattach to tmux session if not already in session to avoid nested sessions
-[ -z "$TMUX" ] && tmux-reattacher
-
 plugins=(git colored-man-pages zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
@@ -52,7 +49,7 @@ alias cdspear_j3="cdspear -j 3 && [ -s /tmp/cdspear_result.dat ] && cd \"\$(cat 
 
 # cdspear keybinds to call aliases
 bindkey -s '^s' 'cdspear_show\n'
-bindkey -s '^h' 'cdspear_mark\n'
+bindkey -s '^[m' 'cdspear_mark\n'
 bindkey -s '^y' 'cdspear_j0\n'
 bindkey -s '^u' 'cdspear_j1\n'
 bindkey -s '^o' 'cdspear_j2\n'

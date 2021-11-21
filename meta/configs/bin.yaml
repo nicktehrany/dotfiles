@@ -11,5 +11,7 @@
       path: bin/set-screen-mirror
     ~/local/bin/set-volume:
       path: bin/set-volume
+    ~/local/bin/set-brightness:
+      path: bin/set-brightness
     ~/local/bin/cht-sh:
       path: bin/cht-sh

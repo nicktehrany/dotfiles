@@ -124,16 +124,16 @@ super + {Left,Down,Up,Right}
 
 # need to run volume check to not increase infinitely
 XF86AudioRaiseVolume
-    /home/nicktehrany/local/bin/set-volume + &
+    $HOME/local/bin/set-volume + &
 
 XF86AudioLowerVolume
-    /home/nicktehrany/local/bin/set-volume - &
+    $HOME/local/bin/set-volume - &
 
 XF86AudioMute
-    /home/nicktehrany/local/bin/set-volume x &
+    $HOME/local/bin/set-volume x &
 
 XF86MonBrightnessUp
-    /home/nicktehrany/local/bin/set-brightness + &
+    $HOME/local/bin/set-brightness + &
 
 XF86MonBrightnessDown
-    /home/nicktehrany/local/bin/set-brightness - &
+    $HOME/local/bin/set-brightness - &

@@ -1,9 +1,8 @@
 export EDITOR='nvim' export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 export GPG_TTY=$(tty)
-export PATH=/home/nicktehrany/local/bin/:$PATH
+export PATH=/home/nicktehrany/local/bin/:/home/nicktehrany/.cargo/bin/:$PATH
 
-[ -d $HOME/.cargo/bin ] && path+=('/home/nicktehrany/.cargo/bin') && export PATH
 [ -d $HOME/dotfiles/bin/textemp ] && export TEXTEMP="$HOME/dotfiles/bin/textemp"
 [ -d $HOME/dotfiles/bin/mdtemp ] && export MDTEMP="$HOME/dotfiles/bin/mdtemp"
 

@@ -10,31 +10,3 @@
       path: vim/.vimrc
     ~/.vim:
       path: vim
-
-- shell:
-    -
-      command: git submodule update --init --merge --remote vim/bundle/Vundle.vim
-      description: Updating Submodules
-      sterr: true
-      stdout: true
-    -
-      command: apt install -y vim xdotool exuberant-ctags fonts-powerline ack-grep mono-complete golang nodejs default-jdk npm python3-dev
-      description: Installing required Packages
-      quiet: true
-    -
-      command: vim -E -s -u ~/.vimrc +PluginInstall +qall
-      description: Installing Vim plugins
-      stderr: true
-      stdout: true
-    -
-      command: mkdir -p ~/.vim/undodir
-      description: Creating vim undodir
-    -
-      command: sudo apt install -y build-essential cmake
-      description: Installing YouCompleteMe
-      sterr: true
-      quite: true
-    -
-      command: cd ~/.vim/bundle/YouCompleteMe && python3 install.py --all
-      description: Building YouCompleteMe
-      sterr: true

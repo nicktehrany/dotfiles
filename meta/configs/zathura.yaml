@@ -1,16 +1,3 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-
-- clean: ["~/.config/zathura/"]
-
 - link:
     ~/.config/zathura/zathurarc:
       path: zathura/zathurarc
-
-- shell:
-    -
-      command: sudo apt install -y zathura-pdf-poppler
-      description: Installing required Packages
-      quiet: true

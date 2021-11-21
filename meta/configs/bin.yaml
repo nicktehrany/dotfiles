@@ -1,15 +1,15 @@
 - link:
     ~/local/bin/mdtemp:
-      path:local/bin/mdtemp/mdtemp
+      path: bin/mdtemp/mdtemp
     ~/local/bin/textemp:
-      path:local/bin/textemp/textemp
+      path: bin/textemp/textemp
     ~/local/bin/tmux-rattacher:
-      path:local/bin/tmux-reattacher
+      path: bin/tmux-reattacher
     ~/local/bin/set-monitors:
-      path:local/bin/set-monitors
+      path: bin/set-monitors
     ~/local/bin/set-set-screen-mirror:
-      path:local/bin/set-screen-mirror
+      path: bin/set-screen-mirror
     ~/local/bin/set-volume:
-      path:local/bin/set-volume
+      path: bin/set-volume
     ~/local/bin/cht-sh:
-      path:local/bin/cht-sh
+      path: bin/cht-sh

@@ -1,5 +1,5 @@
 export GPG_TTY=$(tty)
-export PATH=/home/nicktehrany/local/bin/:$PATH
+export PATH=$HOME/local/bin/:$PATH
 
 [ -d $HOME/.config/env/textemp ] && export TEXTEMP="$HOME/.config/env/textemp"
 [ -d $HOME/.config/env/mdtemp ] && export MDTEMP="$HOME/.config/env/mdtemp"

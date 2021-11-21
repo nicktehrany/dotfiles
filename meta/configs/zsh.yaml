@@ -20,10 +20,6 @@
       stderr: true
       stdout: true
     -
-      command: apt install -y zsh ncdu
-      description: Installing required Packages
-      quiet: true
-    -
       command: test -d zsh/ohmyzsh/custom/plugins/zsh-autosuggestions && echo "zsh-autosuggestions exists" || git clone https://github.com/zsh-users/zsh-autosuggestions zsh/ohmyzsh/custom/plugins/zsh-autosuggestions
       description: Installing zsh autosuggestions
       stderr: true

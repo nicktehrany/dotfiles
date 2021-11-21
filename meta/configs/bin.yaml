@@ -1,10 +1,3 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-
-- clean: ["~/local/bin"]
-
 - link:
     ~/local/bin/mdtemp:
       path:local/bin/mdtemp/mdtemp
@@ -20,10 +13,3 @@
       path:local/bin/set-volume
     ~/local/bin/cht-sh:
       path:local/bin/cht-sh
-
-- shell:
-    -
-      command: git submodule update --init --merge --remote local/bin/mdtemp local/bin/textemp
-      description: Updating Submodules
-      stderr: true
-      stdout: true

@@ -1,12 +1,7 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-
-- clean: ["~/.local/fonts"]
+- clean: ["~/.local/share/fonts"]
 
 - link:
-    ~/.local/fonts:
+    ~/.local/share/fonts:
       path: fonts
 
 - shell:

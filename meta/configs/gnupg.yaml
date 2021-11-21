@@ -1,11 +1,3 @@
-- defaults:
-    link:
-      create: true
-      relink: true
-      force: true
-
-- clean: ["~/.gnupg/"]
-
 - link:
     ~/.gnupg/gpg-agent.conf:
       create: true

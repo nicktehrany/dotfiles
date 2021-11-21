@@ -1,0 +1,5 @@
+- link:
+    ~/.config/bspwm/bspwmrc:
+      path: bspwm/bspwmrc
+    ~/.config/sxhkd/sxhkdrc:
+      path: sxhkd/sxhkdrc

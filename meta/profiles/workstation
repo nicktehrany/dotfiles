@@ -1,6 +1,5 @@
 git
 alacritty
-lf
 tmux
 zathura
 zsh
@@ -10,3 +9,4 @@ bash
 neovim
 bin
 gnupg
+dunst

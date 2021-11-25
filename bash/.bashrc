@@ -1,5 +1,6 @@
 export GPG_TTY=$(tty)
 export PATH=$HOME/local/bin/:$PATH
+export QEMU_BUILD=$HOME/src/qemu-6.1.0/build/
 
 [ -d $HOME/.config/env/textemp ] && export TEXTEMP="$HOME/.config/env/textemp"
 [ -d $HOME/.config/env/mdtemp ] && export MDTEMP="$HOME/.config/env/mdtemp"

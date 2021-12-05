@@ -24,8 +24,3 @@
       description: Installing zsh autosuggestions
       stderr: true
       quiet: true
-    -
-      command: ln -s ~/dotfiles/zsh/themes/lambda-mod/lambda-mod.zsh-theme zsh/ohmyzsh/custom/themes/lambda-mod.zsh-theme
-      description: Installing zsh theme
-      stderr: true
-      quiet: true

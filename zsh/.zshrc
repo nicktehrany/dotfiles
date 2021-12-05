@@ -3,14 +3,12 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 export GPG_TTY=$(tty)
 export PATH=$HOME/local/bin/:$HOME/.cargo/bin/:$PATH
 export QEMU_BUILD=$HOME/src/qemu-6.1.0/build/
+PROMPT='%F{2}%n%F{300}@%m:%F{220}%~ %F{300}$%f '
 
 [ -d $HOME/dotfiles/bin/textemp ] && export TEXTEMP="$HOME/dotfiles/bin/textemp"
 [ -d $HOME/dotfiles/bin/mdtemp ] && export MDTEMP="$HOME/dotfiles/bin/mdtemp"
 
 stty -ixon # disable Ctrl S and Ctrl Q terminal suspend
-
-ZSH_THEME="lambda-mod"
-export LAMBDA_MOD_N_DIR_LEVELS=5
 
 # Use lfcd to switch directories
 # hidden files are shown with zh when in lfcd

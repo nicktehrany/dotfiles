@@ -1,3 +1,5 @@
 - link:
     /etc/issue:
       path: etc/issue
+    $HOME/.xinitrc:
+      path: etc/xinitrc

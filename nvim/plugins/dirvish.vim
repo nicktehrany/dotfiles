@@ -56,7 +56,7 @@ endfunction
 function! Rename()
     let target = trim(getline('.'), '/\')
     let oldname = fnamemodify(target, ':t')
-    let newname = input('New file/dir name: ')
+    let newname = input('New file/dir name: ', oldname)
     if trim(newname) == ''
         return
     endif

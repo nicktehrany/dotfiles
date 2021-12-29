@@ -7,5 +7,6 @@ alias egrep='egrep --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias gdb='gdb --quiet'
 
 alias glog="git log --all --graph --decorate --oneline"

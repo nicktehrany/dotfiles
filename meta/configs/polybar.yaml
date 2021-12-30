@@ -1,3 +1,5 @@
 - link:
     ~/.config/polybar/config:
       path: polybar/config
+    ~/.config/polybar/launch.sh:
+      path: polybar/launch.sh

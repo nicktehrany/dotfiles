@@ -68,7 +68,7 @@ font-3 = FontAwesome:pixelsize=13
 
 [module/audio]
 type = internal/pulseaudio
-sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+sink = ${env:SINK:}
 label-muted = " | Vol muted | "
 label-volume = " | Vol %percentage%% | "
 
@@ -122,7 +122,7 @@ type = internal/temperature
 interval = 0.5
 thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
-hwon-path =  /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon5/temp1_input
+hwon-path = ${env:HWON_PATH:}
 warn-temperature = 85
 units = true
 format = <label>

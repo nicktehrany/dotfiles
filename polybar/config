@@ -12,7 +12,7 @@ yellow     = #edaf1f
 gray       = #a8a197
 
 [bar/bar_dual]
-monitor=${env:MONITOR:}
+monitor=${env:EXT_MONITOR:}
 modules-left = bspwm
 modules-center = date
 modules-right = cpu memory wlan eth temperature_cpu audio battery
@@ -31,7 +31,7 @@ font-2 = Hack:size=10.5:weight=bold;2
 font-3 = FontAwesome:pixelsize=13
 
 [bar/bar_single]
-monitor=eDP-1
+monitor=${env:MAIN_MONITOR:}
 modules-left = bspwm
 modules-center = date
 modules-right = cpu memory wlan eth temperature_cpu audio battery
@@ -50,7 +50,7 @@ font-2 = Hack:size=10.5:weight=bold;2
 font-3 = FontAwesome:pixelsize=13
 
 [bar/bar_dual_external]
-monitor=eDP-1
+monitor=${env:MAIN_MONITOR:}
 modules-left = bspwm
 enable-ipc = true
 padding = 2

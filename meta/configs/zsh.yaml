@@ -12,6 +12,8 @@
       path: zsh
     ~/.oh-my-zsh:
       path: zsh/ohmyzsh
+    ~/.zprofile:
+      path: zsh/.zprofile
 
 - shell:
     -

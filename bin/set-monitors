@@ -30,6 +30,9 @@ else
     for ((i=1;i<=5;i++)); do
         bspc desktop $i -m ${SCREENS[1]}
     done
-    bspc desktop Desktop -r
     bspc wm -O ${SCREENS[1]} ${SCREENS[0]}
+fi
+
+if [[ "$(bspc query -D --names | grep Desktop | wc -l)" -ne "0" ]]; then 
+    bspc desktop Desktop -r
 fi

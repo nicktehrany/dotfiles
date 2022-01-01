@@ -4,3 +4,5 @@ tags
 vim/undodir/*
 .uuid
 nvim/plugged/*
+vim/autoload/*
+vim/plugged/*

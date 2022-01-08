@@ -1,38 +1,42 @@
 #!/bin/bash
 set -e
+set -x 
 
-# The screen layout is hardcoded for my usual setup (it will manage different hdmi or thunderbolt ports), however will require changes for any
-# other setup (only on the screen layout and workspaces)
-# I keep workspaces 1-5 on my external monitor and 6-10 on laptop, when merging I just move 1-5 to the same workspaces (same number) on the laptop
-# When plugging a 2nd monitor in while already having 8 workspaces on the main, it will take a couple of seconds for the monitor to be fully
-# conected (hence the sleep on line 24) after which the workspaces on each monitor will correct (since it's run async the topbar will refresh then)
-if [[ "$(xrandr -q | grep -w "connected" | wc -l)" -eq "1" ]]; then 
-    MAIN_SCREEN=$(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1) 
-    xrandr --output $MAIN_SCREEN --primary --mode 1920x1080
-    NR_ACTIVE_SCREENS=$(bspc query -M | wc -l)
-    if [[ "$NR_ACTIVE_SCREENS" -eq "1" ]]; then
-        # First init so put all in one
-        bspc monitor $MAIN_SCREEN -d 1 2 3 4 5 6 7 8 9 10
-    elif [[ "$NR_ACTIVE_SCREENS" -eq "2" ]]; then
-        OLD_SCREEN=$(bspc query -M --names | grep -v $MAIN_SCREEN)
-        xrandr --output $OLD_SCREEN --off
-        sleep 3
-        bspc monitor $MAIN_SCREEN --reorder-desktops 1 2 3 4 5 6 7 8 9 10
-        bspc monitor $OLD_SCREEN -r
-    fi 
-elif [[ "$(bspc query -D | wc -l)" -ne "10" ]]; then # No desktops there yet
-    bspc monitor ${SCREENS[1]} -d 1 2 3 4 5
-    bspc monitor ${SCREENS[0]} -d 6 7 8 9 10
-else
-    SCREENS=($(xrandr --verbose | grep -Fw 'connected' | cut -d ' ' -f 1))
-    xrandr --output ${SCREENS[1]} --primary --mode 1920x1080 --rotate normal --output ${SCREENS[0]} --mode 1920x1080 --rotate normal --right-of ${SCREENS[1]}
+NR_CONNECTED=$(xrandr -q | grep ' connected' | wc -l)
+NR_BSPW_MONITORS=$(bspc query -M | wc -l)
+MAIN_MONITOR=$(xrandr -q | grep 'primary' | awk '{print $1;exit}')
+
+# TODO: figure out how we can check if layout is correct then run this
+#[[ "$(xrandr -q | grep -Fw "connected" | wc -l)" -eq "1" ]] && xrandr --output $EXT_MONITOR --mode 1920x1080 --rotate normal --output $MAIN_MONITOR --mode 1920x1080 --rotate normal --right-of $EXT_MONITOR
+# if connected to just one monitor
+if [[ "$NR_CONNECTED" -eq "1" ]]; then
+    if [[ "$NR_BSPW_MONITORS" -eq "1" ]] && [[ "$(bspc query -m $MAIN_MONITOR -D --names | wc -l)" -ne "10" ]]; then
+        bspc monitor $MAIN_MONITOR -d 1 2 3 4 5 6 7 8 9 10
+    elif [[ "$NR_BSPW_MONITORS" -eq "2" ]]; then
+        OLD_MONITOR=$(bspc query -M --names | grep -v $MAIN_MONITOR)
+        MOVE_DESKTOPS=$(bspc query -m $OLD_MONITOR -D --names | awk '{printf "%s ", $0}')
+        bspc monitor $OLD_MONITOR -a temp # need a dummy desktop to move all others
+        for DESK in ${MOVE_DESKTOPS}
+        do
+            bspc desktop $DESK -m $MAIN_MONITOR
+        done
+        bspc monitor $OLD_MONITOR -r
+        xrandr --output $OLD_MONITOR --off
+        bspc monitor $MAIN_MONITOR --reorder-desktops 1 2 3 4 5 6 7 8 9 10
+    fi
+elif [[ "$NR_CONNECTED" -eq "2" ]]; then 
+    EXT_MONITOR=$(xrandr -q | grep -Fw "connected" | awk '{print $1}' | grep -v $MAIN_MONITOR)
+    # TODO: figure out how we can check if layout is correct then run this
+    xrandr --output $EXT_MONITOR --mode 1920x1080 --rotate normal --output $MAIN_MONITOR --mode 1920x1080 --rotate normal --right-of $EXT_MONITOR
     sleep 3
-    for ((i=1;i<=5;i++)); do
-        bspc desktop $i -m ${SCREENS[1]}
-    done
-    bspc wm -O ${SCREENS[1]} ${SCREENS[0]}
+    if [[ "$(bspc query -m $MAIN_MONITOR -D | wc -l)" -eq "10" ]]; then
+        for DESK in {1..5}
+        do
+            bspc desktop $DESK -m $EXT_MONITOR
+        done
+    else
+        bspc monitor $EXT_MONITOR -d 1 2 3 4 5
+        bspc monitor $MAIN_MONITOR -d 6 7 8 9 10
+    fi
 fi
-
-if [[ "$(bspc query -D --names | grep Desktop | wc -l)" -ne "0" ]]; then 
-    bspc desktop Desktop -r
-fi
+while [[ "$(bspc query -D --names | grep Desktop | wc -l)" -ne "0" ]]; do  bspc desktop Desktop -r; done

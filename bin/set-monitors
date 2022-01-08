@@ -1,14 +1,10 @@
 #!/bin/bash
 set -e
-set -x 
 
 NR_CONNECTED=$(xrandr -q | grep ' connected' | wc -l)
 NR_BSPW_MONITORS=$(bspc query -M | wc -l)
 MAIN_MONITOR=$(xrandr -q | grep 'primary' | awk '{print $1;exit}')
 
-# TODO: figure out how we can check if layout is correct then run this
-#[[ "$(xrandr -q | grep -Fw "connected" | wc -l)" -eq "1" ]] && xrandr --output $EXT_MONITOR --mode 1920x1080 --rotate normal --output $MAIN_MONITOR --mode 1920x1080 --rotate normal --right-of $EXT_MONITOR
-# if connected to just one monitor
 if [[ "$NR_CONNECTED" -eq "1" ]]; then
     if [[ "$NR_BSPW_MONITORS" -eq "1" ]] && [[ "$(bspc query -m $MAIN_MONITOR -D --names | wc -l)" -ne "10" ]]; then
         bspc monitor $MAIN_MONITOR -d 1 2 3 4 5 6 7 8 9 10

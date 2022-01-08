@@ -1,0 +1,44 @@
+#!/bin/bash
+set -e
+
+# TODO: rewrite this, seems to be buggy
+# Don't change primary desktop, can then grep for that, query for how many monitors there are per desktop and how many are connected and move around based on that
+
+# Main builtin will always either be eDP-1 or LVDS-1, grep for that set as main then query for each desktop to see if they have 5 and the correct names.
+NR_CONNECTED=$(xrandr -q | grep ' connected' | wc -l)
+# MAIN_MONITOR=$(xrandr -q | grep -E 'eDP-1.*connected|LVDS-1.*connected' | awk '{print $1;exit}')
+NR_BSPW_MONITORS=$(bspc query -M | wc -l)
+MAIN_MONITOR=$(xrandr -q | grep 'primary' | awk '{print $1;exit}')
+
+# if connected to just one monitor
+if [[ "$NR_CONNECTED" -eq "1" ]]; then
+    if [[ "$NR_BSPW_MONITORS" -eq "1" ]] && [[ "$(bspc query -m $MAIN_MONITOR -D --names | wc -l)" -ne "10" ]]; then
+        bspc monitor $MAIN_MONITOR -d 1 2 3 4 5 6 7 8 9 10
+    elif [[ "$NR_BSPW_MONITORS" -eq "2" ]]; then
+        OLD_MONITOR=$(bspc query -M --names | grep -v $MAIN_MONITOR)
+        MOVE_DESKTOPS=$(bspc query -m $EXT_MONITOR -D --names)
+        for DESK in $MOVE_DESKTOPS
+        do
+            bspc desktop $DESK -m $MAIN_MONITOR
+        done
+        bspc monitor $MAIN_MONITOR --reorder-desktops 1 2 3 4 5 6 7 8 9 10
+        bspc monitor $OLD_SCREEN -r
+    fi
+elif [[ "$NR_CONNECTED" -eq "2" ]]; then 
+    EXT_MONITOR=$(bspc query -M --names | grep -v $MAIN_MONITOR)
+    if [[ "$NR_BSPW_MONITORS" -eq "1" ]]; then
+        xrandr --output $EXT_MONITOR --mode 1920x1080 --rotate normal --output $MAIN_MONITOR --mode 1920x1080 --rotate normal --right-of $EXT_MONITOR
+        for DESK in {1..5}
+        do
+            bspc desktop $DESK -m $EXT_MONITOR
+        done
+
+        [[ "$(bspc query -D --names | grep Desktop | wc -l)" -ne "0" ]] && bspc desktop Desktop -r
+
+    fi
+fi
+
+# else connected to two
+    # and no desktops yet 
+
+    # no desktops on the second one

@@ -19,6 +19,8 @@ config.unbind("<ctrl+tab>")
 config.bind("<ctrl+tab>", "tab-next")
 config.bind("<ctrl+shift+tab>", "tab-prev")
 
+config.bind('<Ctrl+w>', 'fake-key <Ctrl-Backspace>', mode='insert')
+
 c.auto_save.session = True
 c.colors.statusbar.url.success.https.fg = "white"
 c.downloads.position = 'bottom'

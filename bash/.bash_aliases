@@ -8,5 +8,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias gdb='gdb --quiet'
+alias bat='batcat'
 
 alias glog="git log --all --graph --decorate --oneline"

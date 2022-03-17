@@ -135,20 +135,6 @@ Automating the install unnecessary, but install instructions are [here](https://
 
 I also use wallpapers which I came across somewhere, so if anyone knows who they actually belong to let me know I will credit them.
 
-#### Import custom keyboard shortcuts
-
-Prior to using bspwm I was using gnome and had custom keyboard shortcuts which were exported in `env/custom-shortcuts.conf` using
-
-```bash
-dconf dump / | sed -n '/\[org.gnome.settings-daemon.plugins.media-keys/,/^$/p' > env/custom-shortcuts.conf
-```
-
-and can be imported again with
-
-```bash
-dconf load / < env/custom-shortcuts.conf
-```
-
 #### Installing refind boot manager
 
 I use the [refind boot manager](https://www.rodsbooks.com/refind/), with a [theme](https://github.com/EvanPurkhiser/rEFInd-minimal) which I modified, hence it is included in these dotfiles.

@@ -43,8 +43,6 @@ inoremap <C-k> <Esc>:m .-2<CR>i
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 
-" Disabling page up/down
-
 " substitution
 nnoremap S :%s///g <Left><Left><Left><Left>
 
@@ -62,7 +60,7 @@ call plug#end()
 
 augroup Spellcheck
     autocmd!
-    autocmd FileType markdown,text,latex setlocal spell spelllang=en_us
+    autocmd FileType markdown,text,latex,gitcommit setlocal spell spelllang=en_us
     autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
 augroup END
 

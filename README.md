@@ -28,7 +28,6 @@ I use [bspwm](https://github.com/baskerville/bspwm) as a window manager running 
 ├── dunst
 │   └── dunstrc
 ├── env
-│   ├── custom-shortcuts.conf
 │   ├── refind
 │   └── userChrome.css
 ├── fonts

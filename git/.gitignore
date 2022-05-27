@@ -13,6 +13,7 @@ tags
 *.fls
 *.log
 *.toc
+main.pdf
 
 # Compressed folders
 *.tar.gz

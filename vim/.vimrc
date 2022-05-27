@@ -20,6 +20,10 @@ set showmode
 nnoremap Y y$
 nnoremap <silent><Esc><Esc> :nohlsearch<CR>
 
+" quickfix list movement
+map <C-j> :cn<CR>
+map <C-k> :cp<CR>
+
 " When going next center cursor and unfold after
 nnoremap n nzzzv
 nnoremap N Nzzzv

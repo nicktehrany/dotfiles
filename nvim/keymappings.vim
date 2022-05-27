@@ -7,6 +7,10 @@ map <leader>k :wincmd k<CR>
 " remap to close current buffer
 map <leader>q :bd<CR>
 
+" quickfix list movement
+map <C-j> :cn<CR>
+map <C-k> :cp<CR>
+
 nnoremap <silent><Esc><Esc> :nohlsearch<CR>
 
 nnoremap d "_d

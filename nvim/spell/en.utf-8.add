@@ -52,3 +52,9 @@ metadata
 Aperiodic
 writeable
 schedulable
+aperiodic
+Deferrable
+schedulability
+reproducibility
+performant
+suboptimal

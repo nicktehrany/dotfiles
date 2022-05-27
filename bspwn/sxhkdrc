@@ -6,7 +6,7 @@ super + Return
     alacritty
 
 super + b
-    brave-browser
+    firefox
 
 super + space
     rofi -combi-modi window,drun,ssh -show-icons -m -4 -theme gruvbox-dark-soft -font "hack 10" -show combi &

@@ -18,6 +18,12 @@ augroup Spellcheck
     autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
 augroup END
 
+" Fixes vim failing to detect latex files, and ignores the tresitter error
+" since the command gives an error but still works correctly
+augroup texFile
+    autocmd BufReadPost,BufNewFile *.tex silent! set filetype=tex
+augroup END
+
 augroup YankHighlight
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()

@@ -76,4 +76,3 @@ key_bindings:
   - { key: V, mods: Control|Shift, action: Paste }
   - { key: C, mods: Control|Shift, action: Copy }
   - { key: Z, mods: Control, action: SpawnNewInstance }
-  - { key: Q, mods: Control, action: Quit }

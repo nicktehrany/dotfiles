@@ -4,10 +4,14 @@ map <leader>l :wincmd l<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 
+map <silent> j gj
+map <silent> k gk
+
 " remap to close current buffer
 map <leader>q :bd<CR>
 
 " quickfix list movement
+map <C-q> :copen<CR>
 map <C-j> :cn<CR>
 map <C-k> :cp<CR>
 

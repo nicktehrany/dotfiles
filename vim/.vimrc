@@ -28,6 +28,9 @@ map <C-k> :cp<CR>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+onoremap <silent> j gj
+onoremap <silent> k gk
+
 " Set undo break points in insert mode on punctation
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
@@ -66,6 +69,11 @@ augroup Spellcheck
     autocmd!
     autocmd FileType markdown,text,latex,gitcommit setlocal spell spelllang=en_us
     autocmd BufRead,BufNewFile *.md,*.txt,*.tex setlocal spell spelllang=en_us
+augroup END
+
+augroup WrapText
+    autocmd!
+    autocmd FileType markdown,tex,text setlocal wrap textwidth=120
 augroup END
 
 hi clear SpellBad                                                

@@ -21,6 +21,8 @@ if [[ "$NR_CONNECTED" -eq "1" ]]; then
         bspc monitor $MAIN_MONITOR --reorder-desktops 1 2 3 4 5 6 7 8 9 10
     fi
 elif [[ "$NR_CONNECTED" -eq "2" ]]; then 
+    # Sanity reset if ext monitor is still active for some reason, e.g., from screen mirror
+    xrandr --output $EXT_MONITOR --off
     EXT_MONITOR=$(xrandr -q | grep -Fw "connected" | awk '{print $1}' | grep -v $MAIN_MONITOR)
     # TODO: figure out how we can check if layout is correct then run this
     xrandr --output $EXT_MONITOR --mode 1920x1080 --rotate normal --output $MAIN_MONITOR --mode 1920x1080 --rotate normal --right-of $EXT_MONITOR

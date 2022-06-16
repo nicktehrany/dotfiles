@@ -11,3 +11,4 @@ alias gdb='gdb --quiet'
 alias bat='batcat'
 
 alias glog="git log --all --graph --decorate --oneline"
+alias tt="tty-clock -scbC3"

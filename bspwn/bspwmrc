@@ -32,12 +32,11 @@ bspc config remove_unplugged_monitors true
 # Application rules
 bspc rule -a Zathura state=tiled
 bspc rule -a Firefox state=tiled
-bspc rule -a Slack state=tiled desktop='^7'
-bspc rule -a discord state=tiled desktop='^6'
+bspc rule -a Slack state=tiled desktop='^5'
 bspc rule -a Zathura state=tiled follow=on focus=on
 
 # Wallpaper
-feh --bg-center $HOME/.config/wallpapers/forest_stairs.jpg &
+feh --bg-center $HOME/.config/wallpapers/gruvbox_pacman.png &
 
 # Start polybar
 $HOME/.config/polybar/launch.sh &

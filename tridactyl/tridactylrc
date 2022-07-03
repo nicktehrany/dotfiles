@@ -11,6 +11,8 @@ bind n findnext
 bind N findnext -1
 bind <C-h> nohlsearch
 
+bind <Esc> clearsearchhighlight
+
 " overwrite default ctrl-w to delete word
 " not working atm, failed patch on recent releases
 "bind --mode=ex          <C-w>   text.backward_kill_word

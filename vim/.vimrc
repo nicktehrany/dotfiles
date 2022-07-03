@@ -28,8 +28,13 @@ map <C-k> :cp<CR>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-onoremap <silent> j gj
-onoremap <silent> k gk
+" Ctrl Arrow fix in insert mode to move back a word and forward
+if &term =~ '^\%(screen\|tmux\)'
+    execute "silent! set <xUp>=\<Esc>[@;*A"
+    execute "silent! set <xDown>=\<Esc>[@;*B"
+    execute "silent! set <xRight>=\<Esc>[@;*C"
+    execute "silent! set <xLeft>=\<Esc>[@;*D"
+endif
 
 " Set undo break points in insert mode on punctation
 inoremap , ,<c-g>u

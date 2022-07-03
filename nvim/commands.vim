@@ -1,8 +1,8 @@
 " Wrap all files where writing text
-augroup WrapText
-    autocmd!
-    autocmd FileType markdown,tex,text setlocal wrap textwidth=120
-augroup END
+" augroup WrapText
+"     autocmd!
+"     autocmd FileType markdown,tex,text setlocal wrap textwidth=120
+" augroup END
 
 " When saving delete all trailing whitespaces at eof
 "autocmd BufWritePre * %s/\s\+$//e

@@ -45,3 +45,7 @@ require'lspconfig'.vimls.setup{
 require'lspconfig'.yamlls.setup{
     coq.lsp_ensure_capabilities{}
 }
+
+require'lspconfig'.rls.setup{
+    coq.lsp_ensure_capabilities{}
+}

@@ -62,3 +62,6 @@ inode
 inodes
 F2FS
 journaling
+deduplication
+virtualized
+iteratively

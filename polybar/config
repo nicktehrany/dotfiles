@@ -52,6 +52,7 @@ font-3 = FontAwesome:pixelsize=13
 [bar/bar_dual_external]
 monitor=${env:MAIN_MONITOR:}
 modules-left = bspwm
+modules-right = battery
 enable-ipc = true
 padding = 2
 border-size = 0

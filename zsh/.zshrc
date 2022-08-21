@@ -5,6 +5,10 @@ export PATH=$HOME/local/bin/:$HOME/.cargo/bin/:$PATH
 export QEMU_HOME=$HOME/src/qemu-6.1.0
 PROMPT='%F{2}%n%F{300}@%m:%F{220}%~ %F{300}$%f '
 
+if [[ "$TERM" == "tmux-256color" ]]; then
+  export TERM=screen-256color
+fi
+
 [ -d $HOME/dotfiles/bin/textemp ] && export TEXTEMP="$HOME/dotfiles/bin/textemp"
 [ -d $HOME/dotfiles/bin/mdtemp ] && export MDTEMP="$HOME/dotfiles/bin/mdtemp"
 

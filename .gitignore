@@ -6,3 +6,4 @@ vim/undodir/*
 nvim/plugged/*
 vim/autoload/*
 vim/plugged/*
+mutt/.mailsynclastrun

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-du -a ~/.local/share/mail/*/Inbox/new/* 2>/dev/null | wc -l
+mw -Y 2>/dev/null
+ls -A ~/.local/share/mail/nicktehrany1@gmail.com/INBOX/new 2>/dev/null | wc -l

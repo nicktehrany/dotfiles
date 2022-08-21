@@ -13,3 +13,4 @@ alias bat='batcat'
 alias glog="git log --all --graph --decorate --oneline"
 alias tt="tty-clock -scbC3"
 alias gulp="~/.config/yarn/global/node_modules/gulp/bin/gulp.js"
+alias nmt="neomutt"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+du -a ~/.local/share/mail/*/Inbox/new/* 2>/dev/null | wc -l

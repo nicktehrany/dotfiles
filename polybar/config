@@ -15,7 +15,7 @@ gray       = #a8a197
 monitor=${env:EXT_MONITOR:}
 modules-left = bspwm
 modules-center = date
-modules-right = cpu memory wlan eth temperature_cpu audio battery
+modules-right = mail cpu memory wlan eth temperature_cpu audio battery
 enable-ipc = true
 padding = 2
 border-size = 0
@@ -32,9 +32,9 @@ font-3 = FontAwesome:pixelsize=13
 
 [bar/bar_single]
 monitor=${env:MAIN_MONITOR:}
-modules-left = bspwm
+modules-left = bspwm mail
 modules-center = date
-modules-right = cpu memory wlan eth temperature_cpu audio battery
+modules-right = mail cpu memory wlan eth temperature_cpu audio battery
 enable-ipc = true
 padding = 2
 border-size = 0
@@ -150,6 +150,7 @@ label-warn-foreground = #f00
 type = internal/cpu
 interval = 2
 label-font = 3
+format-prefix = " | " 
 format-prefix-foreground = ${root.foreground}
 label = "CPU:%{A:termite -e htop:}%percentage%%%{A} | "
 format = <label>
@@ -169,7 +170,7 @@ format-connected-underline = #55aa55
 accumulate-stats = true
 label-disconnected = " | "
 format-connected-prefix-foreground = ${colors.foreground}
-label-connected = "%ifname% %local_ip%  %downspeed%  %upspeed% %{T3}|%{T-} "
+label-connected = "%ifname%  %downspeed%  %upspeed% %{T3}|%{T-} "
 lable-connected-foreground = ${colors.teal}
 
 [module/wlan]
@@ -192,6 +193,14 @@ label-occupied-padding = 1
 label-empty = %name%
 label-empty-foreground = ${colors.gray}
 label-empty-padding = 1
+
+[module/mail]
+type = custom/script
+exec = get-mail
+interval=180
+format-prefix ="  " 
+click-left = st -e neomutt &
+click-right = st -e neomutt &
 
 ; TODO: Scroll not working.
 [module/backlight]

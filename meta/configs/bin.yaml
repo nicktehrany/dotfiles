@@ -15,3 +15,5 @@
       path: bin/set-brightness
     ~/local/bin/cht-sh:
       path: bin/cht-sh
+    ~/local/bin/get-mail:
+      path: bin/get-mail

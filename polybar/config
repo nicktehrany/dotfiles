@@ -32,7 +32,7 @@ font-3 = FontAwesome:pixelsize=13
 
 [bar/bar_single]
 monitor=${env:MAIN_MONITOR:}
-modules-left = bspwm mail
+modules-left = bspwm
 modules-center = date
 modules-right = mail cpu memory wlan eth temperature_cpu audio battery
 enable-ipc = true

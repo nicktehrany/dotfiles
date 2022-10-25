@@ -49,3 +49,7 @@ require'lspconfig'.yamlls.setup{
 require'lspconfig'.rls.setup{
     coq.lsp_ensure_capabilities{}
 }
+
+require'lspconfig'.metals.setup{
+    coq.lsp_ensure_capabilities{}
+}

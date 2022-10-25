@@ -14,8 +14,8 @@ map <C-k> :cp<CR>
 
 nnoremap <silent><Esc><Esc> :nohlsearch<CR>
 
-nnoremap d "_d
-vnoremap d "_d
+" nnoremap d "_d
+" vnoremap d "_d
 
 nnoremap Y y$
 

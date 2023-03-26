@@ -14,7 +14,3 @@
 [submodule "bin/mdtemp"]
 	path = bin/mdtemp
 	url = https://github.com/nicktehrany/mdtemp.git
-[submodule "slock"]
-	path = slock
-	url = https://git.suckless.org/slock/
-	ignore = dirty

@@ -65,3 +65,7 @@ journaling
 deduplication
 virtualized
 iteratively
+sequentialized
+compactions
+memtable
+virtualization

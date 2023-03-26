@@ -8,10 +8,10 @@ $HOME/local/bin/set-monitors &
 bspc config border_radius        10
 bspc config border_width         2
 bspc config window_gap           18
-bspc config top_padding          45
-bspc config bottom_padding       15
-bspc config left_padding         30
-bspc config right_padding        30
+# bspc config top_padding          45
+# bspc config bottom_padding       15
+# bspc config left_padding         30
+# bspc config right_padding        30
 bspc config automatic_scheme alternate
 bspc config split_ratio          0.55
 bspc config borderless_monocle   false
@@ -36,7 +36,7 @@ bspc rule -a Slack state=tiled desktop='^5'
 bspc rule -a Zathura state=tiled follow=on focus=on
 
 # Wallpaper
-feh --bg-center $HOME/.config/wallpapers/gruvbox_pacman.png &
+feh --bg-scale $HOME/.config/wallpapers/gruvbox_lines.png &
 
 # Start polybar
 $HOME/.config/polybar/launch.sh &

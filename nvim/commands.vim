@@ -28,3 +28,9 @@ augroup YankHighlight
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
 augroup end
+
+augroup WrapText
+    autocmd!
+    autocmd FileType markdown,tex,text setlocal wrap textwidth=120
+augroup END
+

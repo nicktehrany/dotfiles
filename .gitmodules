@@ -17,3 +17,4 @@
 [submodule "slock"]
 	path = slock
 	url = https://git.suckless.org/slock/
+	ignore = dirty

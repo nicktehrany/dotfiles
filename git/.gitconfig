@@ -1,7 +1,7 @@
 [user]
 	name = Nick Tehrany
 	email = nicktehrany1@gmail.com
-	signingkey = 97EA9AD50F94ADA1
+	signingkey = 21137C8D76897949
 
 [core]
     editor = vim
